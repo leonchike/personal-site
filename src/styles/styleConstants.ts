@@ -3,7 +3,7 @@ import * as STYLES from "@/types/styles";
 export const COLORS: STYLES.COLORS = {
   white: "hsl(0deg 0% 100%)",
   black: "hsl(0deg 0% 0%)",
-  offblack: "hsl(24deg 5% 6%)",
+  offblack: "hsl(0deg 0% 13%)",
   pageBackground: "hsl(0deg 0% 98%)",
   gray: {
     100: "hsl(185deg 5% 95%)",
