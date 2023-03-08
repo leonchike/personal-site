@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { compile } from "@mdx-js/mdx";
+import MDXComponent from "@/components/MDXComponent";
 
 const BlogContent = ({
   category,
@@ -8,28 +11,26 @@ const BlogContent = ({
   category: string;
   page: string;
 }) => {
-  // read mdx file
+  // // read mdx file
   const [content, setContent] = useState("");
 
-  // use axios to get mdx file from https://storage.googleapis.com/mdx-files/rebuildee.mdx; with headers Access-Control-Allow-Origin: * and Access-Control-Allow-Methods: GET, POST, PUT, DELETE, PATCH, OPTIONS
   useEffect(() => {
     axios
-      .get(`https://storage.googleapis.com/mdx-files/${page}.mdx`, {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-        },
-      })
+      .get(`/api/blog`)
       .then((res) => {
-        setContent(res.data);
+        setContent(res.data.file);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
 
+  if (!content) return null;
+
+  // const markdown = await;
   console.log(content);
 
-  return <div>blog content</div>;
+  return <div>Blog</div>;
 };
 
 export default BlogContent;
