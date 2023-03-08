@@ -2,7 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import MDXComponent from "@/components/MDXComponent";
 
+// Components
+import Tags from "@/components/Tags";
+import Spacer from "@/components/Spacer";
+
+// Data
 import About from "@/data/about/about.mdx";
+import main from "@/data/main.json";
 
 const HomeHeader = () => {
   return (
@@ -10,9 +16,12 @@ const HomeHeader = () => {
       <Name>
         Chike <br /> Nwankwo
       </Name>
+      <Spacer height="2rem" />
       <div>
         <MDXComponent File={About} />
       </div>
+      <Spacer height="1.5rem" />
+      <Tags tags={main.about_tags} />
     </Wrapper>
   );
 };
@@ -23,8 +32,7 @@ const Wrapper = styled.header`
 `;
 
 const Name = styled.h1`
-  margin-block-end: 2rem;
-  font-size: 4.6rem;
+  font-size: 4.33rem;
   line-height: 5rem;
 `;
 

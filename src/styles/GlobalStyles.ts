@@ -48,6 +48,10 @@ a:not([class]) {
 a[role="link"] {
   text-decoration: none;
 }
+
+a:visited {
+  color: revert;
+}
 /* Make images easier to work with */
 img,
 picture {
@@ -120,7 +124,7 @@ html {
     0px 0px 1px rgba(0, 0, 0, 0.017), 0px 0px 1.9px rgba(0, 0, 0, 0.014),
     0px 0px 3.4px rgba(0, 0, 0, 0.008), 0px 0px 6.3px rgba(0, 0, 0, 0.012),
     0px 0px 15px rgba(0, 0, 0, 0.08);
-  
+  /* font-size: 18px; */
 }
 body {
   // font styles are set on _app.tsx

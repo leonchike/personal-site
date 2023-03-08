@@ -1,3 +1,4 @@
 {
-  "about": "./about/about.md"
+  "about": "./about/about.md",
+  "about_tags": ["Management consultant", "MBA", "Computer engineer", "Product manager","Supply-chain manager", "User-experience designer", "NextJS", "TypeScript", "Python", "Statistical Analytics"]
 }

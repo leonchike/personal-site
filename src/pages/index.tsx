@@ -22,8 +22,3 @@ export default function Home() {
 }
 
 Home.getLayout = (page: React.ReactNode) => <DefaultPage>{page}</DefaultPage>;
-
-const Hello = styled.h1`
-  font-size: 3.5rem;
-  font-weight: 675;
-`;

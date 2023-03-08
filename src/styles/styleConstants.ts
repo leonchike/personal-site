@@ -6,7 +6,7 @@ export const COLORS: STYLES.COLORS = {
   offblack: "hsl(0deg 0% 13%)",
   pageBackground: "hsl(0deg 0% 98%)",
   gray: {
-    100: "hsl(185deg 5% 95%)",
+    100: "hsl(0deg 0% 90%)",
     300: "hsl(190deg 5% 80%)",
     500: "hsl(196deg 4% 60%)",
     700: "hsl(220deg 5% 40%)",

@@ -6,11 +6,24 @@ import styled from "styled-components";
 
 const MDXComponentStyles = {
   p: (props: ReactNode) => <Paragraph {...props} />,
+  a: (props: ReactNode) => <Link {...props} />,
 };
 
 const Paragraph = styled.p`
-  font-size: 1.1rem;
-  line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+`;
+
+const Link = styled.a`
+  color: var(--color-offblack);
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  &:visited {
+    color: var(--color-offblack);
+  }
 `;
 
 export default MDXComponentStyles;
