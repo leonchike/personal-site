@@ -36,7 +36,7 @@ const BreadcrumbsWrapper = styled.nav`
 const BreadcrumbItem = styled.li`
   display: inline;
   margin-right: 0.5rem;
-  color: var(--color-gray-900);
+  color: var(--color-offblack);
   &:after {
     content: "/";
     margin-left: 0.5rem;
@@ -47,7 +47,7 @@ const BreadcrumbItem = styled.li`
   } */
 
   &:hover {
-    color: var(--color-offblack);
+    color: var(--color-gray-900);
   }
 `;
 

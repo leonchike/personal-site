@@ -37,8 +37,9 @@ const Index = () => {
     <PageWrapper>
       <Wrapper>
         <Breadcrumbs breadcrumbs={breadcrumbs} />
-        <Spacer height="1.5rem" />
+        <Spacer height="2.3rem" />
         <HeaderText>{category}</HeaderText>
+        <Spacer height="4rem" />
       </Wrapper>
       <TileContainer data={array} category={category} />
     </PageWrapper>
@@ -47,12 +48,12 @@ const Index = () => {
 
 const Wrapper = styled.header`
   max-width: 48rem;
-  padding-block-start: 7rem;
+  padding-block-start: 8rem;
 `;
 
 const HeaderText = styled.h1`
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 5rem;
+  font-weight: 800;
   text-transform: capitalize;
 `;
 

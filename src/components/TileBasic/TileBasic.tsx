@@ -5,6 +5,8 @@ import styled from "styled-components";
 // Types
 import { Item } from "@/types/global";
 
+import { QUERIES } from "@/styles/styleConstants";
+
 const SectionTile = ({ data, category }: { data: Item; category: string }) => {
   return (
     <Wrapper>
@@ -32,12 +34,26 @@ const ImageWrapper = styled.div`
   width: 100%;
   height: 120px;
   transform: filter 300ms ease;
+
+  img {
+    object-fit: cover;
+  }
+
+  @media ${QUERIES.tabletAndUp} {
+    height: 140px;
+  }
 `;
 
 const Label = styled.h3`
   font-size: 1.125rem;
   font-weight: 550;
   padding-block-start: 1rem;
+
+  //limit 2 lines and add ellipsis
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 
 export default SectionTile;

@@ -66,16 +66,15 @@ const MoreLink = styled(Link)`
 const TileWrapper = styled.ul`
   --min-column-width: min(200px, 100%);
   display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 2rem;
-  column-gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
 
   @media ${QUERIES.tabletAndUp} {
     grid-template-columns: repeat(
       auto-fill,
       minmax(var(--min-column-width), 1fr)
     );
-    column-gap: 2.5rem;
+    column-gap: 3.5rem;
   }
 `;
 

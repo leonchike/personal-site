@@ -4,7 +4,7 @@ import { QUERIES } from "@/styles/styleConstants";
 export const PageWrapper = styled.div`
   margin: 0 auto;
   width: 100%;
-  max-width: 74rem;
+  max-width: 80rem;
   padding-inline-start: 1rem;
   padding-inline-end: 1rem;
 

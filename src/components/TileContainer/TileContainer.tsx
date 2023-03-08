@@ -28,18 +28,23 @@ const TileContainer = ({
 const Wrapper = styled.section``;
 
 const TileWrapper = styled.ul`
-  --min-column-width: min(200px, 100%);
+  --min-column-width: min(120px, 100%);
   display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 2rem;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--min-column-width), 1fr)
+  );
   column-gap: 1.5rem;
+  row-gap: 2rem;
 
   @media ${QUERIES.tabletAndUp} {
+    --min-column-width: min(200px, 100%);
     grid-template-columns: repeat(
       auto-fill,
       minmax(var(--min-column-width), 1fr)
     );
-    column-gap: 2.5rem;
+    column-gap: 3.5rem;
+    row-gap: 4rem;
   }
 `;
 
