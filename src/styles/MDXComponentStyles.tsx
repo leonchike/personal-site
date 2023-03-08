@@ -15,6 +15,10 @@ const Paragraph = styled.p`
 
   a {
     color: var(--color-offblack);
+
+    &:visited {
+      color: var(--color-offblack);
+    }
   }
 `;
 

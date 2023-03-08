@@ -45,12 +45,9 @@ body {
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
-a[role="link"] {
+a{
+  color: inherit;
   text-decoration: none;
-}
-
-a:visited {
-  color: revert;
 }
 /* Make images easier to work with */
 img,

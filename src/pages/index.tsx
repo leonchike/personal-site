@@ -4,6 +4,11 @@ import styled from "styled-components";
 import DefaultPage from "@/components/layouts/DefaultPage";
 import { PageWrapper } from "@/styles/reUseableStyles";
 import HomeHeader from "@/components/HomeComponents/HomeHeader";
+import Section from "@/components/HomeComponents/Section";
+import Spacer from "@/components/Spacer";
+
+// Data
+import main from "@/data/main.json";
 
 export default function Home() {
   return (
@@ -16,6 +21,8 @@ export default function Home() {
       </Head>
       <PageWrapper>
         <HomeHeader />
+        <Spacer height="4rem" />
+        <Section data={main.teams} sectionTitle="Teams" path="/teams" />
       </PageWrapper>
     </>
   );
