@@ -5,7 +5,9 @@ import styled from "styled-components";
 // @ts-nocheck
 
 const MDXComponentStyles = {
+  // @ts-ignore
   p: (props: ReactNode) => <Paragraph {...props} />,
+  // @ts-ignore
   a: (props: ReactNode) => <Link {...props} />,
 };
 

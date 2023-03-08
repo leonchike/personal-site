@@ -1,5 +1,4 @@
 import Head from "next/head";
-import styled from "styled-components";
 
 import DefaultPage from "@/components/layouts/DefaultPage";
 import { PageWrapper } from "@/styles/reUseableStyles";

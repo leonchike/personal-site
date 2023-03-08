@@ -18,3 +18,8 @@ export interface Route {
   path: string;
   footer: boolean;
 }
+
+export interface BreadCrumb {
+  name: string;
+  path: string;
+}
