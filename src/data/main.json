@@ -1,4 +1,8 @@
 {
-  "about": "./about/about.md",
-  "about_tags": ["Management consultant", "MBA", "Computer engineer", "Product manager","Supply-chain manager", "User-experience designer", "NextJS", "TypeScript", "Python", "Statistical Analytics"]
+  "about": "./about/about.mdx",
+  "about_tags": ["Management consultant", "MBA", "Computer engineer", "Product manager","Supply-chain manager", "User-experience designer", "NextJS", "TypeScript", "Python", "Statistical Analytics"],
+  "teams": [
+    {"rebuildee": "./teams/rebuildee.mdx"},
+    {"deloitte": "./teams/deloitte.mdx"}
+  ]
 }

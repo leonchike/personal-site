@@ -12,6 +12,10 @@ const MDXComponentStyles = {
 const Paragraph = styled.p`
   font-size: 1.25rem;
   line-height: 2.5rem;
+
+  a {
+    color: var(--color-offblack);
+  }
 `;
 
 const Link = styled.a`

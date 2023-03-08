@@ -7,7 +7,7 @@ import Tags from "@/components/Tags";
 import Spacer from "@/components/Spacer";
 
 // Data
-import About from "@/data/about/about.mdx";
+import * as About from "@/data/about/about.mdx";
 import main from "@/data/main.json";
 
 const HomeHeader = () => {
@@ -18,7 +18,7 @@ const HomeHeader = () => {
       </Name>
       <Spacer height="2rem" />
       <div>
-        <MDXComponent File={About} />
+        <MDXComponent File={About.default} />
       </div>
       <Spacer height="1.5rem" />
       <Tags tags={main.about_tags} />
