@@ -1,10 +1,9 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-import main from "@/data/main.json";
 import Link from "next/link";
 
-const Category = () => {
+const Page = () => {
   const router = useRouter();
   const { page } = router.query;
 
@@ -17,4 +16,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default Page;
