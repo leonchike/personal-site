@@ -2,9 +2,9 @@
   "about": "./about/about.mdx",
   "about_tags": ["Management consultant", "MBA", "Computer engineer", "Product manager","Supply-chain manager", "User-experience designer", "NextJS", "TypeScript", "Python", "Statistical Analytics"],
   "teams": [
-    {"name": "rebuildee", "displayName": "Rebuildee", "displayImage": "https://1000logos.net/wp-content/uploads/2019/06/Deloitte-Logo.jpg", "file": "./teams/rebuildee.mdx", "path": "teams/rebuildee"},
-    {"name": "deloitte", "displayName": "Deloitte and Touche", "displayImage": "https://1000logos.net/wp-content/uploads/2019/06/Deloitte-Logo.jpg", "file": "./teams/deloitte.mdx", "path": "teams/rebuildee"},
-    {"name": "bellavent", "displayName": "Bellavent", "displayImage": "https://1000logos.net/wp-content/uploads/2019/06/Deloitte-Logo.jpg", "file": "./teams/bellavent.mdx", "path": "teams/rebuildee"},
-    {"name": "apple", "displayName": "Apple", "displayImage": "https://1000logos.net/wp-content/uploads/2019/06/Deloitte-Logo.jpg", "file": "./teams/rebuildee.mdx", "path": "teams/rebuildee"}
+    {"id": "rebuildee", "name": "rebuildee", "displayName": "Rebuildee", "displayImage": "https://1000logos.net/wp-content/uploads/2019/06/Deloitte-Logo.jpg", "file": "./teams/rebuildee.mdx", "path": "teams/rebuildee"},
+    {"id": "deloitte", "name": "deloitte", "displayName": "Deloitte and Touche", "displayImage": "https://1000logos.net/wp-content/uploads/2019/06/Deloitte-Logo.jpg", "file": "./teams/deloitte.mdx", "path": "teams/rebuildee"},
+    {"id": "bellavent", "name": "bellavent", "displayName": "Bellavent", "displayImage": "https://1000logos.net/wp-content/uploads/2019/06/Deloitte-Logo.jpg", "file": "./teams/bellavent.mdx", "path": "teams/rebuildee"},
+    {"id": "apple", "name": "apple", "displayName": "Apple", "displayImage": "https://1000logos.net/wp-content/uploads/2019/06/Deloitte-Logo.jpg", "file": "./teams/rebuildee.mdx", "path": "teams/rebuildee"}
   ]
 }

@@ -1,4 +1,5 @@
 export interface Item {
+  id: string;
   name: string;
   displayName: string;
   displayImage: string;
@@ -10,4 +11,10 @@ export interface SectionProps {
   data: Item[];
   sectionTitle: string;
   path: string;
+}
+
+export interface Route {
+  name: string;
+  path: string;
+  footer: boolean;
 }
