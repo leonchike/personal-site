@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
+import { capitalizeFirstLetter } from "@/utils/helpers";
+
 import { BreadCrumb } from "@/types/global";
 
 const Breadcrumbs = ({ breadcrumbs }: { breadcrumbs: BreadCrumb[] }) => {
@@ -15,7 +17,9 @@ const Breadcrumbs = ({ breadcrumbs }: { breadcrumbs: BreadCrumb[] }) => {
           if (isLast) return;
           return (
             <BreadcrumbItem key={breadcrumb.name}>
-              <Link href={breadcrumb.path}>{breadcrumb.name}</Link>
+              <Link href={breadcrumb.path}>
+                {capitalizeFirstLetter(breadcrumb.name)}
+              </Link>
             </BreadcrumbItem>
           );
         })}
@@ -39,7 +43,7 @@ const BreadcrumbItem = styled.li`
   color: var(--color-offblack);
   &:after {
     content: "/";
-    margin-left: 0.5rem;
+    margin-left: 0.95rem;
     margin-right: 0.5rem;
   }
   /* &:last-child:after {

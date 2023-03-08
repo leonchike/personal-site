@@ -12,7 +12,7 @@ const SectionTile = ({ data, category }: { data: Item; category: string }) => {
     <Wrapper>
       <Link href={`/${category}/${data.id}`}>
         <ImageWrapper>
-          <Image src={data.displayImage} alt={data.displayName} fill />
+          <Image src={data.thumbnailImage} alt={data.displayName} fill />
         </ImageWrapper>
         <Label>{data.displayName}</Label>
       </Link>

@@ -3,8 +3,11 @@ export interface Item {
   name: string;
   displayName: string;
   displayImage: string;
+  thumbnailImage: string;
   file: string;
   path: string;
+  type: string;
+  subTitle: string;
 }
 
 export interface SectionProps {
@@ -22,4 +25,8 @@ export interface Route {
 export interface BreadCrumb {
   name: string;
   path: string;
+}
+
+export interface PageType {
+  [key: string]: string;
 }
