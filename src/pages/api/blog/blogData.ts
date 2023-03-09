@@ -46,9 +46,9 @@ export const blogData = [
     name: "bellavent",
     displayName: "Bellavent",
     displayImage:
-      "https://1000logos.net/wp-content/uploads/2019/06/Deloitte-Logo.jpg",
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678400935/bellavent-lg_putpri.jpg",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678308490/rebuildee-thumbnail_cj8x3c.jpg",
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678400935/bellavent-thumbnail_w8ie8y.jpg",
     file: "./teams/bellavent.mdx",
     path: "teams/bellavent",
     type: "team",
