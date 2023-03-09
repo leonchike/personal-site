@@ -21,7 +21,7 @@ export default function Home() {
       <PageWrapper>
         <HomeHeader />
         <Spacer height="4rem" />
-        <Section data={main.teams} sectionTitle="Teams" path="/teams" />
+        <Section data={main.teams} sectionTitle="teams" path="/teams" />
       </PageWrapper>
     </>
   );

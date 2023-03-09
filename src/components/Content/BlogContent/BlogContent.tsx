@@ -1,36 +1,36 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import { compile } from "@mdx-js/mdx";
-import MDXComponent from "@/components/MDXComponent";
+import styled from "styled-components";
+import ReactMarkdown from "react-markdown";
 
-const BlogContent = ({
-  category,
-  page,
-}: {
-  category: string;
-  page: string;
-}) => {
-  // // read mdx file
-  const [content, setContent] = useState("");
+import Spacer from "@/components/Spacer";
+import HeroImage from "@/components/Content/HeroImage";
+import MetaData from "@/components/Content/MetaData";
+import RenderMarkdown from "@/components/Content/RenderMarkdown";
+import ExternalLinks from "@/components/Content/ExternalLinks";
 
-  useEffect(() => {
-    axios
-      .get(`/api/blog`)
-      .then((res) => {
-        setContent(res.data.file);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+import { Item } from "@/types/global";
 
-  if (!content) return null;
+interface StateData {
+  file: string;
+  data: Item[];
+}
 
-  // const markdown = await;
-  console.log(content);
-
-  return <div>Blog</div>;
+const BlogContent = ({ data }: { data: StateData }) => {
+  return (
+    <Wrapper>
+      <HeroImage displayImage={data.data[0].displayImage} />
+      <Spacer height="3rem" />
+      <MetaData data={data.data[0]} />
+      <Spacer height="3rem" />
+      <RenderMarkdown content={data.file} />
+      <Spacer height="3rem" />
+      <ExternalLinks links={data.data[0].externalLinks} />
+    </Wrapper>
+  );
 };
+
+const Wrapper = styled.div`
+  max-width: 58rem;
+`;
 
 export default BlogContent;

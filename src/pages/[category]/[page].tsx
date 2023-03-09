@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import styled from "styled-components";
+import axios from "axios";
 
 import DefaultPage from "@/components/layouts/DefaultPage";
 import { PageWrapper } from "@/styles/reUseableStyles";
@@ -12,13 +12,33 @@ import BlogContent from "@/components/Content/BlogContent";
 import { pageType } from "@/data/data";
 
 // Types
-import { BreadCrumb } from "@/types/global";
+import { BreadCrumb, Item } from "@/types/global";
+
+interface StateData {
+  file: string;
+  data: Item[];
+}
 
 const Page = () => {
+  const [data, setData] = useState({} as StateData);
   const router = useRouter();
   const { page, category } = router.query;
 
-  if (!page || !category) {
+  useEffect(() => {
+    if (!page || !category) {
+      return;
+    }
+    axios
+      .get(`/api/blog?page=${page}`)
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [page, category]);
+
+  if (!page || !category || !data.data || !data.file) {
     return null;
   }
   if (typeof page !== "string" || typeof category !== "string") {
@@ -32,24 +52,17 @@ const Page = () => {
     { name: page, path: `/${category}/${page}` },
   ];
 
-  let contentType;
-  if (pageType[category]) {
-    contentType = pageType[category];
-  } else {
-    throw new Error("Category not found");
-  }
+  let contentType = data.data[0].type;
 
   return (
     <PageWrapper>
       <Wrapper>
         <Breadcrumbs breadcrumbs={breadcrumbs} />
         <Spacer height="2.3rem" />
-        <HeaderText>{page}</HeaderText>
+        <HeaderText>{data.data[0].displayName}</HeaderText>
         <Spacer height="2rem" />
       </Wrapper>
-      {contentType === "blog" && (
-        <BlogContent category={category} page={page} />
-      )}
+      {contentType === "team" && <BlogContent data={data} />}
     </PageWrapper>
   );
 };

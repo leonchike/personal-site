@@ -8,6 +8,10 @@ export interface Item {
   path: string;
   type: string;
   subTitle: string;
+  externalLinks: {
+    name: string;
+    url: string;
+  }[];
 }
 
 export interface SectionProps {

@@ -1,0 +1,15 @@
+.reactMarkDown {
+  font-size: 1.25rem;
+}
+
+.reactMarkDown p {
+  margin-block-end: 1rem;
+}
+
+.reactMarkDown p:last-child {
+  margin-block-end: 0rem;
+}
+
+.reactMarkDown strong {
+  font-weight: 550;
+}

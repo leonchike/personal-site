@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-import SectionTile from "@/components/HomeComponents/SectionTile";
+import TileBasic from "@/components/TileBasic";
 
 import { QUERIES } from "@/styles/styleConstants";
 
@@ -21,7 +21,7 @@ const Section = ({ data, sectionTitle, path }: SectionProps) => {
       </Header>
       <TileWrapper role="list">
         {data.slice(0, 4).map((item) => (
-          <SectionTile key={item.name} data={item} />
+          <TileBasic key={item.name} data={item} category={sectionTitle} />
         ))}
       </TileWrapper>
     </Wrapper>
@@ -38,6 +38,7 @@ const Header = styled.div`
 
 const Title = styled.h2`
   font-size: 2rem;
+  text-transform: capitalize;
 `;
 
 const MoreLink = styled(Link)`
@@ -80,6 +81,7 @@ const TileWrapper = styled.ul`
 
 const HideMobile = styled.span`
   display: none;
+  text-transform: capitalize;
 
   @media ${QUERIES.tabletAndUp} {
     display: inline;
