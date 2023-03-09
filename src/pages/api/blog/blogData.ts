@@ -67,7 +67,7 @@ export const blogData = [
   {
     id: "wangariMathenge",
     name: "wangariMathenge",
-    displayName: "Wangari Mathenge",
+    displayName: "Wangari Mathenge Studios",
     displayImage:
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678401779/WangariMathenge-lg_lcxzgj.jpg",
     thumbnailImage:
