@@ -69,9 +69,9 @@ export const blogData = [
     name: "wangariMathenge",
     displayName: "Wangari Mathenge",
     displayImage:
-      "https://1000logos.net/wp-content/uploads/2019/06/Deloitte-Logo.jpg",
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678401779/WangariMathenge-lg_lcxzgj.jpg",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678308490/rebuildee-thumbnail_cj8x3c.jpg",
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678401779/WangariMathenge-thumbnail_jginrv.jpg",
     file: "./teams/wangarimathenge.mdx",
     path: "teams/wangarimathenge",
     type: "team",
@@ -92,13 +92,13 @@ export const blogData = [
     name: "deloitteDigital",
     displayName: "Deloitte Digital",
     displayImage:
-      "https://1000logos.net/wp-content/uploads/2019/06/Deloitte-Logo.jpg",
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678402377/DeloitteDigital-lg_h52em6.png",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678308490/rebuildee-thumbnail_cj8x3c.jpg",
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678402377/DeloitteDigital-thumbnail_gfmnzd.jpg",
     file: "./teams/deloittedigital.mdx",
     path: "teams/deloittedigital",
     type: "team",
-    subTitle: "Project Architect, 2017 - 2019",
+    subTitle: "Senior Consultant, 2017 - 2019",
     externalLinks: [
       {
         name: "Website",
@@ -115,9 +115,9 @@ export const blogData = [
     name: "kivvik",
     displayName: "Kivvik",
     displayImage:
-      "https://1000logos.net/wp-content/uploads/2019/06/Deloitte-Logo.jpg",
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403334/Kivvik-lg_xizwxb.png",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678308490/rebuildee-thumbnail_cj8x3c.jpg",
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403334/Kivvik-lg_xizwxb.png",
     file: "./teams/kivvik.mdx",
     path: "teams/kivvik",
     type: "team",
@@ -138,9 +138,9 @@ export const blogData = [
     name: "capitalOne",
     displayName: "Capital One Innovation Labs",
     displayImage:
-      "https://1000logos.net/wp-content/uploads/2019/06/Deloitte-Logo.jpg",
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403490/CapitalOne-lg_hfgaxr.png",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678308490/rebuildee-thumbnail_cj8x3c.jpg",
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403490/CapitalOne-lg_hfgaxr.png",
     file: "./teams/capitalone.mdx",
     path: "teams/capitalone",
     type: "team",
@@ -157,13 +157,36 @@ export const blogData = [
     ],
   },
   {
+    id: "ge",
+    name: "ge",
+    displayName: "GE",
+    displayImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678404150/GE-lg_ouhjzu.png",
+    thumbnailImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678404150/GE-lg_ouhjzu.png",
+    file: "./teams/rebuildee.mdx",
+    path: "teams/rebuildee",
+    type: "team",
+    subTitle: "Financial Analyst, 2012",
+    externalLinks: [
+      {
+        name: "Website",
+        url: "https://www.apple.com",
+      },
+      {
+        name: "Twitter",
+        url: "https://twitter.com/apple",
+      },
+    ],
+  },
+  {
     id: "apple",
     name: "apple",
     displayName: "Apple",
     displayImage:
-      "https://1000logos.net/wp-content/uploads/2019/06/Deloitte-Logo.jpg",
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403742/Apple-lg_lwkkea.png",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678308490/rebuildee-thumbnail_cj8x3c.jpg",
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403742/Apple-lg_lwkkea.png",
     file: "./teams/rebuildee.mdx",
     path: "teams/rebuildee",
     type: "team",
