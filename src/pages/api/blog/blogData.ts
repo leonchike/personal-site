@@ -75,7 +75,7 @@ export const blogData = [
     file: "./teams/wangarimathenge.mdx",
     path: "teams/wangarimathenge",
     type: "team",
-    subTitle: "Web design and development, 2022 - 2023",
+    subTitle: "Web Engineering, 2022 - 2023",
     externalLinks: [
       {
         name: "Website",
