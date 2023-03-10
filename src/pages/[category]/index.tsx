@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 
@@ -9,6 +9,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import TileContainer from "@/components/TileContainer";
 
 import { useAppState } from "@/context/appContext";
+
+// helpers
+import { capitalizeFirstLetter } from "@/utils/helpers";
 
 // Types
 import { BreadCrumb, AppState } from "@/types/global";
@@ -38,15 +41,20 @@ const Index = () => {
   ];
 
   return (
-    <PageWrapper>
-      <Wrapper>
-        <Breadcrumbs breadcrumbs={breadcrumbs} />
-        <Spacer height="2.3rem" />
-        <HeaderText>{category}</HeaderText>
-        <Spacer height="4rem" />
-      </Wrapper>
-      <TileContainer data={array} category={category} />
-    </PageWrapper>
+    <>
+      <Head>
+        <title>{capitalizeFirstLetter(category)}</title>
+      </Head>
+      <PageWrapper>
+        <Wrapper>
+          <Breadcrumbs breadcrumbs={breadcrumbs} />
+          <Spacer height="2.3rem" />
+          <HeaderText>{category}</HeaderText>
+          <Spacer height="4rem" />
+        </Wrapper>
+        <TileContainer data={array} category={category} />
+      </PageWrapper>
+    </>
   );
 };
 

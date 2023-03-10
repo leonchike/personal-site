@@ -11,7 +11,7 @@ import BlogContent from "@/components/Content/BlogContent";
 import MoreContent from "@/components/Content/MoreContent";
 import Head from "next/head";
 
-// help
+// helpers
 import { capitalizeFirstLetter } from "@/utils/helpers";
 
 // Types
@@ -60,9 +60,8 @@ const Page = () => {
   return (
     <>
       <Head>
-        <title>{capitalizeFirstLetter(data.data[0].displayName)}</title>
+        <title>{capitalizeFirstLetter(data?.data[0]?.displayName)}</title>
       </Head>
-      ;
       <PageWrapper>
         <Wrapper>
           <Breadcrumbs breadcrumbs={breadcrumbs} />
