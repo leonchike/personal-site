@@ -8,13 +8,24 @@ import Spacer from "@/components/Spacer";
 import TileBasic from "@/components/TileBasic";
 import { QUERIES } from "@/styles/styleConstants";
 
-const MoreContent = ({ category, page }) => {
+import { AppState, Item } from "@/types/global";
+
+interface Props {
+  category: string;
+  page: string;
+}
+
+const MoreContent = ({ category, page }: Props) => {
   // category is either teams, projects, wrting etc
   // page is the slug from the category page
-  const state = useAppState();
-  if (!state || !state[category]) return null;
+  //@ts-ignore
+  const state: AppState = useAppState();
+  if (!state || !state[category as keyof AppState]) return null;
 
-  const dataArray = state[category].filter((item) => item.id !== page);
+  if (state === null) return null;
+
+  // @ts-ignore
+  const dataArray = state[category].filter((item: Item) => item.id !== page);
 
   return (
     <Wrapper>
@@ -26,7 +37,7 @@ const MoreContent = ({ category, page }) => {
         </span>
       </Title>
       <TileWrapper role="list">
-        {dataArray.slice(0, 8).map((item) => (
+        {dataArray.slice(0, 8).map((item: Item) => (
           <TileBasic key={item.id} category={category} data={item} />
         ))}
       </TileWrapper>
