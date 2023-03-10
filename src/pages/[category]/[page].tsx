@@ -23,11 +23,11 @@ const Page = () => {
   const { page, category } = router.query;
 
   useEffect(() => {
-    if (!page || !category) {
+    if (!page && !category) {
       return;
     }
     axios
-      .get(`/api/blog?page=${page}`)
+      .get(`/api/teams?page=${page}`)
       .then((res) => {
         setData(res.data);
       })
