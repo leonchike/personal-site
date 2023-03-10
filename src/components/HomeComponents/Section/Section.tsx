@@ -3,13 +3,13 @@ import Link from "next/link";
 
 import TileBasic from "@/components/TileBasic";
 import { QUERIES } from "@/styles/styleConstants";
-import { useAboutState } from "@/context/appContext";
+import { useAppState } from "@/context/appContext";
 
 // Types
 import { SectionProps, Item } from "@/types/global";
 
 const Section = ({ sectionTitle, path }: SectionProps) => {
-  const state = useAboutState();
+  const state = useAppState();
 
   if (!state || !state[sectionTitle]) {
     return null;

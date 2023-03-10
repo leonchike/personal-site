@@ -8,7 +8,7 @@ import { PageWrapper } from "@/styles/reUseableStyles";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TileContainer from "@/components/TileContainer";
 
-import { useAboutState } from "@/context/appContext";
+import { useAppState } from "@/context/appContext";
 
 // Types
 import { BreadCrumb, AppState } from "@/types/global";
@@ -18,7 +18,7 @@ const Index = () => {
   const router = useRouter();
   const { category } = router.query;
   //@ts-ignore
-  const state: AppState = useAboutState();
+  const state: AppState = useAppState();
 
   if (!state || !state.appData) return null;
 

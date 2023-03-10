@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MDXComponent from "@/components/MDXComponent";
-import { useAboutState } from "@/context/appContext";
+import { useAppState } from "@/context/appContext";
 
 // Components
 import Tags from "@/components/Tags";
@@ -11,7 +11,7 @@ import Spacer from "@/components/Spacer";
 import * as About from "@/data/about/about.mdx";
 
 const HomeHeader = () => {
-  const state = useAboutState();
+  const state = useAppState();
 
   // @ts-ignore
   if (!state || !state.appData) {

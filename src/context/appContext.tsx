@@ -37,7 +37,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 }
 
 // Create the custom hook
-export const useAboutState = () => {
+export const useAppState = () => {
   return useContext(AppContext);
 };
 

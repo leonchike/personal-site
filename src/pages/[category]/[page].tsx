@@ -8,6 +8,7 @@ import { PageWrapper } from "@/styles/reUseableStyles";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Spacer from "@/components/Spacer";
 import BlogContent from "@/components/Content/BlogContent";
+import MoreContent from "@/components/Content/MoreContent";
 
 // Types
 import { BreadCrumb, Item } from "@/types/global";
@@ -61,6 +62,7 @@ const Page = () => {
         <Spacer height="2rem" />
       </Wrapper>
       {contentType === "team" && <BlogContent data={data} />}
+      <MoreContent category={category} page={page} />
     </PageWrapper>
   );
 };

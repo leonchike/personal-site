@@ -4,12 +4,12 @@ import styled from "styled-components";
 
 import { QUERIES } from "@/styles/styleConstants";
 
-import { useAboutState } from "@/context/appContext";
+import { useAppState } from "@/context/appContext";
 import { AppState } from "@/types/global";
 
 const FooterLinks = () => {
   //@ts-ignore
-  const state: AppState = useAboutState();
+  const state: AppState = useAppState();
 
   //@ts-ignore
   if (!state || !state.appData) return null;
