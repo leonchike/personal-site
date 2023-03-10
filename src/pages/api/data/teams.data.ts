@@ -93,8 +93,8 @@ export default [
     ],
   },
   {
-    id: "deloitteDigital",
-    name: "deloitteDigital",
+    id: "deloittedigital",
+    name: "deloittedigital",
     displayName: "Deloitte Digital",
     displayImage:
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678402377/DeloitteDigital-lg_h52em6.png",
@@ -139,8 +139,8 @@ export default [
     ],
   },
   {
-    id: "capitalOne",
-    name: "capitalOne",
+    id: "capitalone",
+    name: "capitalone",
     displayName: "Capital One Innovation Labs",
     displayImage:
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403490/CapitalOne-lg_hfgaxr.png",
@@ -169,8 +169,8 @@ export default [
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678404150/GE-lg_ouhjzu.png",
     thumbnailImage:
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678404150/GE-lg_ouhjzu.png",
-    file: "./teams/rebuildee.mdx",
-    path: "teams/rebuildee",
+    file: "./teams/ge.mdx",
+    path: "teams/ge",
     type: "team",
     subTitle: "Financial Analyst, 2012",
     externalLinks: [
@@ -192,8 +192,8 @@ export default [
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403742/Apple-lg_lwkkea.png",
     thumbnailImage:
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403742/Apple-lg_lwkkea.png",
-    file: "./teams/rebuildee.mdx",
-    path: "teams/rebuildee",
+    file: "./teams/apple.mdx",
+    path: "teams/apple",
     type: "team",
     subTitle: "Small Business Initative, 2011-2012",
     externalLinks: [
