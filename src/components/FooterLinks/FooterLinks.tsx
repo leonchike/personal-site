@@ -4,34 +4,48 @@ import styled from "styled-components";
 
 import { QUERIES } from "@/styles/styleConstants";
 
-import { routes, socialLinks } from "@/data/routes";
+import { useAboutState } from "@/context/appContext";
+import { AppState } from "@/types/global";
 
 const FooterLinks = () => {
+  //@ts-ignore
+  const state: AppState = useAboutState();
+
+  //@ts-ignore
+  if (!state || !state.appData) return null;
+
+  const routes = state?.appData?.routes;
+  const socialLinks = state?.appData?.socialLinks;
+
   if (!routes) return null;
 
   return (
     <Wrapper>
-      <Routes role="list">
-        {routes.map((route) => {
-          if (route.footer === false) return;
-          return (
-            <Route key={route.name}>
-              <StyledLink href={route.path} role="link">
-                {route.name}
+      {!!routes && (
+        <Routes role="list">
+          {routes.map((route) => {
+            if (route.footer === false) return;
+            return (
+              <Route key={route.name}>
+                <StyledLink href={route.path} role="link">
+                  {route.name}
+                </StyledLink>
+              </Route>
+            );
+          })}
+        </Routes>
+      )}
+      {!!socialLinks && (
+        <Routes role="list">
+          {socialLinks.map((link) => (
+            <Route key={link.name}>
+              <StyledLink href={link.path} target="_blank" role="link">
+                {link.name}
               </StyledLink>
             </Route>
-          );
-        })}
-      </Routes>
-      <Routes role="list">
-        {socialLinks.map((link) => (
-          <Route key={link.name}>
-            <StyledLink href={link.path} target="_blank" role="link">
-              {link.name}
-            </StyledLink>
-          </Route>
-        ))}
-      </Routes>
+          ))}
+        </Routes>
+      )}
     </Wrapper>
   );
 };

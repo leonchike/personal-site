@@ -2,13 +2,21 @@ import styled from "styled-components";
 import Link from "next/link";
 
 import TileBasic from "@/components/TileBasic";
-
 import { QUERIES } from "@/styles/styleConstants";
+import { useAboutState } from "@/context/appContext";
 
 // Types
-import { SectionProps } from "@/types/global";
+import { SectionProps, Item } from "@/types/global";
 
-const Section = ({ data, sectionTitle, path }: SectionProps) => {
+const Section = ({ sectionTitle, path }: SectionProps) => {
+  const state = useAboutState();
+
+  if (!state || !state[sectionTitle]) {
+    return null;
+  }
+
+  const data: Item[] = state[sectionTitle];
+
   return (
     <Wrapper>
       <Header>

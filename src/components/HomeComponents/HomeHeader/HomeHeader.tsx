@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MDXComponent from "@/components/MDXComponent";
+import { useAboutState } from "@/context/appContext";
 
 // Components
 import Tags from "@/components/Tags";
@@ -8,9 +9,18 @@ import Spacer from "@/components/Spacer";
 
 // Data
 import * as About from "@/data/about/about.mdx";
-import main from "@/data/main.json";
 
 const HomeHeader = () => {
+  const state = useAboutState();
+
+  // @ts-ignore
+  if (!state || !state.appData) {
+    return null;
+  }
+
+  // @ts-ignore
+  const tags = state?.appData?.about?.tags;
+
   return (
     <Wrapper>
       <Name>
@@ -21,7 +31,7 @@ const HomeHeader = () => {
         <MDXComponent File={About.default} />
       </div>
       <Spacer height="1.5rem" />
-      <Tags tags={main.about_tags} />
+      <Tags tags={tags} />
     </Wrapper>
   );
 };

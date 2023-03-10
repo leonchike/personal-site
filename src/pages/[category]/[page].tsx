@@ -9,8 +9,6 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import Spacer from "@/components/Spacer";
 import BlogContent from "@/components/Content/BlogContent";
 
-import { pageType } from "@/data/data";
-
 // Types
 import { BreadCrumb, Item } from "@/types/global";
 

@@ -4,6 +4,7 @@ import { MDXProvider } from "@mdx-js/react";
 import localFont from "next/font/local";
 import GlobalStyles from "@/styles/GlobalStyles";
 import MDXComponentStyles from "@/styles/MDXComponentStyles";
+import { AppProvider } from "@/context/appContext";
 
 const MDSystem = localFont({
   src: "../styles/fonts/MDSystem-VF.woff2",
@@ -24,11 +25,13 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyles />
-      <Main className={MDSystem.variable}>
-        <MDXProvider components={MDXComponentStyles}>
-          {getLayout(<Component {...pageProps} />)}
-        </MDXProvider>
-      </Main>
+      <AppProvider>
+        <Main className={MDSystem.variable}>
+          <MDXProvider components={MDXComponentStyles}>
+            {getLayout(<Component {...pageProps} />)}
+          </MDXProvider>
+        </Main>
+      </AppProvider>
     </>
   );
 }

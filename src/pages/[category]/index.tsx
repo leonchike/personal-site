@@ -8,20 +8,24 @@ import { PageWrapper } from "@/styles/reUseableStyles";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TileContainer from "@/components/TileContainer";
 
-import main from "@/data/main.json";
+import { useAboutState } from "@/context/appContext";
 
 // Types
-import { Item, BreadCrumb } from "@/types/global";
+import { BreadCrumb, AppState } from "@/types/global";
 import Spacer from "@/components/Spacer";
 
 const Index = () => {
   const router = useRouter();
   const { category } = router.query;
+  //@ts-ignore
+  const state: AppState = useAboutState();
+
+  if (!state || !state.appData) return null;
 
   if (!category) return null;
   if (typeof category !== "string") return null;
   // @ts-ignore
-  const array = main[category];
+  const array = state[category];
 
   // console.log(array);
 
