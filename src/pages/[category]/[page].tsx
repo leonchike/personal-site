@@ -27,7 +27,7 @@ const Page = () => {
       return;
     }
     axios
-      .get(`/api/teams?page=${page}`)
+      .get(`/api/${category}?page=${page}`)
       .then((res) => {
         setData(res.data);
       })
