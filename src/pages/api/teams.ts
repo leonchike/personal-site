@@ -23,8 +23,7 @@ export default async function handler(
         res.status(500).json({ error: err });
       }
     } else if (page) {
-      console.log("Page", page);
-      // find rebuildee.mdx file in /src/data/blog and return data
+      // find mdx file in /src/data/blog and return data
       const file = path.join(
         process.cwd(),
         "/src/pages/api/data/teams",

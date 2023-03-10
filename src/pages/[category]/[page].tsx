@@ -9,6 +9,10 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import Spacer from "@/components/Spacer";
 import BlogContent from "@/components/Content/BlogContent";
 import MoreContent from "@/components/Content/MoreContent";
+import Head from "next/head";
+
+// help
+import { capitalizeFirstLetter } from "@/utils/helpers";
 
 // Types
 import { BreadCrumb, Item } from "@/types/global";
@@ -54,16 +58,22 @@ const Page = () => {
   let contentType = data.data[0].type;
 
   return (
-    <PageWrapper>
-      <Wrapper>
-        <Breadcrumbs breadcrumbs={breadcrumbs} />
-        <Spacer height="2.3rem" />
-        <HeaderText>{data.data[0].displayName}</HeaderText>
-        <Spacer height="2rem" />
-      </Wrapper>
-      {contentType === "team" && <BlogContent data={data} />}
-      <MoreContent category={category} page={page} />
-    </PageWrapper>
+    <>
+      <Head>
+        <title>{capitalizeFirstLetter(data.data[0].displayName)}</title>
+      </Head>
+      ;
+      <PageWrapper>
+        <Wrapper>
+          <Breadcrumbs breadcrumbs={breadcrumbs} />
+          <Spacer height="2.3rem" />
+          <HeaderText>{data.data[0].displayName}</HeaderText>
+          <Spacer height="2rem" />
+        </Wrapper>
+        {contentType === "team" && <BlogContent data={data} />}
+        <MoreContent category={category} page={page} />
+      </PageWrapper>
+    </>
   );
 };
 

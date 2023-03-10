@@ -57,15 +57,11 @@ export default [
     file: "./teams/bellavent.mdx",
     path: "teams/bellavent",
     type: "team",
-    subTitle: "Co-Founder, Design and Technology, 2022 - 2023",
+    subTitle: "Co-Founder, Design and Technology, 2021 - 2022",
     externalLinks: [
       {
-        name: "Website",
-        url: "https://app.rebuildee.com",
-      },
-      {
-        name: "Twitter",
-        url: "https://twitter.com/rebuildee",
+        name: "Instagram",
+        url: "https://www.instagram.com/bellavent_ig/",
       },
     ],
   },
@@ -83,12 +79,20 @@ export default [
     subTitle: "Web Engineering, 2022 - 2023",
     externalLinks: [
       {
-        name: "Website",
-        url: "https://app.rebuildee.com",
+        name: "Wangari-Mathenge.com",
+        url: "https://wangari-mathenge.com/",
       },
       {
-        name: "Twitter",
-        url: "https://twitter.com/rebuildee",
+        name: "Robert's Projects LA",
+        url: "https://www.robertsprojectsla.com/artists/wangari-mathenge",
+      },
+      {
+        name: "Artsy",
+        url: "https://www.artsy.net/artist/wangari-mathenge",
+      },
+      {
+        name: "Instagram",
+        url: "https://www.instagram.com/wangari_mathenge/",
       },
     ],
   },
@@ -103,7 +107,7 @@ export default [
     file: "./teams/deloittedigital.mdx",
     path: "teams/deloittedigital",
     type: "team",
-    subTitle: "Senior Consultant, 2017 - 2019",
+    subTitle: "Senior Consultant, 2016 - 2019",
     externalLinks: [
       {
         name: "Website",
@@ -126,15 +130,19 @@ export default [
     file: "./teams/kivvik.mdx",
     path: "teams/kivvik",
     type: "team",
-    subTitle: "Co-Founder, 2013 - 2016",
+    subTitle: "Co-Founder, Product and Marketing, 2013 - 2016",
     externalLinks: [
       {
-        name: "Website",
-        url: "https://app.rebuildee.com",
+        name: "Investment News",
+        url: "https://www.investmentnews.com/a-new-way-for-advisers-to-keep-up-to-speed-on-clients-life-events-63159",
       },
       {
-        name: "Twitter",
-        url: "https://twitter.com/rebuildee",
+        name: "Crunchbase",
+        url: "https://www.crunchbase.com/organization/kivvik",
+      },
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/company/3612545",
       },
     ],
   },
@@ -149,38 +157,15 @@ export default [
     file: "./teams/capitalone.mdx",
     path: "teams/capitalone",
     type: "team",
-    subTitle: "Product Manager, 2016-2017",
+    subTitle: "Product Manager, 2016",
     externalLinks: [
       {
-        name: "Website",
-        url: "https://app.rebuildee.com",
+        name: "Capital One Cafes",
+        url: "https://www.capitalone.com/local/",
       },
       {
-        name: "Twitter",
-        url: "https://twitter.com/rebuildee",
-      },
-    ],
-  },
-  {
-    id: "ge",
-    name: "ge",
-    displayName: "GE",
-    displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678404150/GE-lg_ouhjzu.png",
-    thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678404150/GE-lg_ouhjzu.png",
-    file: "./teams/ge.mdx",
-    path: "teams/ge",
-    type: "team",
-    subTitle: "Financial Analyst, 2012",
-    externalLinks: [
-      {
-        name: "Website",
-        url: "https://www.apple.com",
-      },
-      {
-        name: "Twitter",
-        url: "https://twitter.com/apple",
+        name: "Capital One Labs",
+        url: "https://www.thecapitalonelab.com/",
       },
     ],
   },
@@ -198,12 +183,31 @@ export default [
     subTitle: "Small Business Initative, 2011-2012",
     externalLinks: [
       {
-        name: "Website",
-        url: "https://www.apple.com",
+        name: "Apple Small Business",
+        url: "https://www.apple.com/retail/business/smb-signup/?afid=p238%7CsTPHTG5st-dc_mtid_1870765e38482_pcrid_649874822050_pgrid_74249144809_pntwk_g_pchan__pexid__&cid=aos-us-kwgo-SMB--slid---product-",
       },
       {
         name: "Twitter",
         url: "https://twitter.com/apple",
+      },
+    ],
+  },
+  {
+    id: "ge",
+    name: "ge",
+    displayName: "GE",
+    displayImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678404150/GE-lg_ouhjzu.png",
+    thumbnailImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678404150/GE-lg_ouhjzu.png",
+    file: "./teams/ge.mdx",
+    path: "teams/ge",
+    type: "team",
+    subTitle: "Financial Analyst Intern, 2012",
+    externalLinks: [
+      {
+        name: "GE.com",
+        url: "https://www.ge.com/",
       },
     ],
   },

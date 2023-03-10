@@ -9,12 +9,12 @@ export const PageWrapper = styled.div`
   padding-inline-end: 1rem;
 
   @media ${QUERIES.tabletAndUp} {
-    padding-inline-start: 2rem;
-    padding-inline-end: 2rem;
+    padding-inline-start: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 
   @media ${QUERIES.laptopAndUp} {
-    padding-inline-start: 4rem;
-    padding-inline-end: 4rem;
+    padding-inline-start: 5rem;
+    padding-inline-end: 5rem;
   }
 `;
