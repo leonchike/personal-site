@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import TileBasic from "@/components/TileBasic";
 import { QUERIES } from "@/styles/styleConstants";
+import { TileWrapper } from "@/styles/reUseableStyles";
 import { useAppState } from "@/context/appContext";
 
 // Types
@@ -69,21 +70,6 @@ const MoreLink = styled(Link)`
   &:hover::after {
     transform: translate3d(0.5rem, 0, 0);
     transition: transform 300ms ease;
-  }
-`;
-
-const TileWrapper = styled.ul`
-  --min-column-width: min(200px, 100%);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-
-  @media ${QUERIES.tabletAndUp} {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(var(--min-column-width), 1fr)
-    );
-    column-gap: 3.5rem;
   }
 `;
 

@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 
 import DefaultPage from "@/components/layouts/DefaultPage";
-import { PageWrapper } from "@/styles/reUseableStyles";
+import { PageWrapper, HeaderWrapper } from "@/styles/reUseableStyles";
+import { QUERIES } from "@/styles/styleConstants";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TileContainer from "@/components/TileContainer";
 
@@ -46,27 +47,28 @@ const Index = () => {
         <title>{capitalizeFirstLetter(category)}</title>
       </Head>
       <PageWrapper>
-        <Wrapper>
+        <HeaderWrapper>
           <Breadcrumbs breadcrumbs={breadcrumbs} />
-          <Spacer height="2.3rem" />
           <HeaderText>{category}</HeaderText>
-          <Spacer height="4rem" />
-        </Wrapper>
+        </HeaderWrapper>
         <TileContainer data={array} category={category} />
       </PageWrapper>
     </>
   );
 };
 
-const Wrapper = styled.header`
-  max-width: 48rem;
-  padding-block-start: 8rem;
-`;
-
 const HeaderText = styled.h1`
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 800;
   text-transform: capitalize;
+  margin-block-start: 0.85rem;
+  margin-block-end: 4rem;
+
+  @media ${QUERIES.tabletAndUp} {
+    font-size: 5rem;
+    margin-block-start: 2.3rem;
+    margin-block-end: 4rem;
+  }
 `;
 
 Index.getLayout = (page: React.ReactNode) => <DefaultPage>{page}</DefaultPage>;

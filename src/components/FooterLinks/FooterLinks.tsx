@@ -77,6 +77,12 @@ const Route = styled.li`
 `;
 
 const StyledLink = styled(Link)`
+  font-size: 1.25rem;
+
+  @media ${QUERIES.tabletAndUp} {
+    font-size: 1rem;
+  }
+
   &:hover {
     color: var(--color-gray-700);
   }

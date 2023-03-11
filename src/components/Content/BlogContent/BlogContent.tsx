@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import ReactMarkdown from "react-markdown";
 
 import Spacer from "@/components/Spacer";
 import HeroImage from "@/components/Content/HeroImage";
 import MetaData from "@/components/Content/MetaData";
 import RenderMarkdown from "@/components/Content/RenderMarkdown";
 import ExternalLinks from "@/components/Content/ExternalLinks";
+
+import { QUERIES } from "@/styles/styleConstants";
 
 import { Item } from "@/types/global";
 
@@ -30,7 +31,11 @@ const BlogContent = ({ data }: { data: StateData }) => {
 };
 
 const Wrapper = styled.div`
-  max-width: 58rem;
+  width: 100%;
+
+  @media ${QUERIES.tabletAndUp} {
+    max-width: 42rem;
+  }
 `;
 
 export default BlogContent;

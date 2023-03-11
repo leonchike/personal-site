@@ -32,7 +32,7 @@ const Wrapper = styled.article`
 const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 120px;
+  height: clamp(80px, 60vw, 100px);
   transform: filter 300ms ease;
 
   img {

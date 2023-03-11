@@ -4,7 +4,7 @@ import { QUERIES } from "@/styles/styleConstants";
 export const PageWrapper = styled.div`
   margin: 0 auto;
   width: 100%;
-  max-width: 80rem;
+  max-width: 74rem;
   padding-inline-start: 1rem;
   padding-inline-end: 1rem;
 
@@ -16,5 +16,35 @@ export const PageWrapper = styled.div`
   @media ${QUERIES.laptopAndUp} {
     padding-inline-start: 5rem;
     padding-inline-end: 5rem;
+  }
+`;
+
+export const TileWrapper = styled.ul`
+  --min-column-width: min(120px, 100%);
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--min-column-width), 1fr)
+  );
+  column-gap: 1.5rem;
+  row-gap: 2rem;
+
+  @media ${QUERIES.tabletAndUp} {
+    --min-column-width: min(200px, 100%);
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(var(--min-column-width), 1fr)
+    );
+    column-gap: 3.5rem;
+    row-gap: 4rem;
+  }
+`;
+
+export const HeaderWrapper = styled.header`
+  max-width: 48rem;
+  padding-block-start: 6rem;
+
+  @media ${QUERIES.tabletAndUp} {
+    padding-block-start: 8rem;
   }
 `;

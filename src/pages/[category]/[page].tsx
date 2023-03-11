@@ -4,7 +4,8 @@ import styled from "styled-components";
 import axios from "axios";
 
 import DefaultPage from "@/components/layouts/DefaultPage";
-import { PageWrapper } from "@/styles/reUseableStyles";
+import { PageWrapper, HeaderWrapper } from "@/styles/reUseableStyles";
+import { QUERIES } from "@/styles/styleConstants";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Spacer from "@/components/Spacer";
 import BlogContent from "@/components/Content/BlogContent";
@@ -63,12 +64,10 @@ const Page = () => {
         <title>{capitalizeFirstLetter(data?.data[0]?.displayName)}</title>
       </Head>
       <PageWrapper>
-        <Wrapper>
+        <HeaderWrapper>
           <Breadcrumbs breadcrumbs={breadcrumbs} />
-          <Spacer height="2.3rem" />
           <HeaderText>{data.data[0].displayName}</HeaderText>
-          <Spacer height="2rem" />
-        </Wrapper>
+        </HeaderWrapper>
         {contentType === "team" && <BlogContent data={data} />}
         <MoreContent category={category} page={page} />
       </PageWrapper>
@@ -76,15 +75,19 @@ const Page = () => {
   );
 };
 
-const Wrapper = styled.header`
-  max-width: 48rem;
-  padding-block-start: 8rem;
-`;
-
 const HeaderText = styled.h1`
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 800;
+  line-height: 1.2;
   text-transform: capitalize;
+  margin-block-start: 0.85rem;
+  margin-block-end: 2rem;
+
+  @media ${QUERIES.tabletAndUp} {
+    font-size: 4rem;
+    margin-block-start: 2.3rem;
+    margin-block-end: 4rem;
+  }
 `;
 
 Page.getLayout = (page: React.ReactNode) => <DefaultPage>{page}</DefaultPage>;

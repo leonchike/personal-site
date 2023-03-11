@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import { COLORS, WEIGHTS, FAMILIES } from "./styleConstants";
+import { COLORS, WEIGHTS, FAMILIES, QUERIES } from "./styleConstants";
 
 const GlobalStyles = createGlobalStyle`
   /* Box sizing rules */
@@ -116,19 +116,23 @@ html {
   --masonry-spacing: calc(20 / 16 * 1rem);
   --border-radius: 2px;
   --form-padding: 10px;
-  --normal-font-size: 1rem;
   --box-shadow:  0px 0px 0.4px rgba(0, 0, 0, 0.013),
     0px 0px 1px rgba(0, 0, 0, 0.017), 0px 0px 1.9px rgba(0, 0, 0, 0.014),
     0px 0px 3.4px rgba(0, 0, 0, 0.008), 0px 0px 6.3px rgba(0, 0, 0, 0.012),
     0px 0px 15px rgba(0, 0, 0, 0.08);
   /* font-size: 18px; */
+  font-size: 13px;
+  @media ${QUERIES.tabletAndUp} {
+    font-size: 16px;
+  }
+  @media ${QUERIES.laptopAndUp} {
+    font-size: 18px;
+  }
 }
 body {
   // font styles are set on _app.tsx
   /* font-family: var(--font-family-sans-serif); */
   font-variation-settings: 'slnt' 0;
-  --max-large-width: 1600px;
-  --max-collections-width: calc(10000 / 16 * 1rem);
   color: var(--color-offblack);
   background-color: var(--color-page-background);
 }
