@@ -25,6 +25,10 @@ const HomeHeader = () => {
   // @ts-ignore
   const tags = state?.appData?.about?.tags;
 
+  if (!tags) {
+    return null;
+  }
+
   return (
     <Wrapper>
       <Name>
