@@ -54,6 +54,11 @@ const MoreLink = styled(Link)`
   position: relative;
   font-weight: 500;
   color: var(--color-gray-700);
+  font-size: 1.25rem;
+
+  @media ${QUERIES.tabletAndUp} {
+    font-size: 1rem;
+  }
 
   &:hover {
     color: var(--color-offblack);
