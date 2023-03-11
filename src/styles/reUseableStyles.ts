@@ -20,7 +20,7 @@ export const PageWrapper = styled.div`
 `;
 
 export const TileWrapper = styled.ul`
-  --min-column-width: min(120px, 100%);
+  --min-column-width: min(140px, 100%);
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
