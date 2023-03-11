@@ -5,9 +5,7 @@ import { PageWrapper } from "@/styles/reUseableStyles";
 import HomeHeader from "@/components/HomeComponents/HomeHeader";
 import Section from "@/components/HomeComponents/Section";
 import Spacer from "@/components/Spacer";
-
-// Data
-import main from "@/data/main.json";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 export default function Home() {
   return (
@@ -18,12 +16,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <PageWrapper>
-        <HomeHeader />
-        <Spacer height="4rem" />
-        <Section sectionTitle="teams" path="/teams" />
-        <Section sectionTitle="projects" path="/projects" />
-      </PageWrapper>
+      <ErrorBoundary>
+        <PageWrapper>
+          <HomeHeader />
+          <Spacer height="4rem" />
+          <Section sectionTitle="teams" path="/teams" />
+          <Section sectionTitle="projects" path="/projects" />
+        </PageWrapper>
+      </ErrorBoundary>
     </>
   );
 }
