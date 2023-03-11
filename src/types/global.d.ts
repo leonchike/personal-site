@@ -6,7 +6,7 @@ export interface Item {
   thumbnailImage: string;
   file: string;
   path: string;
-  type: string;
+  type: "teams" | "projects";
   subTitle: string;
   externalLinks: {
     name: string;

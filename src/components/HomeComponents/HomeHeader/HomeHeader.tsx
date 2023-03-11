@@ -14,7 +14,7 @@ const HomeHeader = () => {
   const state = useAppState();
 
   // @ts-ignore
-  if (!state || !state.appData) {
+  if (!state || !state?.appData) {
     return null;
   }
 

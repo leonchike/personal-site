@@ -12,7 +12,7 @@ const FooterLinks = () => {
   const state: AppState = useAppState();
 
   //@ts-ignore
-  if (!state || !state.appData) return null;
+  if (!state || !state?.appData) return null;
 
   const routes = state?.appData?.routes;
   const socialLinks = state?.appData?.socialLinks;

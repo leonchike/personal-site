@@ -13,6 +13,14 @@ export const useAppData = () => {
     GetAppData
   );
 
+  if (!data) {
+    return {
+      data: null,
+      isLoading: true,
+      isError: false,
+    };
+  }
+
   return {
     data,
     isLoading: !error && !data,

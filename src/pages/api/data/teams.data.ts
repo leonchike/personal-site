@@ -14,7 +14,7 @@ export default [
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678308490/rebuildee-thumbnail_cj8x3c.jpg",
     file: "./teams/rebuildee.mdx",
     path: "teams/rebuildee",
-    type: "team",
+    type: "teams",
     subTitle: "Engineering Manager, 2021 - 2023",
     externalLinks: [
       {
@@ -37,7 +37,7 @@ export default [
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678396551/Deloitte_tdunan.png",
     file: "./teams/deloitte.mdx",
     path: "teams/deloitte",
-    type: "team",
+    type: "teams",
     subTitle: "Manager, 2016 - 2022",
     externalLinks: [
       {
@@ -56,7 +56,7 @@ export default [
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678400935/bellavent-thumbnail_w8ie8y.jpg",
     file: "./teams/bellavent.mdx",
     path: "teams/bellavent",
-    type: "team",
+    type: "teams",
     subTitle: "Co-Founder, Design and Technology, 2021 - 2022",
     externalLinks: [
       {
@@ -75,7 +75,7 @@ export default [
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678401779/WangariMathenge-thumbnail_jginrv.jpg",
     file: "./teams/wangarimathenge.mdx",
     path: "teams/wangarimathenge",
-    type: "team",
+    type: "teams",
     subTitle: "Web Engineering, 2022 - 2023",
     externalLinks: [
       {
@@ -106,7 +106,7 @@ export default [
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678402377/DeloitteDigital-thumbnail_gfmnzd.jpg",
     file: "./teams/deloittedigital.mdx",
     path: "teams/deloittedigital",
-    type: "team",
+    type: "teams",
     subTitle: "Senior Consultant, 2016 - 2019",
     externalLinks: [
       {
@@ -129,7 +129,7 @@ export default [
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403334/Kivvik-lg_xizwxb.png",
     file: "./teams/kivvik.mdx",
     path: "teams/kivvik",
-    type: "team",
+    type: "teams",
     subTitle: "Co-Founder, Product and Marketing, 2013 - 2016",
     externalLinks: [
       {
@@ -156,7 +156,7 @@ export default [
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403490/CapitalOne-lg_hfgaxr.png",
     file: "./teams/capitalone.mdx",
     path: "teams/capitalone",
-    type: "team",
+    type: "teams",
     subTitle: "Product Manager, 2016",
     externalLinks: [
       {
@@ -179,7 +179,7 @@ export default [
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403742/Apple-lg_lwkkea.png",
     file: "./teams/apple.mdx",
     path: "teams/apple",
-    type: "team",
+    type: "teams",
     subTitle: "Specialist, Small Business Team, 2011-2012",
     externalLinks: [
       {
@@ -202,7 +202,7 @@ export default [
       "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678404150/GE-lg_ouhjzu.png",
     file: "./teams/ge.mdx",
     path: "teams/ge",
-    type: "team",
+    type: "teams",
     subTitle: "Financial Analyst Intern, 2012",
     externalLinks: [
       {
