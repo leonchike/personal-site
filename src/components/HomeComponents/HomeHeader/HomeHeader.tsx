@@ -18,6 +18,10 @@ const HomeHeader = () => {
     return null;
   }
 
+  if (state.appData === null) {
+    return null;
+  }
+
   // @ts-ignore
   const tags = state?.appData?.about?.tags;
 

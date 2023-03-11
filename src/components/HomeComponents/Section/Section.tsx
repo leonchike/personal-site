@@ -16,6 +16,10 @@ const Section = ({ sectionTitle, path }: SectionProps) => {
     return null;
   }
 
+  if (state[sectionTitle] === null) {
+    return null;
+  }
+
   const data: Item[] | null = state[sectionTitle];
 
   if (typeof data === null) {
