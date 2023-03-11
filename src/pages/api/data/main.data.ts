@@ -14,13 +14,6 @@ export default {
       footer: true,
     },
     {
-      id: "writing",
-      name: "Writing",
-      path: "/writing",
-      pageType: "blog",
-      footer: true,
-    },
-    {
       id: "projects",
       name: "Projects",
       path: "/projects",
@@ -28,9 +21,9 @@ export default {
       footer: true,
     },
     {
-      id: "blog",
-      name: "Likes",
-      path: "/likes",
+      id: "writing",
+      name: "Writing",
+      path: "/writing",
       pageType: "blog",
       footer: true,
     },
@@ -43,9 +36,9 @@ export default {
     },
   ],
   socialLinks: [
-    { name: "Twitter", path: "https://twitter.com/leonchike" },
+    { name: "Twitter", path: "https://twitter.com/l__e__o__n_" },
     { name: "GitHub", path: "https://github.com/leonchike" },
-    { name: "LinkedIn", path: "https://www.linkedin.com/in/leonchike/" },
+    { name: "LinkedIn", path: "https://www.linkedin.com/in/chike-nwankwo/" },
   ],
   about: {
     name: "Chike Nwankwo",
@@ -61,5 +54,13 @@ export default {
       "Python",
       "Statistical Analytics",
     ],
+  },
+  sections: {
+    teams: {
+      live: true,
+    },
+    projects: {
+      live: true,
+    },
   },
 };

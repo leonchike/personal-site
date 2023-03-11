@@ -22,6 +22,7 @@ export default function Home() {
         <HomeHeader />
         <Spacer height="4rem" />
         <Section sectionTitle="teams" path="/teams" />
+        <Section sectionTitle="projects" path="/projects" />
       </PageWrapper>
     </>
   );

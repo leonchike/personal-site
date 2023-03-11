@@ -27,6 +27,8 @@ const MoreContent = ({ category, page }: Props) => {
   // @ts-ignore
   const dataArray = state[category].filter((item: Item) => item.id !== page);
 
+  if (dataArray.length === 0) return null;
+
   return (
     <Wrapper>
       <Spacer height="4rem" />

@@ -1,5 +1,5 @@
 /*
-  Teams data file for the site.
+  Teams data file.
 */
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -180,7 +180,7 @@ export default [
     file: "./teams/apple.mdx",
     path: "teams/apple",
     type: "team",
-    subTitle: "Small Business Initative, 2011-2012",
+    subTitle: "Specialist, Small Business Team, 2011-2012",
     externalLinks: [
       {
         name: "Apple Small Business",

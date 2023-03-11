@@ -7,16 +7,27 @@ import { TileWrapper } from "@/styles/reUseableStyles";
 import { useAppState } from "@/context/appContext";
 
 // Types
-import { SectionProps, Item } from "@/types/global";
+import { SectionProps, Item, AppState } from "@/types/global";
 
 const Section = ({ sectionTitle, path }: SectionProps) => {
-  const state = useAppState();
+  const state: AppState | null = useAppState();
 
   if (!state || !state[sectionTitle]) {
     return null;
   }
 
-  const data: Item[] = state[sectionTitle];
+  const data: Item[] | null = state[sectionTitle];
+
+  if (typeof data === null) {
+    return null;
+  }
+
+  // Check if section is live
+  // @ts-ignore
+  const liveStatus = state.appData.sections[sectionTitle].live;
+  if (liveStatus === false) {
+    return null;
+  }
 
   return (
     <Wrapper>
@@ -37,7 +48,13 @@ const Section = ({ sectionTitle, path }: SectionProps) => {
   );
 };
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  margin-block-end: 4rem;
+
+  &:last-child {
+    margin-block-end: 0;
+  }
+`;
 
 const Header = styled.div`
   display: flex;

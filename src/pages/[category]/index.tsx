@@ -16,7 +16,6 @@ import { capitalizeFirstLetter } from "@/utils/helpers";
 
 // Types
 import { BreadCrumb, AppState } from "@/types/global";
-import Spacer from "@/components/Spacer";
 
 const Index = () => {
   const router = useRouter();

@@ -68,7 +68,8 @@ const Page = () => {
           <Breadcrumbs breadcrumbs={breadcrumbs} />
           <HeaderText>{data.data[0].displayName}</HeaderText>
         </HeaderWrapper>
-        {contentType === "team" && <BlogContent data={data} />}
+        {contentType === "team" ||
+          (contentType === "projects" && <BlogContent data={data} />)}
         <MoreContent category={category} page={page} />
       </PageWrapper>
     </>

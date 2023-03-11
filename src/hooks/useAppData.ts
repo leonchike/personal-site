@@ -32,3 +32,16 @@ export const useTeams = () => {
     isError: error,
   };
 };
+
+export const useProjects = () => {
+  const { data, error } = useSWR(
+    API_Routes.getRoute(API_Routes.projects),
+    GetAppData
+  );
+
+  return {
+    data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+};

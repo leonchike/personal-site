@@ -40,6 +40,7 @@ export interface APIRoutes {
   BASE: string;
   appData: string;
   teams: string;
+  projects: string;
   getRoute(route: string): string;
 }
 
@@ -55,11 +56,20 @@ export interface MainData {
     name: string;
     tags: string[];
   };
+  sections: {
+    teams: {
+      live: boolean;
+    };
+    projects: {
+      live: boolean;
+    };
+  };
 }
 
 export interface AppState {
   appData: MainData | null;
   teams: Item[] | null;
+  projects: Item[] | null;
 }
 
 export interface appReducerAction {
