@@ -28,6 +28,8 @@ const Section = ({ sectionTitle, path }: SectionProps) => {
     return null;
   }
 
+  if (data === undefined) return null;
+
   // Check if section is live
   // @ts-ignore
   const liveStatus = state?.appData.sections[sectionTitle].live;
