@@ -80,7 +80,7 @@ const HeaderText = styled.h1`
   font-weight: 800;
   line-height: 1.2;
   text-transform: capitalize;
-  margin-block-start: 0.85rem;
+  margin-block-start: 1.3rem;
   margin-block-end: 2rem;
 
   @media ${QUERIES.tabletAndUp} {
