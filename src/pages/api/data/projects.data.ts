@@ -23,4 +23,23 @@ export default [
       },
     ],
   },
+  {
+    id: "projectfly",
+    name: "projectfly",
+    displayName: "projectFly",
+    displayImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678578064/projects-images/projectFly02_Radar_xbowmc.png",
+    thumbnailImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678578163/projects-images/projectFly-thumbnail_lkyx6i.png",
+    file: "./projects/projectfly.mdx",
+    path: "projects/projectfly",
+    type: "projects",
+    subTitle: "Published on March 11th, 2023",
+    externalLinks: [
+      {
+        name: "Twitter",
+        url: "https://twitter.com/proflyofficial",
+      },
+    ],
+  },
 ];
