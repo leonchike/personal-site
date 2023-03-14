@@ -12,8 +12,6 @@ import { SectionProps, Item, AppState } from "@/types/global";
 const Section = ({ sectionTitle, path }: SectionProps) => {
   const state: AppState | null = useAppState();
 
-  console.log(state);
-
   if (!state || !state[sectionTitle]) {
     return null;
   }

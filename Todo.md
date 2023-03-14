@@ -1,12 +1,7 @@
 # To Do
 
 1. Add Projects to website
-   ProjectFly
-   Cooking App
    Startup Shell
-   Dingman center
-   Agile division
-   Camst
    New Market Venture Partners
    Risk Analysis Algorithm
 
@@ -18,5 +13,6 @@
    Grillings
    Pocasts
 
-3. On categories and pages. If the url is not in the index of categories or pages, redirect to 404 or home.
+3. If the url is not in the index of approved urls, redirect to 404 or home.
+   Use the Error component on the \_app.tsx file to rendeer after checking.
    https://maxschmitt.me/posts/next-js-default-404-page/

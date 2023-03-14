@@ -28,6 +28,25 @@ export default [
     ],
   },
   {
+    id: "camst",
+    name: "camst",
+    displayName: "Camst",
+    displayImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678826851/camst-lg_a41vhs.png",
+    thumbnailImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678826851/camst-lg_a41vhs.png",
+    file: "./projects/camst.mdx",
+    path: "projects/camst",
+    type: "projects",
+    subTitle: "Supply Chain Researcher, 2022",
+    externalLinks: [
+      {
+        name: "Camst Canteen",
+        url: "https://camstgroup.com/en/catering/ready-made-meals/different-needs-so-many-solutions/",
+      },
+    ],
+  },
+  {
     id: "deloitte",
     name: "deloitte",
     displayName: "Deloitte and Touche",
@@ -168,6 +187,20 @@ export default [
         url: "https://www.thecapitalonelab.com/",
       },
     ],
+  },
+  {
+    id: "agiledivision",
+    name: "agiledivision",
+    displayName: "Agile Division",
+    displayImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678825929/agiledivision-lg_dbkoxj.png",
+    thumbnailImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678825929/agiledivision-lg_dbkoxj.png",
+    file: "./teams/agiledivision.mdx",
+    path: "teams/agiledivision",
+    type: "teams",
+    subTitle: "Founder, Design and Engineering, 2014 - 2015",
+    externalLinks: [],
   },
   {
     id: "apple",
