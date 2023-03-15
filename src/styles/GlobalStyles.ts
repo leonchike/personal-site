@@ -167,7 +167,7 @@ button {
 /* 
   Class based styling for markdown content
 */
-.markdown-two-images {
+.markdown-column-images {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
