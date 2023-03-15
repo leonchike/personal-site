@@ -5,6 +5,7 @@ const API_Routes: APIRoutes = {
   appData: "/appdata",
   teams: "/teams",
   projects: "/projects",
+  likes: "/likes",
 
   getRoute(route) {
     return `${this.BASE}${route}`;

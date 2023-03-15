@@ -2,7 +2,12 @@
 This file creates the context for the app. It is used to store the app data in a global reducer state.
 */
 import React, { useEffect, createContext, useContext, useReducer } from "react";
-import { useAppData, useTeams, useProjects } from "@/hooks/useAppData";
+import {
+  useAppData,
+  useTeams,
+  useProjects,
+  useLikes,
+} from "@/hooks/useAppData";
 import { AppState, appReducerAction } from "@/types/global";
 
 // Create the context
@@ -16,6 +21,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const { data } = useAppData();
   const { data: teams } = useTeams();
   const { data: projects } = useProjects();
+  const { data: likes } = useLikes();
   // Get initial app data
   useEffect(() => {
     //@ts-ignore
@@ -33,6 +39,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     //@ts-ignore
     dispatch({ type: "SET_PROJECTS_DATA", payload: projects });
   }, [projects]);
+
+  // Get initial likes data
+  useEffect(() => {
+    //@ts-ignore
+    dispatch({ type: "SET_LIKES_DATA", payload: likes });
+  }, [likes]);
 
   return (
     <AppContext.Provider value={state}>
@@ -61,6 +73,8 @@ const appReducer = (state: AppState, action: appReducerAction) => {
       return { ...state, teams: action.payload };
     case "SET_PROJECTS_DATA":
       return { ...state, projects: action.payload };
+    case "SET_LIKES_DATA":
+      return { ...state, likes: action.payload };
     default:
       return state;
   }
@@ -71,4 +85,5 @@ const initialState: AppState = {
   appData: null,
   teams: null,
   projects: null,
+  likes: null,
 };

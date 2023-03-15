@@ -1,3 +1,5 @@
+const PageTypes: PageTypes = "teams" | "projects" | "likes";
+
 export interface Item {
   id: string;
   name: string;
@@ -6,7 +8,7 @@ export interface Item {
   thumbnailImage: string;
   file: string;
   path: string;
-  type: "teams" | "projects";
+  type: PageTypes;
   subTitle: string;
   externalLinks: {
     name: string;
@@ -15,7 +17,7 @@ export interface Item {
 }
 
 export interface SectionProps {
-  sectionTitle: "teams" | "projects";
+  sectionTitle: PageTypes;
   path: string;
 }
 
@@ -41,6 +43,7 @@ export interface APIRoutes {
   appData: string;
   teams: string;
   projects: string;
+  likes: string;
   getRoute(route: string): string;
 }
 
@@ -70,6 +73,7 @@ export interface AppState {
   appData: MainData | null;
   teams: Item[] | null;
   projects: Item[] | null;
+  likes: Item[] | null;
 }
 
 export interface appReducerAction {

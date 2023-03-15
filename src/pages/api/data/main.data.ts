@@ -21,9 +21,9 @@ export default {
       footer: true,
     },
     {
-      id: "writing",
-      name: "Writing",
-      path: "/writing",
+      id: "likes",
+      name: "Likes",
+      path: "/likes",
       pageType: "blog",
       footer: true,
     },
@@ -63,6 +63,10 @@ export default {
     projects: {
       live: true,
       subTitle: "Projects I've worked on both personal and for others.",
+    },
+    likes: {
+      live: true,
+      subTitle: "Things I like and enjoy doing.",
     },
   },
 };

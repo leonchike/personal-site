@@ -70,6 +70,7 @@ const Page = () => {
         </HeaderWrapper>
         {contentType === "teams" && <BlogContent data={data} />}
         {contentType === "projects" && <BlogContent data={data} />}
+        {contentType === "likes" && <BlogContent data={data} />}
         <MoreContent category={category} page={page} />
       </PageWrapper>
     </>

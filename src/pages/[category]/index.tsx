@@ -15,7 +15,7 @@ import { useAppState } from "@/context/appContext";
 import { capitalizeFirstLetter } from "@/utils/helpers";
 
 // Types
-import { BreadCrumb, AppState, SectionProps } from "@/types/global";
+import { BreadCrumb, AppState } from "@/types/global";
 
 const Index = () => {
   const router = useRouter();
@@ -29,8 +29,6 @@ const Index = () => {
   if (typeof category !== "string") return null;
   // @ts-ignore
   const array = state[category];
-
-  // console.log(array);
 
   if (!array) return null;
 

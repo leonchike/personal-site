@@ -45,3 +45,16 @@ export const useProjects = () => {
     isError: error,
   };
 };
+
+export const useLikes = () => {
+  const { data, error } = useSWR(
+    API_Routes.getRoute(API_Routes.likes),
+    GetAppData
+  );
+
+  return {
+    data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+};
