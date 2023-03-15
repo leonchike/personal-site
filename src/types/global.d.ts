@@ -14,6 +14,8 @@ export interface Item {
     name: string;
     url: string;
   }[];
+  featured?: boolean;
+  abstract?: string;
 }
 
 export interface SectionProps {

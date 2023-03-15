@@ -9,9 +9,9 @@ export default [
     name: "personalsite",
     displayName: "leonchike.me",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678560394/projects-images/leonchike.me-lg_qiup54.jpg",
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678894204/projects-images/personalsite-lg-03_ibbxqo.png",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678560394/projects-images/leonchike.me-thumbnail_pbx4b3.jpg",
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678894242/projects-images/personalsite-thumbnail-04_xbnmmv.png",
     file: "./projects/personalsite.mdx",
     path: "projects/personalsite",
     type: "projects",
@@ -22,6 +22,9 @@ export default [
         url: "https://leonchike.me",
       },
     ],
+    featured: true,
+    abstract: `This website is a personal project that I started in 2021. It is a static website built with Next.js and TypeScript. It is hosted on Vercel and uses Cloudinary for image hosting. \n
+    The website is fully responsive and is built with accessibility in mind. It is also fully internationalized and supports multiple languages. The website is also fully open source and is available on GitHub.`,
   },
   {
     id: "dingmancenter",

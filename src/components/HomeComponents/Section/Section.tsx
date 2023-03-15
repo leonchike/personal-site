@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 import TileBasic from "@/components/TileBasic";
+import FeaturedContent from "@/components/HomeComponents/FeaturedContent";
 import { QUERIES } from "@/styles/styleConstants";
 import { TileWrapper } from "@/styles/reUseableStyles";
 import { useAppState } from "@/context/appContext";
@@ -39,6 +40,9 @@ const Section = ({ sectionTitle, path }: SectionProps) => {
     return null;
   }
 
+  // @ts-ignore
+  const hasFeatured = data.find((item) => item.featured === true);
+
   return (
     <Wrapper>
       <Header>
@@ -49,11 +53,16 @@ const Section = ({ sectionTitle, path }: SectionProps) => {
           More <HideMobile>{sectionTitle}</HideMobile>
         </MoreLink>
       </Header>
-      <TileWrapper role="list">
-        {data.slice(0, 4).map((item) => (
-          <TileBasic key={item.name} data={item} category={sectionTitle} />
-        ))}
-      </TileWrapper>
+      {/* If no item has a featured property of true, render a basic list of tiles */}
+      {!hasFeatured && (
+        <TileWrapper role="list">
+          {data.slice(0, 4).map((item) => (
+            <TileBasic key={item.name} data={item} category={sectionTitle} />
+          ))}
+        </TileWrapper>
+      )}
+      {/* If an item has a featured property of true, render a featured tile */}
+      {hasFeatured && <FeaturedContent data={data} category={sectionTitle} />}
     </Wrapper>
   );
 };
@@ -70,6 +79,7 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-block-end: calc(18 / 16 * 1rem);
 `;
 
 const Title = styled.h2`
