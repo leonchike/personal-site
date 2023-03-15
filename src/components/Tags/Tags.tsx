@@ -23,7 +23,7 @@ const List = styled.ul`
 
   li {
     background-color: var(--color-gray-100);
-    padding: 0.75rem 1rem;
+    padding: 0.85rem 1rem 0.75rem 1rem;
     font-weight: 550;
     font-size: calc(15 / 16 * 1rem);
     line-height: 1;
