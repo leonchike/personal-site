@@ -24,10 +24,10 @@ export interface SectionProps {
 }
 
 export interface Route {
-  id: string;
+  id?: string;
   name: string;
   path: string;
-  pageType: string;
+  pageType?: string;
   footer: boolean;
 }
 

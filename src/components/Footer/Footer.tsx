@@ -1,19 +1,32 @@
 import React from "react";
+import Link from "next/link";
 import styled from "styled-components";
 
 import { QUERIES } from "@/styles/styleConstants";
 import { PageWrapper } from "@/styles/reUseableStyles";
 import HorizontalDivider from "@/components/HorizontalDivider";
 import FooterLinks from "@/components/FooterLinks";
+import { routes } from "@/data/routes";
 
 const Footer = () => {
+  const homeRoute = routes.find((route) => route.name === "Home");
+
   return (
     <FooterWrapper>
       <PageWrapper>
         <HorizontalDivider />
         <Content>
           <LogoWrapper>
-            Chike <br /> Nwankwo
+            {!!homeRoute && (
+              <Link href={homeRoute.path}>
+                Chike <br /> Nwankwo
+              </Link>
+            )}
+            {!homeRoute && (
+              <>
+                Chike <br /> Nwankwo
+              </>
+            )}
           </LogoWrapper>
           <FooterLinks />
         </Content>

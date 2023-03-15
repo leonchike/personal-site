@@ -162,6 +162,29 @@ button {
   color: var(--color-white);
   background: var(--color-offblack); /* Gecko Browsers */
 }
+
+
+/* 
+  Class based styling for markdown content
+*/
+.markdown-two-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+
+  div {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
 `;
 
 export default GlobalStyles;

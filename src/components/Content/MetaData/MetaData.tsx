@@ -2,14 +2,11 @@ import styled from "styled-components";
 import { Item } from "@/types/global";
 
 const MetaData = ({ data }: { data: Item }) => {
-  if (data.type === "teams") {
-    return (
-      <Wrapper>
-        <Text>{data.subTitle}</Text>
-      </Wrapper>
-    );
-  }
-  if (data.type === "projects") {
+  if (
+    data.type === "teams" ||
+    data.type === "projects" ||
+    data.type === "likes"
+  ) {
     return (
       <Wrapper>
         <Text>{data.subTitle}</Text>

@@ -1,5 +1,6 @@
 .reactMarkDown {
   font-size: 1.25rem;
+  font-family: var(--MDSystem)
 }
 
 .reactMarkDown p {
@@ -12,4 +13,9 @@
 
 .reactMarkDown strong {
   font-weight: 550;
+}
+
+#special {
+  font-size: 4rem;
+  color: hotpink;
 }
