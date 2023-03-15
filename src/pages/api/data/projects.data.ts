@@ -23,8 +23,8 @@ export default [
       },
     ],
     featured: true,
-    abstract: `This website is a personal project that I started in 2021. It is a static website built with Next.js and TypeScript. It is hosted on Vercel and uses Cloudinary for image hosting. \n
-    The website is fully responsive and is built with accessibility in mind. It is also fully internationalized and supports multiple languages. The website is also fully open source and is available on GitHub.`,
+    abstract: `This website is a personal project that I started in 2022. It is a cms app built with Next.js, TypeScript and Next.js edge-functions. It is hosted on Vercel and uses Cloudinary for image hosting. \n
+    The website is fully responsive, prioritizes speed and is built with accessibility in mind. It is also fully open source and is available on GitHub.`,
   },
   {
     id: "dingmancenter",
