@@ -80,6 +80,10 @@ const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-block-end: calc(32 / 16 * 1rem);
+
+  @media ${QUERIES.tabletAndUp} {
+    margin-block-end: calc(48 / 16 * 1rem);
+  }
 `;
 
 const Title = styled.h2`
