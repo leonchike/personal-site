@@ -169,9 +169,13 @@ button {
 */
 .markdown-two-images {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 1rem;
   margin-bottom: 2rem;
+
+  @media ${QUERIES.tabletAndUp} {
+    grid-template-columns: 1fr 1fr;
+  }
 
   div {
     width: 100%;
@@ -184,7 +188,6 @@ button {
     }
   }
 }
-
 `;
 
 export default GlobalStyles;
