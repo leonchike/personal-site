@@ -5,11 +5,14 @@
 
 2. Add likes to website
    Book recomendations
-   Music
+   favorite places [powells bookstore, the breakfast place in portland, musemums etc]
    Philosophy
-   Hiking spots
+   Podcasts
+   Music
    Grillings
-   Pocasts
+   Aviation
+   Dining experiences
+   Frontend Development Resources
 
 3. If the url is not in the index of approved urls, redirect to 404 or home.
    Use the Error component on the \_app.tsx file to rendeer after checking.

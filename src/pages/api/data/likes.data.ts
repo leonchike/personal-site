@@ -17,4 +17,17 @@ export default [
     type: "likes",
     subTitle: "Published on March 15th, 2023",
   },
+  {
+    id: "books",
+    name: "books",
+    displayName: "Books",
+    displayImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678919412/likes/books/books-lg_jtvcep.jpg",
+    thumbnailImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678919412/likes/books/books-thumbnail_fifvzw.jpg",
+    file: "./likes/books.mdx",
+    path: "likes/books",
+    type: "likes",
+    subTitle: "Published on March 15th, 2023",
+  },
 ];

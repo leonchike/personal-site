@@ -50,6 +50,9 @@ a{
   color: inherit;
   text-decoration: none;
 }
+a:hover {
+  opacity: 0.8;
+}
 /* Make images easier to work with */
 img,
 picture {
@@ -167,7 +170,7 @@ button {
 /* 
   Class based styling for markdown content
 */
-.markdown-column-images {
+.markdown-column-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
@@ -180,13 +183,57 @@ button {
   div {
     width: 100%;
     height: 100%;
+    /* display: flex;
+    align-items: flex-start; */
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
     }
   }
+}
+
+.markdown-image-cover {
+  object-fit: cover;
+}
+
+.markdown-image-contain {
+  object-fit: contain;
+}
+
+.markdown-spacer {
+  height: 2.5rem;
+
+  @media ${QUERIES.tabletAndUp} {
+    height: 5rem;
+  }
+}
+
+.markdown-external-link {
+  display: inline-block;
+  background-color: var(--color-gray-100);
+  padding: 0.9rem 1.5rem 0.9rem 1.5rem;
+  font-weight: 500;
+  font-size: calc(17 / 16 * 1rem);
+  line-height: 1;
+  letter-spacing: 0.03rem;
+  
+  span {
+    &::after {
+      content: "↗";
+    display: inline-block;
+    padding-inline-start: 0.25rem;
+    transform: translate3d(0rem, -0.05rem, 0);
+    transition: transform 300ms ease;
+    }
+
+    &:hover::after {
+    transform: translate3d(0.2rem, -0.25rem, 0);
+    transition: transform 300ms ease;
+  }
+  }
+
+  
 }
 `;
 
