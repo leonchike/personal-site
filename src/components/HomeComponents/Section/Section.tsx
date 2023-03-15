@@ -68,7 +68,7 @@ const Section = ({ sectionTitle, path }: SectionProps) => {
 };
 
 const Wrapper = styled.section`
-  margin-block-end: 4rem;
+  margin-block-end: 6rem;
 
   &:last-child {
     margin-block-end: 0;
@@ -79,7 +79,7 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-block-end: calc(18 / 16 * 1rem);
+  margin-block-end: calc(32 / 16 * 1rem);
 `;
 
 const Title = styled.h2`

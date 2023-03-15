@@ -58,7 +58,7 @@ export default {
   sections: {
     teams: {
       live: true,
-      subTitle: "Places I've had the pleasure to work and led.",
+      subTitle: "Places I've had the pleasure to work and lead.",
     },
     projects: {
       live: true,

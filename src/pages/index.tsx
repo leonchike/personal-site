@@ -19,7 +19,7 @@ export default function Home() {
       <ErrorBoundary>
         <PageWrapper>
           <HomeHeader />
-          <Spacer height="4rem" />
+          <Spacer height="5rem" />
           <Section sectionTitle="teams" path="/teams" />
           <Section sectionTitle="projects" path="/projects" />
           <Section sectionTitle="likes" path="/likes" />

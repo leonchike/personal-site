@@ -45,7 +45,7 @@ const ImageWrapper = styled.div`
 `;
 
 const Label = styled.h3`
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 550;
   padding-block-start: 1rem;
 
