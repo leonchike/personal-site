@@ -39,15 +39,13 @@ const Wrapper = styled.div`
     "featured"
     "list";
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  row-gap: 2rem;
+  row-gap: 3rem;
   column-gap: 2rem;
   margin: 1rem 0;
 
   @media ${QUERIES.tabletAndUp} {
     grid-template-areas: "featured list";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
     column-gap: 3.5rem;
     row-gap: 4rem;
   }
