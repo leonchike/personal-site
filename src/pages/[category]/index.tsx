@@ -15,7 +15,7 @@ import { useAppState } from "@/context/appContext";
 import { capitalizeFirstLetter } from "@/utils/helpers";
 
 // Types
-import { BreadCrumb, AppState } from "@/types/global";
+import { BreadCrumb, AppState, SectionProps } from "@/types/global";
 
 const Index = () => {
   const router = useRouter();
@@ -40,6 +40,13 @@ const Index = () => {
     { name: category, path: `/${category}` },
   ];
 
+  let subTitle;
+  if (typeof category === "string") {
+    // TODO: fix this by defining the parameters for category
+    // @ts-ignore
+    subTitle = state.appData.sections[category].subTitle;
+  }
+
   return (
     <>
       <Head>
@@ -49,6 +56,7 @@ const Index = () => {
         <HeaderWrapper>
           <Breadcrumbs breadcrumbs={breadcrumbs} />
           <HeaderText>{category}</HeaderText>
+          {!!subTitle && <SubText>{subTitle}</SubText>}
         </HeaderWrapper>
         <TileContainer data={array} category={category} />
       </PageWrapper>
@@ -61,12 +69,23 @@ const HeaderText = styled.h1`
   font-weight: 800;
   text-transform: capitalize;
   margin-block-start: 0.85rem;
-  margin-block-end: 4rem;
+  margin-block-end: 0rem;
 
   @media ${QUERIES.tabletAndUp} {
     font-size: 5rem;
     margin-block-start: 2.3rem;
-    margin-block-end: 4rem;
+    margin-block-end: 0rem;
+  }
+`;
+
+const SubText = styled.p`
+  font-size: 1rem;
+  margin-block-end: 2rem;
+  color: var(--color-gray-900);
+
+  @media ${QUERIES.tabletAndUp} {
+    font-size: 1.4rem;
+    margin-block-end: 5rem;
   }
 `;
 

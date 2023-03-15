@@ -49,6 +49,13 @@ interface SocialLink {
   path: string;
 }
 
+interface SectionsInMainData {
+  [key: string]: {
+    live: boolean;
+    subTitle?: string;
+  };
+}
+
 export interface MainData {
   routes: Route[];
   socialLinks: SocialLink[];
@@ -56,14 +63,7 @@ export interface MainData {
     name: string;
     tags: string[];
   };
-  sections: {
-    teams: {
-      live: boolean;
-    };
-    projects: {
-      live: boolean;
-    };
-  };
+  sections: SectionsInMainData[];
 }
 
 export interface AppState {
