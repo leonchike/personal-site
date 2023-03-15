@@ -17,6 +17,11 @@ const Paragraph = styled.p`
 
   a {
     color: var(--color-offblack);
+    text-decoration: underline;
+
+    &:hover {
+      opacity: 0.8;
+    }
 
     &:visited {
       color: var(--color-offblack);

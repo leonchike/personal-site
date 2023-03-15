@@ -1,8 +1,6 @@
 # To Do
 
 1. Add Projects to website
-   Startup Shell
-   New Market Venture Partners
    Risk Analysis Algorithm
 
 2. Add likes to website

@@ -15,7 +15,7 @@ export default [
     file: "./teams/rebuildee.mdx",
     path: "teams/rebuildee",
     type: "teams",
-    subTitle: "Engineering Manager, 2021 - 2023",
+    subTitle: "Engineering Manager, 2021 - Present",
     externalLinks: [
       {
         name: "Rebuildee.com",
@@ -201,6 +201,25 @@ export default [
     type: "teams",
     subTitle: "Founder, Design and Engineering, 2014 - 2015",
     externalLinks: [],
+  },
+  {
+    id: "newmarkets",
+    name: "newmarkets",
+    displayName: "New Markets Venture Partners",
+    displayImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678834449/projects-images/newmarkets-lg_d7zas8.png",
+    thumbnailImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678834449/projects-images/newmarkets-lg_d7zas8.png",
+    file: "./teams/newmarkets.mdx",
+    path: "teams/newmarkets",
+    type: "teams",
+    subTitle: "Venture Fellow, 2013-2014",
+    externalLinks: [
+      {
+        name: "New Markets Venture Partners",
+        url: "https://newmarketsvp.com",
+      },
+    ],
   },
   {
     id: "apple",
