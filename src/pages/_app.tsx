@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import GlobalStyles from "@/styles/GlobalStyles";
 import MDXComponentStyles from "@/styles/MDXComponentStyles";
 import { AppProvider } from "@/context/appContext";
+import GoogleAnalytics from "@/utils/analytics";
 
 const MDSystem = localFont({
   src: "../styles/fonts/MDSystem-VF.woff2",
@@ -25,6 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyles />
+      <GoogleAnalytics />
       <AppProvider>
         <Main className={MDSystem.variable}>
           <MDXProvider components={MDXComponentStyles}>

@@ -10,9 +10,9 @@ const ExternalLinks = ({ links }: { links: Item["externalLinks"] }) => {
     <Wrapper role="list">
       {links.map((link, index) => (
         <li key={index}>
-          <a href={link.url} target="_blank">
+          <StyledLink href={link.url} target="_blank">
             <LinkText>{link.name}</LinkText>
-          </a>
+          </StyledLink>
         </li>
       ))}
     </Wrapper>
@@ -25,15 +25,15 @@ const Wrapper = styled.ul`
   flex-wrap: wrap;
   gap: 0.75rem;
   border-radius: 4px;
+`;
 
-  li {
-    background-color: var(--color-gray-100);
-    padding: 1.4rem 2rem 1.3rem 2rem;
-    font-weight: 500;
-    font-size: calc(17 / 16 * 1rem);
-    line-height: 1;
-    letter-spacing: 0.03rem;
-  }
+const StyledLink = styled.a`
+  background-color: var(--color-gray-100);
+  padding: 1.15rem 1.6rem 1rem 1.6rem;
+  font-weight: 500;
+  font-size: calc(17 / 16 * 1rem);
+  line-height: 1;
+  letter-spacing: 0.03rem;
 `;
 
 const LinkText = styled.span`
