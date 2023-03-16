@@ -30,4 +30,17 @@ export default [
     type: "likes",
     subTitle: "Published on March 15th, 2023",
   },
+  {
+    id: "places",
+    name: "places",
+    displayName: "Places",
+    displayImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1679003505/likes/places/places-lg_echhuv.jpg",
+    thumbnailImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1679003505/likes/places/places-thumbnail_uvtuci.jpg",
+    file: "./likes/places.mdx",
+    path: "likes/places",
+    type: "likes",
+    subTitle: "Published on March 15th, 2023",
+  },
 ];
