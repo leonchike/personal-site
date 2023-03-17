@@ -174,7 +174,6 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
-  margin-bottom: 2rem;
 
   @media ${QUERIES.tabletAndUp} {
     grid-template-columns: 1fr 1fr;
@@ -209,6 +208,14 @@ button {
   }
 }
 
+.markdown-spacer-small{
+  height: 1rem;
+
+  @media ${QUERIES.tabletAndUp} {
+    height: 2rem;
+  }
+}
+
 .markdown-external-link {
   display: inline-block;
   background-color: var(--color-gray-100);
@@ -232,8 +239,12 @@ button {
     transition: transform 300ms ease;
   }
   }
+}
 
-  
+.markdown-footnote {
+  display: inline-block;
+  color: var(--color-gray-700);
+  font-size: calc(15 / 16 * 1rem);
 }
 `;
 
