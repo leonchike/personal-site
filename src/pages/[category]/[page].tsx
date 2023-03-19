@@ -7,7 +7,6 @@ import DefaultPage from "@/components/layouts/DefaultPage";
 import { PageWrapper, HeaderWrapper } from "@/styles/reUseableStyles";
 import { QUERIES } from "@/styles/styleConstants";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import Spacer from "@/components/Spacer";
 import BlogContent from "@/components/Content/BlogContent";
 import MoreContent from "@/components/Content/MoreContent";
 import Head from "next/head";

@@ -7,7 +7,7 @@ import Section from "@/components/HomeComponents/Section";
 import Spacer from "@/components/Spacer";
 import ErrorBoundary from "@/components/ErrorBoundary";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -27,6 +27,8 @@ export default function Home() {
       </ErrorBoundary>
     </>
   );
-}
+};
 
 Home.getLayout = (page: React.ReactNode) => <DefaultPage>{page}</DefaultPage>;
+
+export default Home;

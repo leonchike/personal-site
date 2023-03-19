@@ -1,16 +1,11 @@
 # To Do
 
-1. Add Projects to website
-   Risk Analysis Algorithm
+1. Add transitions to hover states
 
 2. Add likes to website
-   favorite places [powells bookstore, the breakfast place in portland, musemums etc]
    Philosophy
    Podcasts
    Music
-   Grillings
-   Aviation
-   Dining experiences
    Frontend Development Resources
 
 3. If the url is not in the index of approved urls, redirect to 404 or home.

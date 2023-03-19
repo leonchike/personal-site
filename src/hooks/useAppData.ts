@@ -4,6 +4,7 @@ import API_Routes from "@/utils/APIRoutes";
 
 const GetAppData = async (url: string) => {
   const { data } = await axios.get(url);
+
   return data;
 };
 
