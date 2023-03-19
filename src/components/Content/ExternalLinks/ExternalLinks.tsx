@@ -9,17 +9,15 @@ const ExternalLinks = ({ links }: { links: Item["externalLinks"] }) => {
   return (
     <Wrapper role="list">
       {links.map((link, index) => (
-        <li key={index}>
-          <StyledLink href={link.url} target="_blank">
-            <LinkText>{link.name}</LinkText>
-          </StyledLink>
-        </li>
+        <StyledLink href={link.url} target="_blank" key={index}>
+          <LinkText>{link.name}</LinkText>
+        </StyledLink>
       ))}
     </Wrapper>
   );
 };
 
-const Wrapper = styled.ul`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
