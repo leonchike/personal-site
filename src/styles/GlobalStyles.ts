@@ -106,24 +106,13 @@ html {
   --color-green: ${COLORS.green};
   --color-orange: ${COLORS.orange};
   --color-urgent: ${COLORS.urgent};
-  --color-backdrop: ${COLORS.backdrop};
-  --color-form-input: ${COLORS.formInput};
-  --color-sidebar: ${COLORS.adminSidebar}
   --font-weight-light: ${WEIGHTS.light};
   --font-weight-normal: ${WEIGHTS.normal};
   --font-weight-bold: ${WEIGHTS.bold};
   --font-weight-heavy: ${WEIGHTS.heavy};
   --font-family-serif: ${FAMILIES.serif};
-  --font-family-sans-serif: ${FAMILIES.sansSerif};
-  --large-body-padding: 2rem;
-  --small-body-padding: 1rem;
-  --masonry-spacing: calc(20 / 16 * 1rem);
-  --border-radius: 2px;
-  --form-padding: 10px;
-  --box-shadow:  0px 0px 0.4px rgba(0, 0, 0, 0.013),
-    0px 0px 1px rgba(0, 0, 0, 0.017), 0px 0px 1.9px rgba(0, 0, 0, 0.014),
-    0px 0px 3.4px rgba(0, 0, 0, 0.008), 0px 0px 6.3px rgba(0, 0, 0, 0.012),
-    0px 0px 15px rgba(0, 0, 0, 0.08);
+  --blog-width: 48rem;
+
   font-size: 14px;
   @media ${QUERIES.tabletAndUp} {
     font-size: 16px;
@@ -173,7 +162,7 @@ button {
 .markdown-column-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
 
   @media ${QUERIES.tabletAndUp} {
     grid-template-columns: 1fr 1fr;

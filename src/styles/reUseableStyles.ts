@@ -41,7 +41,7 @@ export const TileWrapper = styled.ul`
 `;
 
 export const HeaderWrapper = styled.header`
-  max-width: 48rem;
+  max-width: var(--blog-width);
   padding-block-start: 6rem;
 
   @media ${QUERIES.tabletAndUp} {
