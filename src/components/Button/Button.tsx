@@ -26,7 +26,7 @@ const StyledButton = styled.button`
 const Span = styled.span`
   position: relative;
   font-weight: 500;
-  color: var(--color-gray-700);
+  color: var(--color-offblack);
   font-size: 1.25rem;
 
   @media ${QUERIES.tabletAndUp} {
