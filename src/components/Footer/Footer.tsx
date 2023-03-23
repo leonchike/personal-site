@@ -8,8 +8,17 @@ import HorizontalDivider from "@/components/HorizontalDivider";
 import FooterLinks from "@/components/FooterLinks";
 import { routes } from "@/data/routes";
 
+import { useAppState } from "@/context/appContext";
+import { AppState } from "@/types/global";
+
 const Footer = () => {
+  //@ts-ignore
+  const state: AppState = useAppState();
+
   const homeRoute = routes.find((route) => route.name === "Home");
+
+  //@ts-ignore
+  if (!state || !state?.appData) return null;
 
   return (
     <FooterWrapper>
