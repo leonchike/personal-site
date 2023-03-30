@@ -23,7 +23,7 @@ export default [
       },
     ],
     featured: true,
-    abstract: `This website is a personal project that I started in 2022. It is a cms app built with Next.js, TypeScript, and Next.js edge-functions. The site is hosted on Vercel and utilizes Cloudinary to serve image data. \n
+    abstract: `This website is a personal project that I started in 2022. It is a cms app built with Next.js, TypeScript, and Next.js edge-functions. The site is hosted on Vercel and utilizes Cloudinary to serve assets. \n
     The website is fully responsive, prioritizes speed and is built with accessibility in mind. It is also fully open source and is available on GitHub.`,
   },
   {
