@@ -7,7 +7,7 @@ const DownloadButton = ({ children, ...props }) => {
     <Button {...props}>
       {children}{" "}
       <IconWrapper>
-        <Icon id="arrowDown" size="20px" strokeWidth="2px" />
+        <Icon id="arrowDown" size="1.2rem" strokeWidth="2px" />
       </IconWrapper>
     </Button>
   );
@@ -29,7 +29,7 @@ const Button = styled.button`
 `;
 
 const IconWrapper = styled.div`
-  transform: translateY(2px);
+  transform: translateY(calc(2 / 16 * 1rem));
 `;
 
 export default DownloadButton;
