@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { ArrowRight } from "react-feather";
+import { ArrowDown, ArrowRight } from "react-feather";
 
 const icons = {
+  arrowDown: ArrowDown,
   arrowRight: ArrowRight,
 };
 

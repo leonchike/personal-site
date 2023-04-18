@@ -69,4 +69,8 @@ export default {
       subTitle: "Places and things that have brought me joy.",
     },
   },
+  resume: {
+    url: "https://s3.amazonaws.com/leonchike.me/Leon-Chike-Nwankwo-Resume.pdf",
+    live: true,
+  },
 };

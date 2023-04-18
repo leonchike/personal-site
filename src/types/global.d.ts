@@ -46,6 +46,7 @@ export interface APIRoutes {
   teams: string;
   projects: string;
   likes: string;
+  resume: string;
   getRoute(route: string): string;
 }
 

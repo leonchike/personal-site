@@ -6,6 +6,7 @@ import { useAppState } from "@/context/appContext";
 // Components
 import Tags from "@/components/Tags";
 import Spacer from "@/components/Spacer";
+import DownloadResume from "@/components/DownloadResume";
 
 // Data
 import * as About from "@/data/about/about.mdx";
@@ -40,6 +41,8 @@ const HomeHeader = () => {
       </div>
       <Spacer height="1.5rem" />
       <Tags tags={tags} />
+      <Spacer height="1.5rem" />
+      <DownloadResume />
     </Wrapper>
   );
 };
