@@ -17,8 +17,8 @@ const Button = styled.button`
   display: flex;
   border: #222 2px solid;
   border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
-  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  gap: 0.3rem;
 
   transition: all 0.5s ease;
 
@@ -29,7 +29,7 @@ const Button = styled.button`
 `;
 
 const IconWrapper = styled.div`
-  transform: translateY(calc(2 / 16 * 1rem));
+  transform: translateY(calc(2.5 / 16 * 1rem));
 `;
 
 export default DownloadButton;

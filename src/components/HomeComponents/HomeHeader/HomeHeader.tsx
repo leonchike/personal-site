@@ -26,10 +26,6 @@ const HomeHeader = () => {
   // @ts-ignore
   const tags = state?.appData?.about?.tags;
 
-  if (!tags) {
-    return null;
-  }
-
   return (
     <Wrapper>
       <Name>
@@ -40,8 +36,8 @@ const HomeHeader = () => {
         <MDXComponent File={About.default} />
       </div>
       <Spacer height="1.5rem" />
-      <Tags tags={tags} />
-      <Spacer height="1.5rem" />
+      {!!tags && <Tags tags={tags} />}
+      <Spacer height="3rem" />
       <DownloadResume />
     </Wrapper>
   );
