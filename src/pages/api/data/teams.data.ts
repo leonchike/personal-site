@@ -15,7 +15,7 @@ export default [
     file: "./teams/rebuildee.mdx",
     path: "teams/rebuildee",
     type: "teams",
-    subTitle: "Engineering Manager, 2021 - Present",
+    subTitle: "Engineering Manager, 2022 - Present",
     externalLinks: [
       {
         name: "Rebuildee.com",
@@ -38,7 +38,7 @@ export default [
     file: "./projects/camst.mdx",
     path: "projects/camst",
     type: "projects",
-    subTitle: "Supply Chain Researcher, 2022",
+    subTitle: "MBA Consultant, Global Business Development, 2022",
     externalLinks: [
       {
         name: "Camst Canteen",
@@ -149,7 +149,7 @@ export default [
     file: "./teams/kivvik.mdx",
     path: "teams/kivvik",
     type: "teams",
-    subTitle: "Co-Founder, Product and Marketing, 2013 - 2016",
+    subTitle: "Cofounder, Chief Operations Officer, 2013 - 2015",
     externalLinks: [
       {
         name: "Investment News",
@@ -176,7 +176,7 @@ export default [
     file: "./teams/capitalone.mdx",
     path: "teams/capitalone",
     type: "teams",
-    subTitle: "Product Manager, 2016",
+    subTitle: "Contractor - Product Manager, 2016",
     externalLinks: [
       {
         name: "Capital One Cafes",
@@ -199,7 +199,7 @@ export default [
     file: "./teams/agiledivision.mdx",
     path: "teams/agiledivision",
     type: "teams",
-    subTitle: "Founder, Design and Engineering, 2014 - 2015",
+    subTitle: "Founder, Design and Engineering, 2015 - 2016",
     externalLinks: [],
   },
   {
