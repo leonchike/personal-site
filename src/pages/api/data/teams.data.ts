@@ -99,7 +99,7 @@ export default [
     externalLinks: [
       {
         name: "Wangari-Mathenge.com",
-        url: "https://wangari-mathenge.com/",
+        url: "https://www.wangarimathenge-studio.com/",
       },
       {
         name: "Robert's Projects LA",
