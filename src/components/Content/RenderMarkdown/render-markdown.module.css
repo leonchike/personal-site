@@ -1,6 +1,8 @@
 .reactMarkDown {
   font-size: 1.25rem;
-  font-family: var(--MDSystem)
+  /* font-family: var(--MDSystem); */
+  line-height: 2.5rem;
+
 }
 
 .reactMarkDown p {

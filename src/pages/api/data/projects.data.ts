@@ -27,6 +27,27 @@ export default [
     The website is fully responsive, prioritizes speed and is built with accessibility in mind. It is also fully open source and is available on GitHub.`,
   },
   {
+    id: "bellavent",
+    name: "bellavent",
+    displayName: "Bellavent",
+    displayImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678400935/bellavent-lg_putpri.jpg",
+    thumbnailImage:
+      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678400935/bellavent-thumbnail_w8ie8y.jpg",
+    file: "./projects/bellavent.mdx",
+    path: "projects/bellavent",
+    type: "projects",
+    subTitle: "Published on August 11th, 2023",
+    externalLinks: [
+      {
+        name: "Instagram",
+        url: "https://www.instagram.com/bellavent_ig/",
+      },
+    ],
+    featured: false,
+    abstract: ``,
+  },
+  {
     id: "dingmancenter",
     name: "dingmancenter",
     displayName: "Dingman Center",

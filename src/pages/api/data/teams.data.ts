@@ -15,7 +15,7 @@ export default [
     file: "./teams/rebuildee.mdx",
     path: "teams/rebuildee",
     type: "teams",
-    subTitle: "Engineering Manager, 2022 - Present",
+    subTitle: "Engineering and Product Manager, 2022 - Present",
     externalLinks: [
       {
         name: "Rebuildee.com",
@@ -66,25 +66,6 @@ export default [
     ],
   },
   {
-    id: "bellavent",
-    name: "bellavent",
-    displayName: "Bellavent",
-    displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678400935/bellavent-lg_putpri.jpg",
-    thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678400935/bellavent-thumbnail_w8ie8y.jpg",
-    file: "./teams/bellavent.mdx",
-    path: "teams/bellavent",
-    type: "teams",
-    subTitle: "Co-Founder, Design and Technology, 2021 - 2022",
-    externalLinks: [
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/bellavent_ig/",
-      },
-    ],
-  },
-  {
     id: "wangarimathenge",
     name: "wangarimathenge",
     displayName: "Wangari Mathenge Studios",
@@ -95,7 +76,7 @@ export default [
     file: "./teams/wangarimathenge.mdx",
     path: "teams/wangarimathenge",
     type: "teams",
-    subTitle: "Web Engineering, 2022 - 2023",
+    subTitle: "Head of Engineering, 2022 - 2023",
     externalLinks: [
       {
         name: "Wangari-Mathenge.com",
@@ -176,7 +157,7 @@ export default [
     file: "./teams/capitalone.mdx",
     path: "teams/capitalone",
     type: "teams",
-    subTitle: "Contractor - Product Manager, 2016",
+    subTitle: "Product Manager, 2015 - 2016",
     externalLinks: [
       {
         name: "Capital One Cafes",
@@ -232,7 +213,7 @@ export default [
     file: "./teams/apple.mdx",
     path: "teams/apple",
     type: "teams",
-    subTitle: "Specialist, Small Business Team, 2011-2012",
+    subTitle: "Intern, Small Business Team, 2012",
     externalLinks: [
       {
         name: "Apple Small Business",
@@ -255,7 +236,7 @@ export default [
     file: "./teams/ge.mdx",
     path: "teams/ge",
     type: "teams",
-    subTitle: "Financial Analyst Intern, 2012",
+    subTitle: "Intern - Financial Analyst, 2012",
     externalLinks: [
       {
         name: "GE.com",
