@@ -8,10 +8,9 @@ export default [
     id: "rebuildee",
     name: "rebuildee",
     displayName: "Rebuildee",
-    displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678308490/rebuildee-lg_ogn4rg.jpg",
-    thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678308490/rebuildee-thumbnail_cj8x3c.jpg",
+    displayImage: "https://sample-videos.com/img/Sample-jpg-image-30mb.jpg",
+    thumbnailImage: "https://sample-videos.com/img/Sample-jpg-image-30mb.jpg",
+    blurDataURL: "LIC?fi~U%1xuS*WAogbI00Mxt6WB",
     file: "./teams/rebuildee.mdx",
     path: "teams/rebuildee",
     type: "teams",

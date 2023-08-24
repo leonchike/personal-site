@@ -15,6 +15,8 @@ interface StateData {
 }
 
 const BlogContent = ({ data }: { data: StateData }) => {
+  console.log(data);
+
   return (
     <Wrapper>
       <HeroImage displayImage={data.data[0].displayImage} />
