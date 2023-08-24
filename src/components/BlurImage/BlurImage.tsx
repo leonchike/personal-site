@@ -38,12 +38,20 @@ const BlurImage = ({
   }, [displayImage]);
 
   return (
-    <Image
-      src={loaded ? displayImage : lowQualityImage}
-      alt={alt ? `${alt}` : "image"}
-      fill
-      className={loaded ? styles.highQualityImage : styles.lowQualityImage}
-    />
+    <div className={styles.imageContainer}>
+      <Image
+        src={lowQualityImage || displayImage}
+        alt={alt || "image"}
+        fill
+        className={styles.lowQualityImage}
+      />
+      <Image
+        src={displayImage}
+        alt={alt || "image"}
+        fill
+        className={`${styles.highQualityImage} ${loaded ? styles.visible : ""}`}
+      />
+    </div>
   );
 };
 
