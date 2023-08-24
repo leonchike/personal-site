@@ -8,7 +8,6 @@ import { Item } from "@/types/global";
 import { QUERIES } from "@/styles/styleConstants";
 
 const SectionTile = ({ data, category }: { data: Item; category: string }) => {
-  console.log(data);
   return (
     <Wrapper>
       <Link href={`/${category}/${data.id}`}>

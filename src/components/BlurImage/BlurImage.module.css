@@ -1,0 +1,9 @@
+.lowQualityImage {
+  filter: blur(20px);
+  transition: filter 250ms ease-out;
+}
+
+.highQualityImage {
+  filter: none;
+  transition: filter 250ms ease-out;
+}

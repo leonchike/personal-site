@@ -6,6 +6,7 @@ export interface Item {
   displayName: string;
   displayImage: string;
   thumbnailImage: string;
+  alt: string;
   file: string;
   path: string;
   type: PageTypes;

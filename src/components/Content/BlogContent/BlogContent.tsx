@@ -15,11 +15,13 @@ interface StateData {
 }
 
 const BlogContent = ({ data }: { data: StateData }) => {
-  console.log(data);
-
   return (
     <Wrapper>
-      <HeroImage displayImage={data.data[0].displayImage} />
+      <HeroImage
+        displayImage={data.data[0].displayImage}
+        lowQualityImage={data.data[0].thumbnailImage}
+        alt={data.data[0].alt}
+      />
       <Spacer height="3rem" />
       <MetaData data={data.data[0]} />
       <Spacer height="3rem" />

@@ -9,9 +9,10 @@ export default [
     name: "personalsite",
     displayName: "leonchike.me",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678894204/projects-images/personalsite-lg-03_ibbxqo.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/6a953c99-c914-4ca8-5c70-37f1f160c700/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678894242/projects-images/personalsite-thumbnail-04_xbnmmv.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/6a953c99-c914-4ca8-5c70-37f1f160c700/thumbnails",
+    alt: "leonchike.me Company Image",
     file: "./projects/personalsite.mdx",
     path: "projects/personalsite",
     type: "projects",
@@ -31,9 +32,10 @@ export default [
     name: "bellavent",
     displayName: "Bellavent",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678400935/bellavent-lg_putpri.jpg",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/c4730e43-e6d1-48da-ca98-057ba4549b00/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678400935/bellavent-thumbnail_w8ie8y.jpg",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/c4730e43-e6d1-48da-ca98-057ba4549b00/thumbnails",
+    alt: "Bellavent Company Image",
     file: "./projects/bellavent.mdx",
     path: "projects/bellavent",
     type: "projects",
@@ -52,9 +54,10 @@ export default [
     name: "dingmancenter",
     displayName: "Dingman Center",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678827977/projects-images/dingmancenter-lg_itq6ur.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/5959a413-b951-4ec7-39b6-03b1ba059400/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678827977/projects-images/dingmancenter-lg_itq6ur.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/5959a413-b951-4ec7-39b6-03b1ba059400/thumbnails",
+    alt: "Dingman Center Company Image",
     file: "./projects/dingmancenter.mdx",
     path: "projects/dingmancenter",
     type: "projects",
@@ -71,9 +74,10 @@ export default [
     name: "startupshell",
     displayName: "Startup Shell",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678829725/projects-images/startupshell-lg_flqpwj.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/d95b3d06-9499-4dbf-9c6e-2afb474fc000/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678829725/projects-images/startupshell-lg_flqpwj.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/d95b3d06-9499-4dbf-9c6e-2afb474fc000/thumbnails",
+    alt: "Startup Shell Company Image",
     file: "./projects/startupshell.mdx",
     path: "projects/startupshell",
     type: "projects",
@@ -90,9 +94,10 @@ export default [
     name: "projectfly",
     displayName: "projectFly",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678578064/projects-images/projectFly02_Radar_xbowmc.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/95c2f8e6-02f4-4620-a514-03ae0351ea00/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678578163/projects-images/projectFly-thumbnail_lkyx6i.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/95c2f8e6-02f4-4620-a514-03ae0351ea00/thumbnails",
+    alt: "projectFly Company Image",
     file: "./projects/projectfly.mdx",
     path: "projects/projectfly",
     type: "projects",
@@ -109,9 +114,10 @@ export default [
     name: "nwankwocooks",
     displayName: "Recipes app",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678823251/projects-images/nwankwocooks-lg_tllwzj.jpg",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/90d29a0a-408b-4084-6125-ab3001b5fb00/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678823252/projects-images/nwankwocooks-thumbnail_lhnp4a.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/90d29a0a-408b-4084-6125-ab3001b5fb00/thumbnails",
+    alt: "Recipes app Company Image",
     file: "./projects/nwankwocooks.mdx",
     path: "projects/nwankwocooks",
     type: "projects",
@@ -123,9 +129,10 @@ export default [
     name: "primetimetraining",
     displayName: "Prime Time Training",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678824060/projects-images/primetimetraining-lg_i8ebac.jpg",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/c09e203b-0dfd-4771-2f8a-bb1a0d948700/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678824060/projects-images/primetimetraining-lg_i8ebac.jpg",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/c09e203b-0dfd-4771-2f8a-bb1a0d948700/thumbnails",
+    alt: "Prime Time Training Company Image",
     file: "./projects/primetimetraining.mdx",
     path: "projects/primetimetraining",
     type: "projects",

@@ -8,9 +8,11 @@ export default [
     id: "rebuildee",
     name: "rebuildee",
     displayName: "Rebuildee",
-    displayImage: "https://sample-videos.com/img/Sample-jpg-image-30mb.jpg",
-    thumbnailImage: "https://sample-videos.com/img/Sample-jpg-image-30mb.jpg",
-    blurDataURL: "LIC?fi~U%1xuS*WAogbI00Mxt6WB",
+    displayImage:
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/bb76d127-6159-460a-9ae7-641870b7e700/original",
+    thumbnailImage:
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/bb76d127-6159-460a-9ae7-641870b7e700/thumbnails",
+    alt: "Rebuildee Company Image",
     file: "./teams/rebuildee.mdx",
     path: "teams/rebuildee",
     type: "teams",
@@ -31,9 +33,10 @@ export default [
     name: "camst",
     displayName: "Camst",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678826851/camst-lg_a41vhs.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/c216e4d0-0268-4fe9-d53e-8dcb04618900/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678826851/camst-lg_a41vhs.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/c216e4d0-0268-4fe9-d53e-8dcb04618900/thumbnails",
+    alt: "Camst Company Image",
     file: "./projects/camst.mdx",
     path: "projects/camst",
     type: "projects",
@@ -50,9 +53,10 @@ export default [
     name: "deloitte",
     displayName: "Deloitte and Touche",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678396551/Deloitte_tdunan.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/80515b02-c09a-445e-2e18-770bc8573e00/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678396551/Deloitte_tdunan.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/80515b02-c09a-445e-2e18-770bc8573e00/thumbnails",
+    alt: "Deloitte Company Image",
     file: "./teams/deloitte.mdx",
     path: "teams/deloitte",
     type: "teams",
@@ -69,9 +73,10 @@ export default [
     name: "wangarimathenge",
     displayName: "Wangari Mathenge Studios",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678401779/WangariMathenge-lg_lcxzgj.jpg",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/2ca750c3-2fa6-44cc-bab7-f6b168c70100/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678401779/WangariMathenge-thumbnail_jginrv.jpg",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/2ca750c3-2fa6-44cc-bab7-f6b168c70100/thumbnails",
+    alt: "Wangari Mathenge Studios Company Image",
     file: "./teams/wangarimathenge.mdx",
     path: "teams/wangarimathenge",
     type: "teams",
@@ -100,9 +105,10 @@ export default [
     name: "deloittedigital",
     displayName: "Deloitte Digital",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678402377/DeloitteDigital-lg_h52em6.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/89915499-908f-459a-0345-055a589ab800/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678402377/DeloitteDigital-thumbnail_gfmnzd.jpg",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/89915499-908f-459a-0345-055a589ab800/thumbnails",
+    alt: "Deloitte Digital Company Image",
     file: "./teams/deloittedigital.mdx",
     path: "teams/deloittedigital",
     type: "teams",
@@ -123,9 +129,10 @@ export default [
     name: "kivvik",
     displayName: "Kivvik",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403334/Kivvik-lg_xizwxb.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/978e8970-ed09-4e8d-ceb3-58cd9a263400/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403334/Kivvik-lg_xizwxb.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/978e8970-ed09-4e8d-ceb3-58cd9a263400/thumbnails",
+    alt: "Kivvik Company Image",
     file: "./teams/kivvik.mdx",
     path: "teams/kivvik",
     type: "teams",
@@ -150,9 +157,10 @@ export default [
     name: "capitalone",
     displayName: "Capital One Innovation Labs",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403490/CapitalOne-lg_hfgaxr.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/be2f22b6-9622-4c8f-fbba-850c501e3400/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403490/CapitalOne-lg_hfgaxr.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/be2f22b6-9622-4c8f-fbba-850c501e3400/thumbnails",
+    alt: "Capital One Company Image",
     file: "./teams/capitalone.mdx",
     path: "teams/capitalone",
     type: "teams",
@@ -173,9 +181,10 @@ export default [
     name: "agiledivision",
     displayName: "Agile Division",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678825929/agiledivision-lg_dbkoxj.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/c65124d8-30ca-4217-943b-47fc1a612b00/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678825929/agiledivision-lg_dbkoxj.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/c65124d8-30ca-4217-943b-47fc1a612b00/thumbnails",
+    alt: "Agile Division Company Image",
     file: "./teams/agiledivision.mdx",
     path: "teams/agiledivision",
     type: "teams",
@@ -187,9 +196,10 @@ export default [
     name: "newmarkets",
     displayName: "New Markets Venture Partners",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678834449/projects-images/newmarkets-lg_d7zas8.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/780f2299-dc79-40eb-4d1d-8661c264d800/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678834449/projects-images/newmarkets-lg_d7zas8.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/780f2299-dc79-40eb-4d1d-8661c264d800/thumbnails",
+    alt: "New Markets Company Image",
     file: "./teams/newmarkets.mdx",
     path: "teams/newmarkets",
     type: "teams",
@@ -206,9 +216,10 @@ export default [
     name: "apple",
     displayName: "Apple",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403742/Apple-lg_lwkkea.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/ddf9b51b-a65a-410e-b55c-6db8bcc0f600/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678403742/Apple-lg_lwkkea.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/ddf9b51b-a65a-410e-b55c-6db8bcc0f600/thumbnails",
+    alt: "Apple Company Image",
     file: "./teams/apple.mdx",
     path: "teams/apple",
     type: "teams",
@@ -229,9 +240,10 @@ export default [
     name: "ge",
     displayName: "GE",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678404150/GE-lg_ouhjzu.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/4bc05729-6d4c-43a8-2967-c7997eee6400/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678404150/GE-lg_ouhjzu.png",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/4bc05729-6d4c-43a8-2967-c7997eee6400/thumbnails",
+    alt: "GE Company Image",
     file: "./teams/ge.mdx",
     path: "teams/ge",
     type: "teams",

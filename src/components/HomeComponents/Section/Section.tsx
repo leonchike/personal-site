@@ -21,24 +21,13 @@ const Section = ({ sectionTitle, path }: SectionProps) => {
     return null;
   }
 
-  const data: Item[] | null = state[sectionTitle];
-
-  if (typeof data === null) {
-    return null;
-  }
-
-  if (data === undefined) return null;
+  const data = state[sectionTitle] as Item[];
+  if (!data || !Array.isArray(data) || data.length === 0) return null;
 
   // Check if section is live
   // @ts-ignore
-  if (state.appData === null || state.appData === undefined) {
-    return null;
-  }
-  // @ts-ignore
-  const liveStatus = state?.appData.sections[sectionTitle].live;
-  if (liveStatus === false) {
-    return null;
-  }
+  const liveStatus = state?.appData?.sections[sectionTitle]?.live;
+  if (liveStatus === false) return null;
 
   // @ts-ignore
   const hasFeatured = data.find((item) => item.featured === true);

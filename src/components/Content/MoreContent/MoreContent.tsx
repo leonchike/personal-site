@@ -11,8 +11,8 @@ import { QUERIES } from "@/styles/styleConstants";
 import { AppState, Item } from "@/types/global";
 
 interface Props {
-  category: string;
-  page: string;
+  category: string | string[] | undefined;
+  page: string | string[] | undefined;
 }
 
 const MoreContent = ({ category, page }: Props) => {
@@ -40,7 +40,11 @@ const MoreContent = ({ category, page }: Props) => {
       </Title>
       <TileWrapper role="list">
         {dataArray.slice(0, 8).map((item: Item) => (
-          <TileBasic key={item.id} category={category} data={item} />
+          <TileBasic
+            key={item.id}
+            category={category ? category.toString() : ""}
+            data={item}
+          />
         ))}
       </TileWrapper>
     </Wrapper>

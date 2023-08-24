@@ -2,11 +2,24 @@ import Image from "next/image";
 import styled from "styled-components";
 
 import { QUERIES } from "@/styles/styleConstants";
+import BlurImage from "@/components/BlurImage/BlurImage";
 
-const HeroImage = ({ displayImage }: { displayImage: string }) => {
+const HeroImage = ({
+  displayImage,
+  lowQualityImage,
+  alt,
+}: {
+  displayImage: string;
+  lowQualityImage: string;
+  alt: string;
+}) => {
   return (
-    <ImageWrapper>
-      <Image src={displayImage} alt="Hero Image" fill />
+    <ImageWrapper key={displayImage}>
+      <BlurImage
+        displayImage={displayImage}
+        lowQualityImage={lowQualityImage}
+        alt="Hero Image"
+      />
     </ImageWrapper>
   );
 };

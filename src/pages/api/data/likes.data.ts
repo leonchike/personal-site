@@ -9,9 +9,10 @@ export default [
     name: "hiking",
     displayName: "Hiking",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678891053/likes/hiking/hiking-lg_drnboa.jpg",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/62c65a8b-e50b-4ff6-e633-bb8935fe1f00/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678891053/likes/hiking/hiking-thumbnail_zevix4.jpg",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/62c65a8b-e50b-4ff6-e633-bb8935fe1f00/thumbnails",
+    alt: "Hiking Image",
     file: "./likes/hiking.mdx",
     path: "likes/hiking",
     type: "likes",
@@ -22,9 +23,10 @@ export default [
     name: "books",
     displayName: "Books",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678919412/likes/books/books-lg_jtvcep.jpg",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/dde444c2-ca67-44fa-f343-a9c52fd10800/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1678919412/likes/books/books-thumbnail_fifvzw.jpg",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/dde444c2-ca67-44fa-f343-a9c52fd10800/thumbnails",
+    alt: "Books Image",
     file: "./likes/books.mdx",
     path: "likes/books",
     type: "likes",
@@ -35,9 +37,10 @@ export default [
     name: "places",
     displayName: "Places",
     displayImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1679003505/likes/places/places-lg_echhuv.jpg",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/7b1a7fc7-b347-4b86-40d2-a0b56854a000/original",
     thumbnailImage:
-      "https://res.cloudinary.com/dch8jsjcf/image/upload/v1679003505/likes/places/places-thumbnail_uvtuci.jpg",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/7b1a7fc7-b347-4b86-40d2-a0b56854a000/thumbnails",
+    alt: "Places Image",
     file: "./likes/places.mdx",
     path: "likes/places",
     type: "likes",

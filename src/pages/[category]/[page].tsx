@@ -10,6 +10,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import BlogContent from "@/components/Content/BlogContent";
 import MoreContent from "@/components/Content/MoreContent";
 import Head from "next/head";
+import useFetchData from "@/hooks/usePagedata";
 
 // helpers
 import { capitalizeFirstLetter } from "@/utils/helpers";
@@ -23,37 +24,21 @@ interface StateData {
 }
 
 const Page = () => {
-  const [data, setData] = useState({} as StateData);
+  // const [data, setData] = useState({} as StateData);
   const router = useRouter();
   const { page, category } = router.query;
 
-  useEffect(() => {
-    if (!page && !category) {
-      return;
-    }
-    axios
-      .get(`/api/${category}?page=${page}`)
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [page, category]);
-
-  if (!page || !category || !data.data || !data.file) {
-    return null;
-  }
-  if (typeof page !== "string" || typeof category !== "string") {
-    return null;
-  }
+  const { data, error } = useFetchData(page, category);
 
   // BreadCrumbs
   const breadcrumbs: BreadCrumb[] = [
     { name: "Chike Nwankwo", path: "/" },
-    { name: category, path: `/${category}` },
-    { name: page, path: `/${category}/${page}` },
+    { name: category as string, path: `/${category}` },
+    { name: page as string, path: `/${category}/${page}` },
   ];
+
+  if (!data) return null;
+  if (error) return <div>error</div>;
 
   let contentType = data.data[0].type;
 
