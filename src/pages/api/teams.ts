@@ -41,7 +41,7 @@ export default async function handler(
       }
     } else {
       res.status(404).json({ error: "Not found" });
-      console.log("Not found");
+      console.warn("Not found");
     }
   }
 }

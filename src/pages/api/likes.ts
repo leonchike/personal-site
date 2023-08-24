@@ -21,7 +21,7 @@ export default async function handler(
         res.status(200).json(likesData);
       } catch (err) {
         res.status(500).json({ error: err });
-        console.log(err);
+        console.error(err);
       }
     } else if (page) {
       // find mdx file in /src/data/likes and return data
@@ -42,7 +42,7 @@ export default async function handler(
       }
     } else {
       res.status(404).json({ error: "Not found" });
-      console.log("Not found");
+      console.warn("Not found");
     }
   }
 }

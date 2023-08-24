@@ -11,7 +11,6 @@ const withRouteChecking = (WrappedComponent: any) => {
     const router = useRouter();
     const { route } = router;
     const allRoutes = getAllAppRoutes(state);
-    console.log(allRoutes);
     const isRouteValid = allRoutes.includes(route);
 
     if (!isRouteValid) {

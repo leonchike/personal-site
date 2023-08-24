@@ -13,7 +13,6 @@ export default async function handler(
 ) {
   if (req.method === "GET") {
     try {
-      console.log("Resume API route called");
       res.status(200).json(appData.resume);
     } catch (err) {
       res.status(500).json({ error: err });
