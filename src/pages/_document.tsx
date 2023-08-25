@@ -16,6 +16,8 @@ export default function Document() {
           content="https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/5e091063-f025-4510-b7f9-5039b381dd00/public"
         />
         <meta property="og:type" content="website" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <body>
         <Main />
