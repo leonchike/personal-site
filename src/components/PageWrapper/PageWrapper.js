@@ -6,8 +6,6 @@ import useDOMLoaded from "@/hooks/useDOMLoaded";
 const PageWrapper = ({ children }) => {
   const isDOMLoaded = useDOMLoaded();
 
-  console.log("isDOMLoaded", isDOMLoaded);
-
   return (
     <PageWrapperStyles className={isDOMLoaded ? "fadeIn" : ""}>
       {children}
