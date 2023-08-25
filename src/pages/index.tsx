@@ -1,11 +1,13 @@
 import Head from "next/head";
 
 import DefaultPage from "@/components/layouts/DefaultPage";
-import { PageWrapper } from "@/styles/reUseableStyles";
+// import { PageWrapper } from "@/styles/reUseableStyles";
 import HomeHeader from "@/components/HomeComponents/HomeHeader";
 import Section from "@/components/HomeComponents/Section";
 import Spacer from "@/components/Spacer";
 import ErrorBoundary from "@/components/ErrorBoundary";
+
+import PageWrapper from "@/components/PageWrapper";
 
 const Home = () => {
   return (

@@ -4,10 +4,11 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 
 import DefaultPage from "@/components/layouts/DefaultPage";
-import { PageWrapper, HeaderWrapper } from "@/styles/reUseableStyles";
+import { HeaderWrapper } from "@/styles/reUseableStyles";
 import { QUERIES } from "@/styles/styleConstants";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TileContainer from "@/components/TileContainer";
+import PageWrapper from "@/components/PageWrapper";
 
 import { useAppState } from "@/context/appContext";
 

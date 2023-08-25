@@ -4,13 +4,14 @@ import styled from "styled-components";
 import axios from "axios";
 
 import DefaultPage from "@/components/layouts/DefaultPage";
-import { PageWrapper, HeaderWrapper } from "@/styles/reUseableStyles";
+import { HeaderWrapper } from "@/styles/reUseableStyles";
 import { QUERIES } from "@/styles/styleConstants";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BlogContent from "@/components/Content/BlogContent";
 import MoreContent from "@/components/Content/MoreContent";
 import Head from "next/head";
 import useFetchData from "@/hooks/usePagedata";
+import PageWrapper from "@/components/PageWrapper";
 
 // helpers
 import { capitalizeFirstLetter } from "@/utils/helpers";

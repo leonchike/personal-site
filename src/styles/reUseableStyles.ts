@@ -1,5 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { QUERIES } from "@/styles/styleConstants";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const PageWrapper = styled.div`
   margin: 0 auto;
@@ -16,6 +25,10 @@ export const PageWrapper = styled.div`
   @media ${QUERIES.laptopAndUp} {
     padding-inline-start: 5rem;
     padding-inline-end: 5rem;
+  }
+
+  &.fadeIn {
+    animation: ${fadeIn} 500ms ease-in-out forwards;
   }
 `;
 

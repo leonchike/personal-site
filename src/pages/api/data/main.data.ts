@@ -43,16 +43,16 @@ export default {
   about: {
     name: "Chike Nwankwo",
     tags: [
+      "Product Manager",
+      "Full Stack Engineer",
+      "Technical Product Manager",
+      "Human Centered Design",
       "Management Consultant",
       "MBA",
-      "Computer Engineer",
-      "Technical Product Manager",
-      "Supply-Chain Manager",
-      "User-Experience Designer",
+      "ReactJS",
       "NextJS",
       "TypeScript",
       "Python",
-      "Statistical Analytics",
     ],
   },
   sections: {

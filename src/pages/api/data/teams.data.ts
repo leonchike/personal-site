@@ -40,7 +40,7 @@ export default [
     file: "./projects/camst.mdx",
     path: "projects/camst",
     type: "projects",
-    subTitle: "MBA Consultant, Global Business Development, 2022",
+    subTitle: "MBA Consultant (Internship), Global Business Development, 2022",
     externalLinks: [
       {
         name: "Camst Canteen",
@@ -80,7 +80,7 @@ export default [
     file: "./teams/wangarimathenge.mdx",
     path: "teams/wangarimathenge",
     type: "teams",
-    subTitle: "Head of Engineering, 2022 - 2023",
+    subTitle: "Software Engineering Advisor, 2022 - Present",
     externalLinks: [
       {
         name: "Wangari-Mathenge.com",
@@ -112,7 +112,7 @@ export default [
     file: "./teams/deloittedigital.mdx",
     path: "teams/deloittedigital",
     type: "teams",
-    subTitle: "Senior Consultant, 2016 - 2019",
+    subTitle: "Manager, 2016 - 2019",
     externalLinks: [
       {
         name: "Website",
