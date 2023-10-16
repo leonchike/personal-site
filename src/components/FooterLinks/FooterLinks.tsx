@@ -1,22 +1,11 @@
-import React, { use } from "react";
+import React from "react";
 import Link from "next/link";
 import styles from "./FooterLinks.module.css";
-import axios from "axios";
-import API_Routes from "@/utils/APIRoutes";
 import { MainData } from "@/types/global";
-
-async function getRoutes() {
-  try {
-    const res = await axios.get(API_Routes.getRoute("appData"));
-    return res.data.data;
-  } catch (error) {
-    console.log(error);
-    return;
-  }
-}
+import { getAppData } from "@/lib/getAppData";
 
 const FooterLinks = async () => {
-  const data: MainData = await getRoutes();
+  const data: MainData = getAppData();
 
   if (!data) {
     return <div>Loading...</div>;

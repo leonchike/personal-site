@@ -1,20 +1,30 @@
 import React from "react";
-import axios from "axios";
-import API_Routes from "@/utils/APIRoutes";
 import Section from "@/components/HomeComponents/Section";
+import { getHomeSectionData } from "@/lib/getAppData";
+import { Item } from "@/types/global";
 
 async function getData() {
-  try {
-    const res = await axios.get(API_Routes.getRoute("homeSections"));
-    return res.data.data;
-  } catch (error) {
-    console.log(error);
-    return;
+  const data = getHomeSectionData();
+
+  if (!data) {
+    return null;
   }
+
+  return data;
+}
+
+interface Data {
+  teams: Item[];
+  projects: Item[];
+  likes: Item[];
 }
 
 const HomeSections = async () => {
-  const data = await getData();
+  const data: Data | null = await getData();
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
 
   const teamsData = data.teams;
   const projectsData = data.projects;

@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./HomeHeader.module.css";
 import { MainData } from "@/types/global";
-import axios from "axios";
-import API_Routes from "@/utils/APIRoutes";
+import { getAppData } from "@/lib/getAppData";
 
 // Components
 import Tags from "@/components/Tags";
@@ -11,17 +10,17 @@ import HomeAbout from "@/components/HomeComponents/HomeAbout";
 import DownloadResume from "@/components/DownloadResume";
 
 async function getData() {
-  try {
-    const res = await axios.get(API_Routes.getRoute("appData"));
-    return res.data.data;
-  } catch (error) {
-    console.log(error);
-    return;
+  const data: MainData = getAppData();
+
+  if (!data) {
+    return null;
   }
+
+  return data;
 }
 
 const HomeHeader = async () => {
-  const data: MainData = await getData();
+  const data: MainData | null = await getData();
 
   if (!data) {
     return <div>Loading...</div>;
