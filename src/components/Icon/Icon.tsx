@@ -25,15 +25,7 @@ const Icon = ({ id, color, size, strokeWidth, ...delegated }: IconType) => {
   }
 
   return (
-    <div
-      id={id}
-      style={{
-        ...(strokeWidth !== undefined
-          ? { "--strokeWidth": strokeWidth + "px" }
-          : {}),
-      }}
-      {...delegated}
-    >
+    <div id={id} {...delegated}>
       <Component
         color={color}
         size={size}

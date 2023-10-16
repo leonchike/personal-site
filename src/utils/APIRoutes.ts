@@ -9,6 +9,7 @@ const API_Routes: APIRoutes = {
   projects: "/projects",
   likes: "/likes",
   resume: "/resume",
+  homeSections: "/homesections",
 
   getRoute(route: keyof APIRoutes) {
     return `${this.BASE}${this[route]}`;

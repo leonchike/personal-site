@@ -1,47 +1,28 @@
-import styled from "styled-components";
 import Link from "next/link";
+import styles from "./Section.module.css";
 
 import TileBasic from "@/components/TileBasic";
 import FeaturedContent from "@/components/HomeComponents/FeaturedContent";
-import { QUERIES } from "@/styles/styleConstants";
-import { TileWrapper } from "@/styles/reUseableStyles";
-import { useAppState } from "@/context/appContext";
+import { TileWrapper } from "@/components/ViewWrappers/ViewWrappers";
 
 // Types
-import { SectionProps, Item, AppState } from "@/types/global";
+import { SectionProps } from "@/types/global";
 
-const Section = ({ sectionTitle, path }: SectionProps) => {
-  const state: AppState | null = useAppState();
+const Section = ({ sectionTitle, path, data }: SectionProps) => {
+  if (!data) return null;
 
-  if (!state || !state[sectionTitle]) {
-    return null;
-  }
-
-  if (state[sectionTitle] === null) {
-    return null;
-  }
-
-  const data = state[sectionTitle] as Item[];
-  if (!data || !Array.isArray(data) || data.length === 0) return null;
-
-  // Check if section is live
-  // @ts-ignore
-  const liveStatus = state?.appData?.sections[sectionTitle]?.live;
-  if (liveStatus === false) return null;
-
-  // @ts-ignore
   const hasFeatured = data.find((item) => item.featured === true);
 
   return (
-    <Wrapper>
-      <Header>
+    <section className={styles.wrapper}>
+      <div className={styles.header}>
         <Link href={path}>
-          <Title>{sectionTitle}</Title>
+          <h2 className={styles.title}>{sectionTitle}</h2>
         </Link>
-        <MoreLink href={path} role="link">
-          More <HideMobile>{sectionTitle}</HideMobile>
-        </MoreLink>
-      </Header>
+        <Link className={styles.moreLink} href={path} role="link">
+          More <span className={styles.hideMobile}>{sectionTitle}</span>
+        </Link>
+      </div>
       {/* If no item has a featured property of true, render a basic list of tiles */}
       {!hasFeatured && (
         <TileWrapper role="list">
@@ -52,69 +33,69 @@ const Section = ({ sectionTitle, path }: SectionProps) => {
       )}
       {/* If an item has a featured property of true, render a featured tile */}
       {hasFeatured && <FeaturedContent data={data} category={sectionTitle} />}
-    </Wrapper>
+    </section>
   );
 };
 
-const Wrapper = styled.section`
-  margin-block-end: 6rem;
+// const Wrapper = styled.section`
+//   margin-block-end: 6rem;
 
-  &:last-child {
-    margin-block-end: 0;
-  }
-`;
+//   &:last-child {
+//     margin-block-end: 0;
+//   }
+// `;
 
-const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-block-end: calc(32 / 16 * 1rem);
+// const Header = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin-block-end: calc(32 / 16 * 1rem);
 
-  @media ${QUERIES.tabletAndUp} {
-    margin-block-end: calc(48 / 16 * 1rem);
-  }
-`;
+//   @media ${QUERIES.tabletAndUp} {
+//     margin-block-end: calc(48 / 16 * 1rem);
+//   }
+// `;
 
-const Title = styled.h2`
-  font-size: 2rem;
-  text-transform: capitalize;
-`;
+// const Title = styled.h2`
+//   font-size: 2rem;
+//   text-transform: capitalize;
+// `;
 
-const MoreLink = styled(Link)`
-  position: relative;
-  font-weight: 500;
-  color: var(--color-gray-700);
-  font-size: 1.25rem;
+// const MoreLink = styled(Link)`
+//   position: relative;
+//   font-weight: 500;
+//   color: var(--color-gray-700);
+//   font-size: 1.25rem;
 
-  @media ${QUERIES.tabletAndUp} {
-    font-size: 1rem;
-  }
+//   @media ${QUERIES.tabletAndUp} {
+//     font-size: 1rem;
+//   }
 
-  &:hover {
-    color: var(--color-offblack);
-  }
+//   &:hover {
+//     color: var(--color-offblack);
+//   }
 
-  &::after {
-    content: "→";
-    display: inline-block;
-    padding-inline-start: 0.5rem;
-    transform: translate3d(0rem, 0, 0);
-    transition: transform 300ms ease;
-  }
+//   &::after {
+//     content: "→";
+//     display: inline-block;
+//     padding-inline-start: 0.5rem;
+//     transform: translate3d(0rem, 0, 0);
+//     transition: transform 300ms ease;
+//   }
 
-  &:hover::after {
-    transform: translate3d(0.5rem, 0, 0);
-    transition: transform 300ms ease;
-  }
-`;
+//   &:hover::after {
+//     transform: translate3d(0.5rem, 0, 0);
+//     transition: transform 300ms ease;
+//   }
+// `;
 
-const HideMobile = styled.span`
-  display: none;
-  text-transform: capitalize;
+// const HideMobile = styled.span`
+//   display: none;
+//   text-transform: capitalize;
 
-  @media ${QUERIES.tabletAndUp} {
-    display: inline;
-  }
-`;
+//   @media ${QUERIES.tabletAndUp} {
+//     display: inline;
+//   }
+// `;
 
 export default Section;
