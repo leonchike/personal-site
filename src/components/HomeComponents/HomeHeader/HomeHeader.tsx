@@ -8,7 +8,7 @@ import API_Routes from "@/utils/APIRoutes";
 import Tags from "@/components/Tags";
 import Spacer from "@/components/Spacer";
 import HomeAbout from "@/components/HomeComponents/HomeAbout";
-// import DownloadResume from "@/components/DownloadResume";
+import DownloadResume from "@/components/DownloadResume";
 
 async function getData() {
   try {
@@ -41,7 +41,7 @@ const HomeHeader = async () => {
       <Spacer height="1.5rem" />
       {!!tags && <Tags tags={tags} />}
       <Spacer height="3rem" />
-      {/* <DownloadResume /> */}
+      <DownloadResume url={data.resume.url} />
     </header>
   );
 };

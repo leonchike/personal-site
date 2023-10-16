@@ -71,6 +71,10 @@ export interface MainData {
     tags: string[];
   };
   sections: SectionsInMainData[];
+  resume: {
+    url: string;
+    live: boolean;
+  };
 }
 
 export interface AppState {
