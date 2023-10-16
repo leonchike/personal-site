@@ -22,6 +22,7 @@ export interface Item {
 export interface SectionProps {
   sectionTitle: PageTypes;
   path: string;
+  data: Item[];
 }
 
 export interface Route {
@@ -48,6 +49,7 @@ export interface APIRoutes {
   projects: string;
   likes: string;
   resume: string;
+  homeSections: string;
   getRoute(route: string): string;
 }
 

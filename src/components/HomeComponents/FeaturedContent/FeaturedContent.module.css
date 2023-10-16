@@ -1,0 +1,28 @@
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "featured"
+    "list";
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+  column-gap: 2rem;
+  margin: 1rem 0;
+}
+
+@media (min-width: 600px) {
+  .wrapper {
+    grid-template-areas: "featured list";
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.5rem;
+    row-gap: 4rem;
+  }
+}
+
+.featured {
+  grid-area: featured;
+}
+
+.list {
+  grid-area: list;
+  align-content: start;
+}

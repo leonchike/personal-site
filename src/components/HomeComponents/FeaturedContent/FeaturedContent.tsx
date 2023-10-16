@@ -1,9 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import styles from "./FeaturedContent.module.css";
 
 import { Item } from "@/types/global";
-import { QUERIES } from "@/styles/styleConstants";
-import { TileWrapper } from "@/styles/reUseableStyles";
+import { TileWrapper } from "@/components/ViewWrappers/ViewWrappers";
 
 import TileBasic from "@/components/TileBasic";
 import TileFeatured from "@/components/TileFeatured";
@@ -20,44 +19,17 @@ const FeaturedContent = ({ data, category }: FeaturedContentProps) => {
   const nonFeaturedItems = data.filter((item) => item.id !== featuredItem.id);
 
   return (
-    <Wrapper>
-      <Featured>
+    <div className={styles.wrapper}>
+      <div className={styles.featured}>
         <TileFeatured data={featuredItem} category={category} />
-      </Featured>
-      <List role="list">
+      </div>
+      <TileWrapper className={styles.list} role="list">
         {nonFeaturedItems.slice(0, 4).map((item) => (
           <TileBasic key={item.name} data={item} category={category} />
         ))}
-      </List>
-    </Wrapper>
+      </TileWrapper>
+    </div>
   );
 };
-
-const Wrapper = styled.div`
-  display: grid;
-  grid-template-areas:
-    "featured"
-    "list";
-  grid-template-columns: 1fr;
-  row-gap: 3rem;
-  column-gap: 2rem;
-  margin: 1rem 0;
-
-  @media ${QUERIES.tabletAndUp} {
-    grid-template-areas: "featured list";
-    grid-template-columns: 1fr 1fr;
-    column-gap: 3.5rem;
-    row-gap: 4rem;
-  }
-`;
-
-const Featured = styled.div`
-  grid-area: featured;
-`;
-
-const List = styled(TileWrapper)`
-  grid-area: list;
-  align-content: start;
-`;
 
 export default FeaturedContent;
