@@ -11,7 +11,7 @@ export interface Item {
   path: string;
   type: PageTypes;
   subTitle: string;
-  externalLinks: {
+  externalLinks?: {
     name: string;
     url: string;
   }[];
@@ -74,7 +74,7 @@ export interface MainData {
     name: string;
     tags: string[];
   };
-  sections: SectionsInMainData[];
+  sections: SectionsInMainData;
   resume: {
     url: string;
     live: boolean;
