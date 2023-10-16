@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styles from "./MetaData.module.css";
 import { Item } from "@/types/global";
 
 const MetaData = ({ data }: { data: Item }) => {
@@ -8,19 +8,13 @@ const MetaData = ({ data }: { data: Item }) => {
     data.type === "likes"
   ) {
     return (
-      <Wrapper>
-        <Text>{data.subTitle}</Text>
-      </Wrapper>
+      <div className={styles.wrapper}>
+        <div className={styles.text}>{data.subTitle}</div>
+      </div>
     );
   }
 
   return null;
 };
 
-const Wrapper = styled.div``;
-
-const Text = styled.div`
-  font-size: 1.1rem;
-  font-weight: 500;
-`;
 export default MetaData;

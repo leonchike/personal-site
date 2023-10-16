@@ -61,7 +61,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={MDSystem.variable}>
+      <body className={MDSystem.className}>
         <AppProviders>{children}</AppProviders>
         <Footer />
       </body>

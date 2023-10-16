@@ -1,44 +1,50 @@
 import React from "react";
+import axios from "axios";
+import styles from "./MoreContent.module.css";
 import Link from "next/link";
-import styled from "styled-components";
 
-import { useAppState } from "@/context/appContext";
 import HorizontalDivider from "@/components/HorizontalDivider";
 import Spacer from "@/components/Spacer";
 import TileBasic from "@/components/TileBasic";
-import { QUERIES } from "@/styles/styleConstants";
+import API_Routes from "@/utils/APIRoutes";
 
-import { AppState, Item } from "@/types/global";
+import { Item } from "@/types/global";
 
 interface Props {
-  category: string | string[] | undefined;
-  page: string | string[] | undefined;
+  category: string;
+  page: string;
 }
 
-const MoreContent = ({ category, page }: Props) => {
-  // category is either teams, projects, wrting etc
-  // page is the slug from the category page
-  //@ts-ignore
-  const state: AppState = useAppState();
-  if (!state || !state[category as keyof AppState]) return null;
+// Data fetching
+const getCategoryData = async (category: string) => {
+  const baseUrl = API_Routes.getRoute("categoryData");
+  const url = `${baseUrl}?category=${category}`;
 
-  if (state === null) return null;
+  try {
+    const res = await axios.get(url);
+    return res.data.data;
+  } catch (error) {
+    console.log(error);
+    return;
+  }
+};
 
-  // @ts-ignore
-  const dataArray = state[category].filter((item: Item) => item.id !== page);
+const MoreContent = async ({ category, page }: Props) => {
+  const data = await getCategoryData(category);
+  const dataArray = data.filter((item: Item) => item.id !== page);
 
   if (dataArray.length === 0) return null;
 
   return (
-    <Wrapper>
+    <section>
       <Spacer height="4rem" />
       <HorizontalDivider />
-      <Title>
+      <h2 className={styles.title}>
         <span>
           <Link href={`/${category}`}>More {category}</Link>
         </span>
-      </Title>
-      <TileWrapper role="list">
+      </h2>
+      <ul className={styles.titleWrapper} role="list">
         {dataArray.slice(0, 8).map((item: Item) => (
           <TileBasic
             key={item.id}
@@ -46,40 +52,9 @@ const MoreContent = ({ category, page }: Props) => {
             data={item}
           />
         ))}
-      </TileWrapper>
-    </Wrapper>
+      </ul>
+    </section>
   );
 };
-
-const Wrapper = styled.section``;
-
-const Title = styled.h2`
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-block-start: 5rem;
-  margin-block-end: 3rem;
-  text-transform: capitalize;
-
-  span {
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-`;
-
-const TileWrapper = styled.ul`
-  --min-column-width: min(200px, 100%);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-
-  @media ${QUERIES.tabletAndUp} {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(var(--min-column-width), 1fr)
-    );
-    column-gap: 3.5rem;
-  }
-`;
 
 export default MoreContent;

@@ -1,0 +1,24 @@
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: clamp(180px, 50vw, 240px);
+  overflow: hidden;
+}
+
+@media (min-width: 600px) {
+  .imageWrapper {
+    height: 370px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .imageWrapper {
+    height: 400px;
+  }
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

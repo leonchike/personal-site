@@ -12,6 +12,15 @@ const TileContainer = ({
   data: Item[];
   category: string;
 }) => {
+  // check if data is empty
+  if (!data || data.length === 0) {
+    return (
+      <section>
+        <h1>No data</h1>
+      </section>
+    );
+  }
+
   return (
     <section>
       <TileWrapper>
