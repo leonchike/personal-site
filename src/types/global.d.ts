@@ -50,6 +50,7 @@ export interface APIRoutes {
   likes: string;
   resume: string;
   homeSections: string;
+  categoryData: string;
   getRoute(route: string): string;
 }
 
