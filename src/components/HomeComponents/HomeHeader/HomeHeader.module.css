@@ -1,0 +1,9 @@
+.wrapper {
+  max-width: 48rem;
+  padding-block-start: 8rem;
+}
+
+.name {
+  font-size: 4.33rem;
+  line-height: 5rem;
+}

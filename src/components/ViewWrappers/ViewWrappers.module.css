@@ -1,0 +1,35 @@
+/* Define a base class for the PageWrapper */
+.pageWrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 74rem;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  animation: fadeIn 500ms ease-in-out forwards;
+}
+
+/* Define media queries using the assumed breakpoints */
+@media (min-width: 600px) {
+  .pageWrapper {
+    padding-inline-start: 2.5rem;
+    padding-inline-end: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pageWrapper {
+    padding-inline-start: 5rem;
+    padding-inline-end: 5rem;
+  }
+}
+
+/* You'll need to define the 'fadeIn' keyframes somewhere in your CSS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

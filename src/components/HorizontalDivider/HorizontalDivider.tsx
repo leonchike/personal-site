@@ -1,10 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styles from "./HorizontalDivider.module.css";
 
-const HorizontalDivider = styled.hr`
-  margin: 1rem 0;
-  border: none;
-  border-top: 1px solid var(--color-gray-300);
-`;
-
-export default HorizontalDivider;
+export default function HorizontalDivider() {
+  return <hr className={styles.divider}></hr>;
+}

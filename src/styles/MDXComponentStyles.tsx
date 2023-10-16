@@ -1,44 +1,33 @@
-import React, { ReactNode } from "react";
-import styled from "styled-components";
+"use client";
 
-// ts ignore file
-// @ts-nocheck
+import React, { ReactNode, CSSProperties } from "react";
+
+interface StyledProps {
+  children?: ReactNode;
+  style?: CSSProperties;
+}
 
 const MDXComponentStyles = {
-  // @ts-ignore
-  p: (props: ReactNode) => <Paragraph {...props} />,
-  // @ts-ignore
-  a: (props: ReactNode) => <Link {...props} />,
+  p: (props: StyledProps) => (
+    <p
+      {...props}
+      style={{
+        fontSize: "1.25rem",
+        lineHeight: "2.5rem",
+        ...props.style,
+      }}
+    />
+  ),
+  a: (props: StyledProps) => (
+    <a
+      {...props}
+      style={{
+        color: "var(--color-offblack)",
+        textDecoration: "underline",
+        ...props.style,
+      }}
+    />
+  ),
 };
-
-const Paragraph = styled.p`
-  font-size: 1.25rem;
-  line-height: 2.5rem;
-
-  a {
-    color: var(--color-offblack);
-    text-decoration: underline;
-
-    &:hover {
-      opacity: 0.8;
-    }
-
-    &:visited {
-      color: var(--color-offblack);
-    }
-  }
-`;
-
-const Link = styled.a`
-  color: var(--color-offblack);
-
-  &:hover {
-    color: var(--color-primary);
-  }
-
-  &:visited {
-    color: var(--color-offblack);
-  }
-`;
 
 export default MDXComponentStyles;

@@ -1,5 +1,7 @@
+"use client";
+
 import { memo, useEffect } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import Script from "next/script";
 
 import { GA_TRACKING_ID } from "@/utils/constants";
@@ -7,6 +9,7 @@ import { GA_TRACKING_ID } from "@/utils/constants";
 const TRACKING_ID = GA_TRACKING_ID;
 
 const GoogleAnalytics = () => {
+  return;
   const router = useRouter();
   // 👇 send page views when users gets to the landing page
   useEffect(() => {

@@ -1,15 +1,17 @@
 import { APIRoutes } from "@/types/global";
 
+let APIBASE = process.env.API_BASE || "http://localhost:3000/api";
+
 const API_Routes: APIRoutes = {
-  BASE: "/api",
+  BASE: APIBASE,
   appData: "/appdata",
   teams: "/teams",
   projects: "/projects",
   likes: "/likes",
   resume: "/resume",
 
-  getRoute(route) {
-    return `${this.BASE}${route}`;
+  getRoute(route: keyof APIRoutes) {
+    return `${this.BASE}${this[route]}`;
   },
 };
 

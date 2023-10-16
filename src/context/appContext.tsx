@@ -1,3 +1,5 @@
+"use client";
+
 /*
 This file creates the context for the app. It is used to store the app data in a global reducer state.
 */

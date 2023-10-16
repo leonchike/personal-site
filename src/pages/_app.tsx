@@ -6,6 +6,7 @@ import GlobalStyles from "@/styles/GlobalStyles";
 import MDXComponentStyles from "@/styles/MDXComponentStyles";
 import { AppProvider } from "@/context/appContext";
 import GoogleAnalytics from "@/utils/analytics";
+import "@/styles/global.css";
 
 const MDSystem = localFont({
   src: "../styles/fonts/MDSystem-VF.woff2",

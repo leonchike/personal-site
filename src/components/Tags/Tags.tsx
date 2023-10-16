@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styles from "./Tags.module.css";
 
 const Tags = ({ tags }: { tags: string[] }) => {
   if (!tags || tags.length === 0) {
@@ -6,29 +6,14 @@ const Tags = ({ tags }: { tags: string[] }) => {
   }
 
   return (
-    <List role="list">
+    <ul className={styles.list} role="list">
       {tags.map((tag) => (
-        <li key={tag}>{tag}</li>
+        <li className={styles.items} key={tag}>
+          {tag}
+        </li>
       ))}
-    </List>
+    </ul>
   );
 };
-
-const List = styled.ul`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  border-radius: 4px;
-
-  li {
-    background-color: var(--color-gray-100);
-    padding: 0.85rem 1rem 0.75rem 1rem;
-    font-weight: 550;
-    font-size: calc(15 / 16 * 1rem);
-    line-height: 1;
-    letter-spacing: 0.03rem;
-  }
-`;
 
 export default Tags;

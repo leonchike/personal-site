@@ -1,0 +1,16 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  border-radius: 4px;
+}
+
+.items {
+  background-color: var(--color-gray-100);
+  padding: 0.85rem 1rem 0.75rem 1rem;
+  font-weight: 550;
+  font-size: calc(15 / 16 * 1rem);
+  line-height: 1;
+  letter-spacing: 0.03rem;
+}

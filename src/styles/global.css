@@ -1,0 +1,267 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+main {
+  width: 100%;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.65;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  --reach-dialog: 1;
+}
+
+html, body, #root, #__next {
+  height: 100%;
+}
+
+/* DESIGN TOKENS */
+html {
+  --color-white: hsl(0deg 0% 100%);
+  --color-black: hsl(0deg 0% 0%);
+  --color-offblack: hsl(0deg 0% 13%);
+  --color-page-background: hsl(0deg 0% 98%);
+  
+  --color-gray-100: hsl(0deg 0% 90%);
+  --color-gray-300: hsl(0deg 0% 85%);
+  --color-gray-500: hsl(0deg 0% 80%);
+  --color-gray-700: hsl(0deg 0% 60%);
+  --color-gray-900: hsl(0deg 0% 40%);
+  
+  --color-primary: hsl(267deg 45% 59%);
+  --color-secondary: hsl(240deg 60% 63%);
+  --color-orange: hsl(30deg 100% 60%);
+  --color-green: hsl(119deg 54% 47%);
+  --color-urgent: hsl(349deg 100% 59%);
+  --color-backdrop: hsl(220deg 5% 40% / 0.8);
+  --color-form-input: hsl(0deg 0% 91.4%);
+  --color-admin-sidebar: hsl(240deg 17% 98%);
+
+  --tabletMin: 600px;
+  --laptopMin: 1100px;
+  --desktopMin: 1500px;
+  --ultraWideMin: 2200px;
+
+  font-size: 14px;
+
+  @media (min-width: 600px) { 
+    font-size: 16px;
+  }
+
+  @media (min-width: 1200px) { 
+    font-size: 18px;
+  }
+
+  font-family: MDSystem, Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-variation-settings: 'slnt' 0;
+  color: var(--color-offblack);
+  background-color: var(--color-page-background);
+}
+
+
+button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
+/*
+  Changing the default link styles to match the design
+*/
+::selection {
+  color: var(--color-white);
+  background: var(--color-offblack); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  color: var(--color-white);
+  background: var(--color-offblack); /* Gecko Browsers */
+}
+
+
+/* Base styles */
+.markdown-column-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+.markdown-column-grid div {
+  width: 100%;
+  height: 100%;
+}
+
+.markdown-column-grid div img {
+  width: 100%;
+  height: 100%;
+}
+
+.markdown-image-cover {
+  object-fit: cover;
+}
+
+.markdown-image-contain {
+  object-fit: contain;
+}
+
+.markdown-spacer {
+  height: 2.5rem;
+}
+
+.markdown-grid-content-description-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+.markdown-grid-content-description-layout div {
+  width: 100%;
+  height: 100%;
+}
+
+.markdown-grid-content-description-layout div img {
+  width: 100%;
+  height: 100%;
+}
+
+.markdown-spacer-small {
+  height: 1rem;
+}
+
+.markdown-external-link {
+  display: inline-block;
+  background-color: var(--color-gray-100);
+  padding: 0.9rem 1.5rem 0.9rem 1.5rem;
+  font-weight: 500;
+  font-size: calc(17 / 16 * 1rem);
+  line-height: 1;
+  letter-spacing: 0.03rem;
+}
+
+.markdown-external-link span::after {
+  content: "↗";
+  display: inline-block;
+  padding-inline-start: 0.25rem;
+  transform: translate3d(0rem, -0.05rem, 0);
+  transition: transform 300ms ease;
+}
+
+.markdown-external-link span:hover::after {
+  transform: translate3d(0.2rem, -0.25rem, 0);
+  transition: transform 300ms ease;
+}
+
+.markdown-footnote {
+  display: inline-block;
+  color: var(--color-gray-700);
+  font-size: calc(15 / 16 * 1rem);
+}
+
+/* Media queries */
+@media (min-width: 600px) {
+  .markdown-column-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  .markdown-spacer {
+    height: 5rem;
+  }
+
+  .markdown-grid-content-description-layout {
+    grid-template-columns: 0.7fr 1fr;
+    grid-gap: 3rem;
+  }
+
+  .markdown-spacer-small {
+    height: 2rem;
+  }
+}
