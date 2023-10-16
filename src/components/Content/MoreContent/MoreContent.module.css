@@ -1,0 +1,30 @@
+.title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-block-start: 5rem;
+  margin-block-end: 3rem;
+  text-transform: capitalize;
+}
+
+.title span:hover {
+  color: var(--primary-color);
+}
+
+.titleWrapper {
+  --min-column-width: min(200px, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 600px) {
+  .titleWrapper {
+    --min-column-width: min(200px, 100%);
+
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(var(--min-column-width), 1fr)
+    );
+    column-gap: 3.5rem;
+  }
+}

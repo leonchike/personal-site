@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styles from "./BlogContent.module.css";
 
 import Spacer from "@/components/Spacer";
 import HeroImage from "@/components/Content/HeroImage";
@@ -16,7 +16,7 @@ interface StateData {
 
 const BlogContent = ({ data }: { data: StateData }) => {
   return (
-    <Wrapper>
+    <div className={styles.wrapper}>
       <HeroImage
         displayImage={data.data[0].displayImage}
         lowQualityImage={data.data[0].thumbnailImage}
@@ -28,13 +28,8 @@ const BlogContent = ({ data }: { data: StateData }) => {
       <RenderMarkdown content={data.file} />
       <Spacer height="3rem" />
       <ExternalLinks links={data.data[0].externalLinks} />
-    </Wrapper>
+    </div>
   );
 };
-
-const Wrapper = styled.div`
-  width: 100%;
-  max-width: var(--blog-width);
-`;
 
 export default BlogContent;

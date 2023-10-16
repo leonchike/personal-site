@@ -11,6 +11,7 @@ const API_Routes: APIRoutes = {
   resume: "/resume",
   homeSections: "/homesections",
   categoryData: "/categorydata",
+  pageData: "/pagedata",
 
   getRoute(route: keyof APIRoutes) {
     return `${this.BASE}${this[route]}`;

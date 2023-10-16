@@ -51,6 +51,7 @@ export interface APIRoutes {
   resume: string;
   homeSections: string;
   categoryData: string;
+  pageData: string;
   getRoute(route: string): string;
 }
 
