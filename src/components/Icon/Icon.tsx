@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import React from "react";
 import { ArrowDown, ArrowRight } from "react-feather";
 
 const icons = {
@@ -9,8 +9,8 @@ const icons = {
 interface IconProps {
   id: keyof typeof icons;
   color?: string;
-  size?: number;
-  strokeWidth?: number;
+  size?: number | string;
+  strokeWidth?: number | string;
 }
 
 type IconType = IconProps &
@@ -25,18 +25,22 @@ const Icon = ({ id, color, size, strokeWidth, ...delegated }: IconType) => {
   }
 
   return (
-    <Wrapper id={id} strokeWidth={strokeWidth} {...delegated}>
-      <Component color={color} size={size} />
-    </Wrapper>
+    <div
+      id={id}
+      style={{
+        ...(strokeWidth !== undefined
+          ? { "--strokeWidth": strokeWidth + "px" }
+          : {}),
+      }}
+      {...delegated}
+    >
+      <Component
+        color={color}
+        size={size}
+        style={{ strokeWidth: strokeWidth }}
+      />
+    </div>
   );
 };
-
-const Wrapper = styled.div<IconType>`
-  & > svg {
-    display: block;
-    stroke-width: ${(p) =>
-      p.strokeWidth !== undefined ? p.strokeWidth + "px" : undefined};
-  }
-`;
 
 export default Icon;
