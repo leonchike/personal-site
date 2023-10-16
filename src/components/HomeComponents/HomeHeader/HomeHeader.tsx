@@ -1,56 +1,49 @@
 import React from "react";
-import styled from "styled-components";
-import MDXComponent from "@/components/MDXComponent";
-import { useAppState } from "@/context/appContext";
+import styles from "./HomeHeader.module.css";
+import { MainData } from "@/types/global";
+import axios from "axios";
+import API_Routes from "@/utils/APIRoutes";
 
 // Components
 import Tags from "@/components/Tags";
 import Spacer from "@/components/Spacer";
-import DownloadResume from "@/components/DownloadResume";
+import HomeAbout from "@/components/HomeComponents/HomeAbout";
+// import DownloadResume from "@/components/DownloadResume";
 
-// Data
-import * as About from "@/data/about/about.mdx";
+async function getData() {
+  try {
+    const res = await axios.get(API_Routes.getRoute("appData"));
+    return res.data.data;
+  } catch (error) {
+    console.log(error);
+    return;
+  }
+}
 
-const HomeHeader = () => {
-  const state = useAppState();
+const HomeHeader = async () => {
+  const data: MainData = await getData();
 
-  // @ts-ignore
-  if (!state || !state?.appData) {
-    return null;
+  if (!data) {
+    return <div>Loading...</div>;
   }
 
-  if (state.appData === null) {
-    return null;
-  }
-
-  // @ts-ignore
-  const tags = state?.appData?.about?.tags;
+  const tags = data.about.tags;
 
   return (
-    <Wrapper>
-      <Name>
+    <header className={styles.wrapper}>
+      <h1 className={styles.name}>
         Chike <br /> Nwankwo
-      </Name>
+      </h1>
       <Spacer height="2rem" />
       <div>
-        <MDXComponent File={About.default} />
+        <HomeAbout />
       </div>
       <Spacer height="1.5rem" />
       {!!tags && <Tags tags={tags} />}
       <Spacer height="3rem" />
-      <DownloadResume />
-    </Wrapper>
+      {/* <DownloadResume /> */}
+    </header>
   );
 };
-
-const Wrapper = styled.header`
-  max-width: 48rem;
-  padding-block-start: 8rem;
-`;
-
-const Name = styled.h1`
-  font-size: 4.33rem;
-  line-height: 5rem;
-`;
 
 export default HomeHeader;
