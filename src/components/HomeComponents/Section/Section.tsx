@@ -25,7 +25,7 @@ const Section = ({ sectionTitle, path, data }: SectionProps) => {
       </div>
       {/* If no item has a featured property of true, render a basic list of tiles */}
       {!hasFeatured && (
-        <TileWrapper role="list">
+        <TileWrapper>
           {data.slice(0, 4).map((item) => (
             <TileBasic key={item.name} data={item} category={sectionTitle} />
           ))}
@@ -36,66 +36,5 @@ const Section = ({ sectionTitle, path, data }: SectionProps) => {
     </section>
   );
 };
-
-// const Wrapper = styled.section`
-//   margin-block-end: 6rem;
-
-//   &:last-child {
-//     margin-block-end: 0;
-//   }
-// `;
-
-// const Header = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   margin-block-end: calc(32 / 16 * 1rem);
-
-//   @media ${QUERIES.tabletAndUp} {
-//     margin-block-end: calc(48 / 16 * 1rem);
-//   }
-// `;
-
-// const Title = styled.h2`
-//   font-size: 2rem;
-//   text-transform: capitalize;
-// `;
-
-// const MoreLink = styled(Link)`
-//   position: relative;
-//   font-weight: 500;
-//   color: var(--color-gray-700);
-//   font-size: 1.25rem;
-
-//   @media ${QUERIES.tabletAndUp} {
-//     font-size: 1rem;
-//   }
-
-//   &:hover {
-//     color: var(--color-offblack);
-//   }
-
-//   &::after {
-//     content: "→";
-//     display: inline-block;
-//     padding-inline-start: 0.5rem;
-//     transform: translate3d(0rem, 0, 0);
-//     transition: transform 300ms ease;
-//   }
-
-//   &:hover::after {
-//     transform: translate3d(0.5rem, 0, 0);
-//     transition: transform 300ms ease;
-//   }
-// `;
-
-// const HideMobile = styled.span`
-//   display: none;
-//   text-transform: capitalize;
-
-//   @media ${QUERIES.tabletAndUp} {
-//     display: inline;
-//   }
-// `;
 
 export default Section;
