@@ -23,7 +23,7 @@ const FeaturedContent = ({ data, category }: FeaturedContentProps) => {
       <div className={styles.featured}>
         <TileFeatured data={featuredItem} category={category} />
       </div>
-      <TileWrapper className={styles.list} role="list">
+      <TileWrapper>
         {nonFeaturedItems.slice(0, 4).map((item) => (
           <TileBasic key={item.name} data={item} category={category} />
         ))}
