@@ -5,9 +5,13 @@ import API_Routes from "@/utils/APIRoutes";
 
 import { PageWrapper } from "@/components/ViewWrappers/ViewWrappers";
 import CategoryHeader from "@/components/CategoryComponents/CategoryHeader";
+import TileContainer from "@/components/TileContainer";
 
 // helpers
 import { capitalizeFirstLetter } from "@/utils/helpers";
+
+// types
+import { Category } from "@/types/global";
 
 // Data fetching
 const getCategoryData = async (category: string) => {
@@ -26,7 +30,7 @@ const getCategoryData = async (category: string) => {
 // Metadata
 type Props = {
   params: {
-    category: string;
+    category: Category;
   };
 };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -44,11 +48,11 @@ export default async function Page({
 }) {
   const category = params.category;
   const data = await getCategoryData(category);
-  console.log(data);
 
   return (
     <PageWrapper>
-      <CategoryHeader category={category} />
+      <CategoryHeader category={category as "teams" | "projects" | "likes"} />
+      <TileContainer data={data} category={category} />
     </PageWrapper>
   );
 }

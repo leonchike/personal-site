@@ -91,3 +91,5 @@ export interface appReducerAction {
   type: string;
   payload: MainData;
 }
+
+export type Category = "teams" | "projects" | "likes";
