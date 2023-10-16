@@ -8,3 +8,7 @@ export const PageWrapper = ({ children }: { children: React.ReactNode }) => {
 export const TileWrapper = ({ children }: { children: React.ReactNode }) => {
   return <div className={styles.tileWrapper}>{children}</div>;
 };
+
+export const HeaderWrapper = ({ children }: { children: React.ReactNode }) => {
+  return <div className={styles.headerWrapper}>{children}</div>;
+};

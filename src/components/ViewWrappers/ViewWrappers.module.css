@@ -57,3 +57,15 @@
     row-gap: 4rem;
   }
 }
+
+/* Defines header wrapper styles*/
+.headerWrapper {
+  max-width: var(--blog-width);
+  padding-block-start: 6rem;
+}
+
+@media (min-width: 600px) {
+  .headerWrapper {
+    padding-block-start: 8rem;
+  }
+}

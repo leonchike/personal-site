@@ -10,6 +10,7 @@ const API_Routes: APIRoutes = {
   likes: "/likes",
   resume: "/resume",
   homeSections: "/homesections",
+  categoryData: "/categorydata",
 
   getRoute(route: keyof APIRoutes) {
     return `${this.BASE}${this[route]}`;
