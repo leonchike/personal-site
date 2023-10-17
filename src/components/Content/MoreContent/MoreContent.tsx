@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import styles from "./MoreContent.module.css";
 import Link from "next/link";
 import { getCategoryData } from "@/lib/getAppData";
@@ -7,7 +6,6 @@ import { getCategoryData } from "@/lib/getAppData";
 import HorizontalDivider from "@/components/HorizontalDivider";
 import Spacer from "@/components/Spacer";
 import TileBasic from "@/components/TileBasic";
-import API_Routes from "@/utils/APIRoutes";
 
 import { Item } from "@/types/global";
 
