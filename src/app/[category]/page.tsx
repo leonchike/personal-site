@@ -1,31 +1,16 @@
 import React from "react";
-import axios from "axios";
 import type { Metadata } from "next";
-import API_Routes from "@/utils/APIRoutes";
 
 import { PageWrapper } from "@/components/ViewWrappers/ViewWrappers";
 import CategoryHeader from "@/components/CategoryComponents/CategoryHeader";
 import TileContainer from "@/components/TileContainer";
+import { getCategoryData } from "@/lib/getAppData";
 
 // helpers
 import { capitalizeFirstLetter } from "@/utils/helpers";
 
 // types
-import { Category } from "@/types/global";
-
-// Data fetching
-const getCategoryData = async (category: string) => {
-  const baseUrl = API_Routes.getRoute("categoryData");
-  const url = `${baseUrl}?category=${category}`;
-
-  try {
-    const res = await axios.get(url);
-    return res.data.data;
-  } catch (error) {
-    console.log(error);
-    return;
-  }
-};
+import { Category, Item } from "@/types/global";
 
 // Metadata
 type Props = {
@@ -47,7 +32,11 @@ export default async function Page({
   params: { category: string };
 }) {
   const category = params.category;
-  const data = await getCategoryData(category);
+  const data: Item[] | null = getCategoryData(category);
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <PageWrapper>
