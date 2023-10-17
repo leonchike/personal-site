@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import styles from "./MoreContent.module.css";
 import Link from "next/link";
+import { getCategoryData } from "@/lib/getAppData";
 
 import HorizontalDivider from "@/components/HorizontalDivider";
 import Spacer from "@/components/Spacer";
@@ -15,22 +16,10 @@ interface Props {
   page: string;
 }
 
-// Data fetching
-const getCategoryData = async (category: string) => {
-  const baseUrl = API_Routes.getRoute("categoryData");
-  const url = `${baseUrl}?category=${category}`;
-
-  try {
-    const res = await axios.get(url);
-    return res.data.data;
-  } catch (error) {
-    console.log(error);
-    return;
-  }
-};
-
 const MoreContent = async ({ category, page }: Props) => {
-  const data = await getCategoryData(category);
+  const data = getCategoryData(category);
+
+  if (!data) return null;
   const dataArray = data.filter((item: Item) => item.id !== page);
 
   if (dataArray.length === 0) return null;
