@@ -1,5 +1,3 @@
-import styled from "styled-components";
-
 import TileBasic from "@/components/TileBasic";
 import { TileWrapper } from "@/components/ViewWrappers/ViewWrappers";
 

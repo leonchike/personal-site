@@ -1,32 +1,16 @@
 import React from "react";
-import axios from "axios";
-import API_Routes from "@/utils/APIRoutes";
 import type { Metadata } from "next";
 import { PageWrapper } from "@/components/ViewWrappers/ViewWrappers";
 import PageHeader from "@/components/PageComponents/PageHeader";
 import BlogContent from "@/components/Content/BlogContent";
 import MoreContent from "@/components/Content/MoreContent";
+import { getPageData } from "@/lib/getAppData";
 
 // types
-import { Category } from "@/types/global";
+import { Category, Item } from "@/types/global";
 
 // helpers
 import { capitalizeFirstLetter } from "@/utils/helpers";
-
-// Data fetching
-const getPageData = async (category: string, page: string) => {
-  const baseUrl = API_Routes.getRoute("pageData");
-  const url = `${baseUrl}?category=${category}&page=${page}`;
-
-  try {
-    const res = await axios.get(url);
-    // console.log(res.data);
-    return res.data;
-  } catch (error) {
-    console.log(error);
-    return;
-  }
-};
 
 // Metadata
 type Props = {
@@ -35,12 +19,29 @@ type Props = {
     page: string;
   };
 };
+
+interface Data {
+  data: Item[];
+  file: string;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = params.category;
   const page = params.page;
-  const data = await getPageData(category, page);
+  // @ts-ignore
+  const data: Data | null = await getPageData(category, page);
 
-  const name = !!data?.data[0]?.displayName ? data?.data[0]?.displayName : page;
+  if (!data) {
+    return {
+      title: "Loading...",
+    };
+  }
+
+  // @ts-ignore
+  const name =
+    data.data.length && data.data[0]?.displayName
+      ? data.data[0]?.displayName
+      : page;
 
   return {
     title: capitalizeFirstLetter(name),
@@ -55,7 +56,8 @@ export default async function Page({
   const category = params.category;
   const page = params.page;
 
-  const data = await getPageData(category, page);
+  // @ts-ignore
+  const data: Data | null = await getPageData(category, page);
 
   if (!data) {
     return <div>Loading...</div>;
@@ -66,7 +68,7 @@ export default async function Page({
       <PageHeader
         category={category}
         page={page}
-        title={data.data[0].displayName}
+        title={data.data.length ? data.data[0].displayName : ""}
       />
       <BlogContent data={data} />
       {/* @ts-expect-error Server Component */}
