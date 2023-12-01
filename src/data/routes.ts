@@ -6,7 +6,7 @@ export const routes: Route[] = [
   { name: "Writing", path: "/writing", footer: true },
   { name: "Projects", path: "/projects", footer: true },
   { name: "Likes", path: "/likes", footer: true },
-  { name: "Travel", path: "/travel", footer: true },
+  // { name: "Travel", path: "/travel", footer: true },
 ];
 
 export const socialLinks = [

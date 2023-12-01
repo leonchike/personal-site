@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import AppProviders from "@/context/contextProviders";
+import GoogleAnalytics from "@/utils/analytics";
+import { GA_TRACKING_ID } from "@/utils/constants";
 import localFont from "next/font/local";
 import "@/styles/global.css";
 import Footer from "@/components/Footer";
@@ -62,6 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={MDSystem.className}>
+        <GoogleAnalytics ga_id={GA_TRACKING_ID} />
         <AppProviders>{children}</AppProviders>
         <Footer />
       </body>
