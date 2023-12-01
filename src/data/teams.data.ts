@@ -20,7 +20,7 @@ export default [
     externalLinks: [
       {
         name: "Rebuildee.com",
-        url: "https://app.rebuildee.com",
+        url: "https://rebuildee.com",
       },
       {
         name: "Twitter",

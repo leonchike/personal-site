@@ -3,6 +3,7 @@
   border: #222 2px solid;
   border-radius: 0.25rem;
   padding: 0.4rem 0.8rem;
+  padding-block-end: 0.1rem;
   gap: 0.3rem;
 
   transition: all 0.5s ease;
@@ -11,8 +12,9 @@
 .button:hover {
   background-color: #222;
   color: #fff;
+  transition: all 0.5s ease;
 }
 
 .iconWrapper {
-  transform: translateY(calc(2.5 / 16 * 1rem));
+  transform: translateY(calc(2.2 / 16 * 1rem));
 }
