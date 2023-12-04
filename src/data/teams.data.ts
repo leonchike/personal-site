@@ -23,7 +23,7 @@ export default [
         url: "https://rebuildee.com",
       },
       {
-        name: "Twitter",
+        name: "X.com",
         url: "https://twitter.com/rebuildee",
       },
     ],
