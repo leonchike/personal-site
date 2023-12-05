@@ -18,9 +18,9 @@ const BlogContent = ({ data }: { data: StateData }) => {
   return (
     <div className={styles.wrapper}>
       <HeroImage
-        displayImage={data.data[0].displayImage}
-        lowQualityImage={data.data[0].thumbnailImage}
-        alt={data.data[0].alt}
+        displayImage={data.data[0].displayImage || ""}
+        lowQualityImage={data.data[0].thumbnailImage || ""}
+        alt={data.data[0].alt || ""}
       />
       <Spacer height="3rem" />
       <MetaData data={data.data[0]} />
