@@ -16,7 +16,7 @@ export default [
     file: "./teams/rebuildee.mdx",
     path: "teams/rebuildee",
     type: "teams",
-    subTitle: "Engineering and Product Manager, 2022 - Present",
+    subTitle: "Senior Technical Product Manager, 2022 - Present",
     externalLinks: [
       {
         name: "Rebuildee.com",
