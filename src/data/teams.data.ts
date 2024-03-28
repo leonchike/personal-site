@@ -177,21 +177,6 @@ export default [
     ],
   },
   {
-    id: "agiledivision",
-    name: "agiledivision",
-    displayName: "Agile Division",
-    displayImage:
-      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/c65124d8-30ca-4217-943b-47fc1a612b00/original",
-    thumbnailImage:
-      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/c65124d8-30ca-4217-943b-47fc1a612b00/thumbnails",
-    alt: "Agile Division Company Image",
-    file: "./teams/agiledivision.mdx",
-    path: "teams/agiledivision",
-    type: "teams",
-    subTitle: "Founder, Design and Engineering, 2015 - 2016",
-    externalLinks: [],
-  },
-  {
     id: "newmarkets",
     name: "newmarkets",
     displayName: "New Markets Venture Partners",

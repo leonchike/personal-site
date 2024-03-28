@@ -14,7 +14,7 @@
 }
 
 @media (min-width: 600px) {
-  .header{
+  .header {
     margin-block-end: calc(48 / 16 * 1rem);
   }
 }
@@ -22,6 +22,7 @@
 .title {
   font-size: 2rem;
   text-transform: capitalize;
+  font-weight: 700;
 }
 
 .moreLink {
@@ -33,10 +34,10 @@
 
 .moreLink::after {
   content: "→";
-    display: inline-block;
-    padding-inline-start: 0.5rem;
-    transform: translate3d(0rem, 0, 0);
-    transition: transform 300ms ease;
+  display: inline-block;
+  padding-inline-start: 0.5rem;
+  transform: translate3d(0rem, 0, 0);
+  transition: transform 300ms ease;
 }
 
 .moreLink:hover::after {
@@ -45,9 +46,9 @@
 }
 
 @media (min-width: 600px) {
-   .moreLink {
+  .moreLink {
     font-size: 1rem;
-   }
+  }
 }
 
 .hideMobile {
