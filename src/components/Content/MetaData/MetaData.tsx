@@ -3,9 +3,9 @@ import { Item } from "@/types/global";
 
 const MetaData = ({ data }: { data: Item }) => {
   if (
-    data.type === "teams" ||
-    data.type === "projects" ||
-    data.type === "likes"
+    data?.type === "teams" ||
+    data?.type === "projects" ||
+    data?.type === "likes"
   ) {
     return (
       <div className={styles.wrapper}>

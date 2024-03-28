@@ -1,3 +1,6 @@
+/** @type {import('next').NextConfig} */
+const { withAxiom } = require("next-axiom");
+
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
   options: {
@@ -37,4 +40,4 @@ const nextConfig = {
 };
 
 // Merge MDX config with Next.js config
-module.exports = withMDX(nextConfig);
+module.exports = withAxiom(withMDX(nextConfig));
