@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { getPageVisitsServerAction } from "@/lib/actions";
+import useSWR from "swr";
+import useSWRInfinite from "swr/infinite";
 
 interface PageVisitInterface {
   _id: string;
@@ -17,34 +19,28 @@ interface PageVisitInterface {
   pathname: string;
 }
 
+const fetcher = async (url: string) => {
+  const [_, page, limit] = url.split("/");
+  const { visits, hasMore } = await getPageVisitsServerAction(
+    parseInt(page),
+    parseInt(limit)
+  );
+  return { visits, hasMore };
+};
+
 export default function AdminView() {
-  const [pageVisits, setPageVisits] = useState([] as PageVisitInterface[]);
-  const [page, setPage] = useState(1);
-  const [isLoading, setIsLoading] = useState(false);
-  const [hasMore, setHasMore] = useState(true);
   const limit = 100;
+  const { data, error, size, setSize } = useSWRInfinite(
+    (index) => `/api/page-visits/${index + 1}/${limit}`,
+    fetcher
+  );
 
-  useEffect(() => {
-    const fetchPageVisits = async () => {
-      setIsLoading(true);
-      try {
-        const { visits, hasMore } = await getPageVisitsServerAction(
-          page,
-          limit
-        );
-        setPageVisits((prevVisits) => [...prevVisits, ...visits]);
-        setHasMore(hasMore);
-      } catch (error) {
-        console.error("Error fetching page visits:", error);
-      }
-      setIsLoading(false);
-    };
-
-    fetchPageVisits();
-  }, [page]);
+  const pageVisits = data ? data.flatMap((data) => data.visits) : [];
+  const isLoading = !data && !error;
+  const hasMore = data && data[data.length - 1].hasMore;
 
   const handleLoadMore = () => {
-    setPage((prevPage) => prevPage + 1);
+    setSize(size + 1);
   };
 
   return (
