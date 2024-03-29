@@ -53,7 +53,7 @@ export default function AdminView() {
         <h1 className="text-3xl font-medium mb-6">Admin Log View</h1>
         <table className="w-full max-w-4xl bg-white shadow-md rounded-sm overflow-hidden">
           <thead>
-            <tr className="bg-gray-100 text-gray-700">
+            <tr className="bg-gray-100 text-gray-700 text-left">
               <th className="py-3 pt-4 px-4">Timestamp</th>
               <th className="py-3 px-4">IP Address</th>
               <th className="py-3 px-4">Location</th>
@@ -62,7 +62,7 @@ export default function AdminView() {
           </thead>
           <tbody>
             {pageVisits.map((visit) => (
-              <tr key={visit._id}>
+              <tr key={visit._id} className="text-sm">
                 <td className="py-3 px-4">
                   {new Date(visit.timestamp).toLocaleString()}
                 </td>
