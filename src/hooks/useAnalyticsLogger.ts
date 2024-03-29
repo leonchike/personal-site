@@ -1,4 +1,3 @@
-// useAnalyticsLogger.ts
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { logPageVisitServerAction } from "@/lib/actions";
@@ -8,6 +7,14 @@ export const useAnalyticsLogger = () => {
 
   useEffect(() => {
     const logPageVisit = async () => {
+      if (
+        process.env.NODE_ENV === "development" ||
+        pathname === "/login" ||
+        pathname === "/admin"
+      ) {
+        return;
+      }
+
       try {
         const timestamp = new Date().toISOString();
         const ipAddress = await fetch("https://api.ipify.org?format=json")
