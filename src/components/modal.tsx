@@ -1,15 +1,20 @@
-import * as Dialog from "@radix-ui/react-dialog";
+import React from "react";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
 
-export default function ModalBase({ children }: { children: React.ReactNode }) {
-  <Dialog.Root>
-    <Dialog.Trigger />
-    <Dialog.Portal>
-      <Dialog.Overlay />
-      <Dialog.Content>
-        <Dialog.Title />
-        <Dialog.Description />
-        <Dialog.Close />
-      </Dialog.Content>
-    </Dialog.Portal>
-  </Dialog.Root>;
-}
+export const DialogContent = React.forwardRef<
+  HTMLDivElement,
+  { children: React.ReactNode }
+>(({ children, ...props }, forwardedRef) => (
+  <DialogPrimitive.Portal>
+    <DialogPrimitive.Overlay />
+    <DialogPrimitive.Content {...props} ref={forwardedRef}>
+      {children}
+      <DialogPrimitive.Close aria-label="Close">close</DialogPrimitive.Close>
+    </DialogPrimitive.Content>
+  </DialogPrimitive.Portal>
+));
+
+DialogContent.displayName = "DialogContent";
+
+export const Dialog = DialogPrimitive.Root;
+export const DialogTrigger = DialogPrimitive.Trigger;
