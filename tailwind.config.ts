@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-elzavariable)", "ui-sans-serif", "system-ui"],
+        serif: ["var(--font-gallient)", "ui-serif", "Georgia"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
