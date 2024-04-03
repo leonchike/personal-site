@@ -47,7 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${elzaVariable.variable} ${gallient.variable}`}>
+      <body
+        className={`${elzaVariable.variable} ${gallient.variable} min-h-screen font-sans`}
+      >
         {children}
       </body>
     </html>

@@ -1,5 +1,9 @@
-import Image from "next/image";
+import { WideWidthWrapper } from "@/components/ui/layout";
 
 export default function Home() {
-  return <div className="text-4xl text-red-600">Hello</div>;
+  return (
+    <WideWidthWrapper>
+      <div className="text-4xl text-red-600">Hello</div>
+    </WideWidthWrapper>
+  );
 }
