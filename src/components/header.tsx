@@ -4,6 +4,8 @@ import Link from "next/link";
 import * as Dialog from "@radix-ui/react-dialog";
 import ROUTES from "@/utils/routes";
 import { useState } from "react";
+import clsx from "clsx";
+import { WidthWrapper } from "@/components/ui/layout";
 
 const LINKS = [
   { name: "Work", href: ROUTES.HOME_WORK_SECTION },
@@ -13,15 +15,31 @@ const LINKS = [
 ];
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
-    <header className="flex justify-between items-center py-3 opacity-0 animate-fadeIn">
-      <Link href={ROUTES.HOME}>
-        <span className="uppercase text-[0.7rem] font-[500] tracking-[0.15em]">
-          Leon Nwankwo [Chike]
-        </span>
-      </Link>
-      <DesktopLinks />
-      <MobileMenu />
+    <header
+      id="main-header"
+      className={clsx(
+        "flex transition-colors duration-300",
+        isOpen
+          ? "bg-primary-dark text-primary-white"
+          : "bg-primary-white text-primary-dark"
+      )}
+    >
+      <WidthWrapper>
+        <div className="flex justify-between items-center py-3 opacity-0 animate-fadeIn">
+          <Link href={ROUTES.HOME}>
+            <span className="uppercase text-[0.7rem] font-[500] tracking-[0.15em]">
+              Leon Nwankwo [Chike]
+            </span>
+          </Link>
+          <DesktopLinks />
+          <MobileMenu isOpen={isOpen} toggleMenu={toggleMenu} />
+        </div>
+      </WidthWrapper>
     </header>
   );
 }
@@ -40,12 +58,23 @@ function DesktopLinks() {
   );
 }
 
-function MobileMenu() {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
+function MobileMenu({
+  isOpen,
+  toggleMenu,
+}: {
+  isOpen: boolean;
+  toggleMenu: () => void;
+}) {
+  const isClient = document !== undefined;
+
+  if (!isClient) return null;
+
+  const headerHeight = document.getElementById("main-header")?.clientHeight;
+
+  console.log(headerHeight);
 
   return (
-    <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog.Root open={isOpen} onOpenChange={toggleMenu}>
       <Dialog.Trigger asChild>
         <button onClick={toggleMenu} className="md:hidden focus:outline-none">
           <MobileMenuButton isOpen={isOpen} />
@@ -53,8 +82,13 @@ function MobileMenu() {
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0" />
-        <Dialog.Content className="fixed top-[62px] left-0 right-0 bottom-0 bg-white p-8">
-          <MobileLinks closeMenu={() => setIsOpen(false)} />
+        <Dialog.Content
+          className={clsx(
+            `${headerHeight ? `top-[${headerHeight}px]` : "top-[58px"}`,
+            "fixed  left-0 right-0 bottom-0 bg-primary-dark text-primary-white p-8 transform transition-transform duration-300"
+          )}
+        >
+          <MobileLinks closeMenu={toggleMenu} />
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
@@ -82,19 +116,26 @@ const MobileMenuButton = ({ isOpen }: { isOpen: boolean }) => (
   <button className="focus:outline-none">
     <div className="relative w-5 h-5">
       <div
-        className={`absolute top-1/2 left-0 w-full h-0.5 bg-primary-dark transform transition-transform duration-300 ${
-          isOpen ? "rotate-45 translate-y-0" : "-translate-y-1.5"
-        }`}
+        className={clsx(
+          "absolute top-1/2 left-0 w-full h-0.5 transform transition-transform duration-300",
+          isOpen
+            ? "bg-primary-white rotate-45 translate-y-0"
+            : "bg-primary-dark -translate-y-1.5"
+        )}
       ></div>
       <div
-        className={`absolute top-1/2 left-0 w-full h-0.5 bg-primary-dark transform transition-opacity duration-300 ${
-          isOpen ? "opacity-0" : "opacity-100"
-        }`}
+        className={clsx(
+          "absolute top-1/2 left-0 w-full h-0.5 transform transition-opacity duration-300",
+          isOpen ? "bg-primary-white opacity-0" : "bg-primary-dark opacity-100"
+        )}
       ></div>
       <div
-        className={`absolute top-1/2 left-0 w-full h-0.5 bg-primary-dark transform transition-transform duration-300 ${
-          isOpen ? "-rotate-45 translate-y-0" : "translate-y-1.5"
-        }`}
+        className={clsx(
+          "absolute top-1/2 left-0 w-full h-0.5 transform transition-transform duration-300",
+          isOpen
+            ? "bg-primary-white -rotate-45 translate-y-0"
+            : "bg-primary-dark translate-y-1.5"
+        )}
       ></div>
     </div>
   </button>
