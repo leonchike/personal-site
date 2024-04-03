@@ -19,6 +19,7 @@ const config: Config = {
       },
       colors: {
         "primary-dark": "var(--color-primary-dark)",
+        "primary-white": "var(--color-primary-white)",
       },
       keyframes: {
         fadeIn: {
