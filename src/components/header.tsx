@@ -71,8 +71,6 @@ function MobileMenu({
 
   const headerHeight = document.getElementById("main-header")?.clientHeight;
 
-  console.log(headerHeight);
-
   return (
     <Dialog.Root open={isOpen} onOpenChange={toggleMenu}>
       <Dialog.Trigger asChild>
