@@ -1,9 +1,11 @@
-import { WideWidthWrapper } from "@/components/ui/layout";
+import { WidthWrapper } from "@/components/ui/layout";
+import Header from "@/components/header";
 
 export default function Home() {
   return (
-    <WideWidthWrapper>
+    <WidthWrapper>
+      <Header />
       <div className="text-4xl text-red-600">Hello</div>
-    </WideWidthWrapper>
+    </WidthWrapper>
   );
 }
