@@ -8,6 +8,7 @@
   --background-end-rgb: 255, 255, 255;
   --color-primary-dark: #141414;
   --color-primary-white: #fff;
+  --color-primary-white-70: rgba(255, 255, 255, 0.7);
   font-size: 18px;
 }
 

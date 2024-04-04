@@ -23,10 +23,10 @@ export default function Header() {
     <header
       id="main-header"
       className={clsx(
-        "fixed top-0 left-0 w-full z-50 transition-colors duration-300",
+        "fixed top-0 left-0 w-full z-50 transition-colors duration-300 backdrop-blur-sm",
         isOpen
           ? "bg-primary-dark text-primary-white"
-          : "bg-primary-white text-primary-dark"
+          : "bg-primary-white-70 text-primary-dark"
       )}
     >
       <WidthWrapper>
