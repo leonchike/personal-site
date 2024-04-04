@@ -30,7 +30,7 @@ export default function Header() {
       )}
     >
       <WidthWrapper>
-        <div className="flex justify-between items-center py-3 opacity-0 animate-fadeIn">
+        <div className="flex justify-between items-center py-3 opacity-0 animate-fadeIn300">
           <Link href={ROUTES.HOME}>
             <span className="uppercase text-[0.7rem] font-[500] tracking-[0.15em]">
               Leon Nwankwo [Chike]
@@ -84,11 +84,11 @@ function MobileMenu({
         </button>
       </Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0" />
+        <Dialog.Overlay className="fixed inset-0 bg-primary-dark opacity-0 animate-fadeIn750" />
         <Dialog.Content
           className={clsx(
             `top-[${headerHeight}px]`,
-            "fixed left-0 right-0 bottom-0 bg-primary-dark text-primary-white p-8 transform transition-transform duration-300 "
+            "fixed left-0 right-0 bottom-0 bg-primary-dark text-primary-white p-8 opacity-0 animate-fadeIn750"
           )}
         >
           <MobileLinks closeMenu={toggleMenu} />

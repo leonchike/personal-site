@@ -26,11 +26,14 @@ const config: Config = {
       keyframes: {
         fadeIn: {
           "0%": { opacity: "0" },
+          "25%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
       },
       animation: {
-        fadeIn: "fadeIn 1s ease-out forwards",
+        fadeIn300: "fadeIn 300ms ease-out forwards",
+        fadeIn750: "fadeIn 750ms ease-out forwards",
+        fadeIn1000: "fadeIn 1.5s ease-out forwards",
       },
     },
   },

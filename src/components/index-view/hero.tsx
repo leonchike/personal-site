@@ -5,6 +5,8 @@ import { ArrowDownIcon } from "@/components/ui/custom-icons";
 export default async function Hero() {
   const { aboutData } = await getIndexData();
 
+  if (!aboutData) return null;
+
   return (
     <section className="py-16 md:py-28">
       <Title aboutData={aboutData} />
@@ -27,7 +29,7 @@ function Title({ aboutData }: TitleProps) {
       <h1 className="">Hi, I&apos;m {aboutData.name},</h1>
       <h2>{aboutData.currentPosition}</h2>
       <div className="w-full md:w-[75vw] xl:w-[50vw] pt-4">
-        <p className="text-[1.7rem] leading-9 tracking-[0.02em] font-[375]">
+        <p className="text-[1.3rem] md:text-[1.7rem] leading-9 tracking-[0.02em] font-[375]">
           {aboutData.personalStatement}
         </p>
       </div>
@@ -51,8 +53,6 @@ function AnchorLinks() {
       href: getSamePageAnchorLink(ROUTES.HOME_COLLABORATION_SECTION),
     },
   ];
-
-  console.log(LINKS);
 
   return (
     <div className="pt-6 flex flex-col gap-3 text-[rgb(20,20,20)]">
