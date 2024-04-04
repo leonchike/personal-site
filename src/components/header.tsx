@@ -88,10 +88,16 @@ function MobileMenu({
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0" />
         <Dialog.Content
-          className={clsx(
-            `top-[${headerHeight}px]`,
-            "fixed left-0 right-0 bottom-0 bg-primary-dark text-primary-white p-8 transform transition-transform duration-300"
-          )}
+          // className={clsx(
+          //   `top-[${headerHeight}px]`,
+          //   "fixed left-0 right-0 bottom-0 bg-primary-dark text-primary-white p-8 transform transition-transform duration-300"
+          // )}\
+          className={`
+            top-[${headerHeight}px]
+            fixed left-0 right-0 bottom-0
+            bg-primary-dark text-primary-white p-8
+            transform transition-transform duration-300
+          `}
         >
           <MobileLinks closeMenu={toggleMenu} />
         </Dialog.Content>
