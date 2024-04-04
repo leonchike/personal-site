@@ -3,7 +3,7 @@
 import Link from "next/link";
 import * as Dialog from "@radix-ui/react-dialog";
 import ROUTES from "@/utils/routes";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { WidthWrapper } from "@/components/ui/layout";
 
@@ -65,25 +65,30 @@ function MobileMenu({
   isOpen: boolean;
   toggleMenu: () => void;
 }) {
-  const isClient = document !== undefined;
+  const [headerHeight, setHeaderHeight] = useState(54);
 
-  if (!isClient) return null;
-
-  const headerHeight = document.getElementById("main-header")?.clientHeight;
+  useEffect(() => {
+    // This code runs after the component mounts, ensuring `document` is defined
+    const calculatedHeight =
+      document.getElementById("main-header")?.clientHeight;
+    if (calculatedHeight) {
+      setHeaderHeight(calculatedHeight);
+    }
+  }, []);
 
   return (
     <Dialog.Root open={isOpen} onOpenChange={toggleMenu}>
       <Dialog.Trigger asChild>
         <button onClick={toggleMenu} className="md:hidden focus:outline-none">
-          <MobileMenuButton isOpen={isOpen} />
+          <MobileMenuButton isOpen={isOpen} onClick={toggleMenu} />
         </button>
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0" />
         <Dialog.Content
           className={clsx(
-            `${headerHeight ? `top-[${headerHeight}px]` : "top-[58px"}`,
-            "fixed  left-0 right-0 bottom-0 bg-primary-dark text-primary-white p-8 transform transition-transform duration-300"
+            `top-[${headerHeight}px]`,
+            "fixed left-0 right-0 bottom-0 bg-primary-dark text-primary-white p-8 transform transition-transform duration-300"
           )}
         >
           <MobileLinks closeMenu={toggleMenu} />
@@ -110,8 +115,14 @@ function MobileLinks({ closeMenu }: { closeMenu: () => void }) {
   );
 }
 
-const MobileMenuButton = ({ isOpen }: { isOpen: boolean }) => (
-  <button className="focus:outline-none">
+const MobileMenuButton = ({
+  isOpen,
+  onClick,
+}: {
+  isOpen: boolean;
+  onClick: () => void;
+}) => (
+  <div className="md:hidden focus:outline-none" onClick={onClick}>
     <div className="relative w-5 h-5">
       <div
         className={clsx(
@@ -136,5 +147,5 @@ const MobileMenuButton = ({ isOpen }: { isOpen: boolean }) => (
         )}
       ></div>
     </div>
-  </button>
+  </div>
 );
