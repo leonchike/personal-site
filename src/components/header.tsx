@@ -26,7 +26,7 @@ export default function Header() {
         "fixed top-0 left-0 w-full z-50 transition-colors duration-300 backdrop-blur-sm",
         isOpen
           ? "bg-primary-dark text-primary-white"
-          : "bg-primary-white-70 text-primary-dark"
+          : "bg-primary-white-90 text-primary-dark"
       )}
     >
       <WidthWrapper>
