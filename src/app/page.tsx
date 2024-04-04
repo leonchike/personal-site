@@ -8,9 +8,11 @@ export default function Home() {
   return (
     <WidthWrapper>
       <Suspense fallback={null}>
-        <Hero />
-        <WorkSection />
-        <LeadershipSection />
+        <div className="animate-fadeIn1000">
+          <Hero />
+          <WorkSection />
+          <LeadershipSection />
+        </div>
       </Suspense>
     </WidthWrapper>
   );
