@@ -88,7 +88,7 @@ function MobileMenu({
         <Dialog.Content
           className={clsx(
             `top-[${headerHeight}px]`,
-            "fixed left-0 right-0 bottom-0 bg-primary-dark text-primary-white p-8 transform transition-transform duration-300"
+            "fixed left-0 right-0 bottom-0 bg-primary-dark text-primary-white p-8 transform transition-transform duration-300 h-full"
           )}
         >
           <MobileLinks closeMenu={toggleMenu} />
