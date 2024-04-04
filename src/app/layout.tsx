@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { elzaVariable, gallient } from "./typefaces/type-faces";
 import "./globals.css";
+import Header from "@/components/header";
 
 export const metadata: Metadata = {
   title: "Leon Nwankwo - Personal Site",
@@ -48,8 +49,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${elzaVariable.variable} ${gallient.variable} min-h-screen font-sans text-primary-dark`}
+        className={`${elzaVariable.variable} ${gallient.variable} min-h-screen font-sans text-primary-dark pt-[56px]`}
       >
+        <Header />
         {children}
       </body>
     </html>
