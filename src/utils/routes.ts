@@ -9,3 +9,9 @@ const ROUTES = {
 };
 
 export default ROUTES;
+
+export const socialLinks = [
+  { name: "Twitter", path: "https://twitter.com/leonchike" },
+  { name: "GitHub", path: "https://github.com/leonchike" },
+  { name: "LinkedIn", path: "https://www.linkedin.com/in/leonchike/" },
+];
