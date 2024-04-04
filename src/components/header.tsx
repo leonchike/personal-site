@@ -23,7 +23,7 @@ export default function Header() {
     <header
       id="main-header"
       className={clsx(
-        "flex transition-colors duration-300",
+        "fixed top-0 left-0 w-full z-50 transition-colors duration-300",
         isOpen
           ? "bg-primary-dark text-primary-white"
           : "bg-primary-white text-primary-dark"
@@ -87,7 +87,7 @@ function MobileMenu({
         <Dialog.Overlay className="fixed inset-0" />
         <Dialog.Content
           className={clsx(
-            `top-[${headerHeight}px] h-[calc(100%-${headerHeight}px)]`,
+            `top-[${headerHeight}px]`,
             "fixed left-0 right-0 bottom-0 bg-primary-dark text-primary-white p-8 transform transition-transform duration-300 "
           )}
         >
