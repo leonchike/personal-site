@@ -15,3 +15,13 @@ export const socialLinks = [
   { name: "GitHub", path: "https://github.com/leonchike" },
   { name: "LinkedIn", path: "https://www.linkedin.com/in/leonchike/" },
 ];
+
+export function getSamePageAnchorLink(href: string) {
+  // replace the "/" with an empty string
+  return href.replace("/", "");
+}
+
+export function getSamePageSectionId(href: string) {
+  // replace the "/#" with an empty string
+  return href.replace("/#", "");
+}
