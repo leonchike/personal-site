@@ -76,6 +76,8 @@ function MobileMenu({
     }
   }, []);
 
+  console.log(headerHeight);
+
   return (
     <Dialog.Root open={isOpen} onOpenChange={toggleMenu}>
       <Dialog.Trigger asChild>
