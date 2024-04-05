@@ -1,8 +1,8 @@
 export type WorkItemType = {
   index: number;
   role: string[];
-  company: string;
-  location: string;
+  company: string | null;
+  location: string | null;
   year: number;
   articleTitle: string;
   articleDescription: string;
@@ -13,9 +13,11 @@ export type WorkItemType = {
 
 type Visual = {
   url: string;
+  smallurl?: string;
   alt: string;
   mediaType: string;
-  description: string;
+  description: string | null;
+  bgColor?: string;
 };
 
 type Reference = {
