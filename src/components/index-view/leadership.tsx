@@ -3,6 +3,7 @@ import { SectionTitle } from "./reusable-index-components";
 import { getIndexData } from "@/actions/server-actions";
 import { LeadershipType } from "@/utils/types";
 import { ArrowUpRightIcon } from "@/components/ui/custom-icons";
+import { WidthWrapper } from "@/components/ui/layout";
 
 export default async function LeadershipSection() {
   const { leadershipData } = await getIndexData();
@@ -10,10 +11,12 @@ export default async function LeadershipSection() {
   return (
     <section
       id={getSamePageSectionId(ROUTES.HOME_LEADERSHIP_SECTION)}
-      className="pt-8 md:pt-10 bg-[#61767e] pb-16 md:pb-24 -mx-[10000px] px-[10000px] overflow-clip"
+      className="pt-8 md:pt-10 bg-[#61767e] pb-16 md:pb-24 w-full"
     >
-      <Heading />
-      <Content data={leadershipData} />
+      <WidthWrapper>
+        <Heading />
+        <Content data={leadershipData} />
+      </WidthWrapper>
     </section>
   );
 }

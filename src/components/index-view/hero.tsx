@@ -29,7 +29,7 @@ function Title({ aboutData }: TitleProps) {
       <h1 className="text-lg">Hi, I&apos;m {aboutData.name},</h1>
       <h2 className="text-lg">{aboutData.currentPosition}</h2>
       <div className="w-full md:w-[75vw] xl:w-[50vw] pt-4">
-        <p className="text-[1.3rem] md:text-[1.7rem] leading-9 tracking-[0.02em] font-[375]">
+        <p className="text-[1.3rem] md:text-[1.7rem] leading-9 tracking-[0.02em] font-[375] max-w-[62rem]">
           {aboutData.personalStatement}
         </p>
       </div>

@@ -7,15 +7,18 @@ import AboutSection from "@/components/index-view/about";
 
 export default function Home() {
   return (
-    <WidthWrapper>
-      <Suspense fallback={null}>
-        <div className="animate-fadeIn1000">
+    <Suspense fallback={null}>
+      <div className="animate-fadeIn1000 relative">
+        <WidthWrapper>
           <Hero />
           <WorkSection />
-          <LeadershipSection />
+        </WidthWrapper>
+
+        <LeadershipSection />
+        <WidthWrapper>
           <AboutSection />
-        </div>
-      </Suspense>
-    </WidthWrapper>
+        </WidthWrapper>
+      </div>
+    </Suspense>
   );
 }
