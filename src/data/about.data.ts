@@ -1,3 +1,5 @@
+import { profile } from "console";
+
 /* eslint-disable import/no-anonymous-default-export */
 export default {
   name: "Leon Chike Nwankwo",
@@ -11,4 +13,6 @@ export default {
   contactLocation: "Washington, DC",
   resumeURL:
     "https://s3.amazonaws.com/leonchike.me/Leon-Chike-Nwankwo-Resume.pdf",
+  profilePictureURL:
+    "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/7b87c386-8cac-4b58-f46c-09892d5a1700/original",
 };
