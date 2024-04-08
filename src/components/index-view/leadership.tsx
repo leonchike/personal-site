@@ -10,7 +10,7 @@ export default async function LeadershipSection() {
   return (
     <section
       id={getSamePageSectionId(ROUTES.HOME_LEADERSHIP_SECTION)}
-      className="pt-8 md:pt-10 bg-[#61767e] pb-16 md:pb-24 -mx-[10000px] px-[10000px]"
+      className="pt-8 md:pt-10 bg-[#61767e] pb-16 md:pb-24 -mx-[10000px] px-[10000px] overflow-clip"
     >
       <Heading />
       <Content data={leadershipData} />
