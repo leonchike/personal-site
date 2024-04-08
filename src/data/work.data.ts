@@ -76,4 +76,38 @@ export default [
       },
     ],
   },
+  {
+    index: 2,
+    role: [
+      "0>1 Product Strategy",
+      "End to end Visual Design + Interaction Design",
+      "Team Leadership",
+    ],
+    company: "Deloitte",
+    location: "Remote",
+    year: 2021,
+    articleTitle:
+      "Revolutionizing Pension Processing with Robotic Process Automation (RPA)",
+    articleDescription:
+      "Spearheaded the development of an innovative RPA application that transformed pension processing for a major client. By leveraging Azure, machine learning, and React, we automated complex tasks, extracting data from 200 million scanned documents. The application led to $2.9M in annual cost reductions, freed up 95,000 hours of manual labor, and improved accuracy and efficiency, benefiting over 265,000 pension plan members. This project showcased my ability to drive innovation, lead cross-functional teams, and deliver significant cost savings and operational efficiencies.",
+    visuals: [
+      {
+        url: "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/14165043-2d71-46c8-27f0-7273630bd200/largeartwork",
+        smallurl:
+          "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/14165043-2d71-46c8-27f0-7273630bd200/largeartwork",
+        alt: "Rebuildee",
+        mediaType: "image",
+        description: null,
+        bgColor: "#F1F1F1",
+      },
+    ],
+    displayType: "single-image",
+    References: [
+      {
+        url: "https://www.rebuildee.com",
+        title: "Rebuildee",
+        description: "Rebuildee",
+      },
+    ],
+  },
 ];
