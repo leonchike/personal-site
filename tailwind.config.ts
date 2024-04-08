@@ -35,6 +35,10 @@ const config: Config = {
         fadeIn750: "fadeIn 750ms ease-out forwards",
         fadeIn1000: "fadeIn 1.5s ease-out forwards",
       },
+      container: {
+        center: true,
+        padding: "2rem",
+      },
     },
   },
   plugins: [],
