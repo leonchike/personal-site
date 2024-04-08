@@ -25,3 +25,16 @@ type Reference = {
   title: string;
   description: string;
 };
+
+type LeadershipData = {
+  heading: string;
+  subheading: string;
+  description: string;
+};
+
+export type LeadershipType = {
+  sectionStatement: string;
+  calendlyLink: string;
+  leadershipData: LeadershipData[];
+  highlights: string[];
+};
