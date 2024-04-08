@@ -33,8 +33,6 @@ function Heading() {
 }
 
 function WorkItem({ data }: { data: WorkItemType }) {
-  console.log(data);
-
   return (
     <article className="space-y-8 md:space-y-12 pb-16 md:pb-18">
       <WorkItemDescription data={data} />

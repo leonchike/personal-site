@@ -19,7 +19,7 @@ export default {
   ],
   highlights: [
     "Facilitate workshops on design thinking, product management, and software engineering",
-    "Instructor (Part-time) at General Assembly, teaching Product Management",
+    "Instructor (Part-time) at 1863 Ventures, teaching Product Management and Design Thinking to underrepresented founders",
     "Mentor at the University of Maryland's Startup Shell, helping students in the early stages of their startup journey",
     "Led product and design trainings at Deloitte Digital",
     "Built design systems and led design sprints at Deloitte Digital",
