@@ -38,3 +38,14 @@ export type LeadershipType = {
   leadershipData: LeadershipData[];
   highlights: string[];
 };
+
+export type AboutData = {
+  name: string;
+  currentPosition: string;
+  personalStatement: string;
+  summaryStatement: string;
+  contactEmail: string;
+  contactPhone: string;
+  contactLocation: string;
+  resumeURL: string;
+};

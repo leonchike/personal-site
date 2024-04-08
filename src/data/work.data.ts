@@ -81,7 +81,7 @@ export default [
     role: [
       "0>1 Product Strategy",
       "End to end Visual Design + Interaction Design",
-      "Team Leadership",
+      "Engagement Lead",
     ],
     company: "Deloitte",
     location: "Remote",

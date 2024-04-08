@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import Hero from "@/components/index-view/hero";
 import WorkSection from "@/components/index-view/work";
 import LeadershipSection from "@/components/index-view/leadership";
+import AboutSection from "@/components/index-view/about";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
           <Hero />
           <WorkSection />
           <LeadershipSection />
+          <AboutSection />
         </div>
       </Suspense>
     </WidthWrapper>
