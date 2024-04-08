@@ -88,29 +88,6 @@ function WorkItemVisuals({
 
   if (data.displayType === "single-image") return <SingleImage data={data} />;
 
-  // return (
-  //   <div className="flex justify-center">
-  //     <div className=" max-w-[1600px] w-full grid grid-cols-[repeat(auto-fill,minmax(min(480px,100%),1fr))] gap-x-4 gap-y-6 w-content">
-  //       {data.visuals.map((visual, index) => (
-  //         <div key={index} className="flex flex-col items-center">
-  //           <div className="flex flex-col items-center">
-  //             <img
-  //               src={visual.url}
-  //               alt={visual.alt}
-  //               className="w-[70%] md:w-[50%] lg:w-[70%] xl:w-[80%] h-auto"
-  //             />
-  //           </div>
-  //           <div className="py-8">
-  //             <p className="text-center px-4 max-w-[380px] text-[0.92rem]">
-  //               {visual.description}
-  //             </p>
-  //           </div>
-  //         </div>
-  //       ))}
-  //     </div>
-  //   </div>
-  // );
-
   return null;
 }
 
