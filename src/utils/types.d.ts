@@ -48,4 +48,5 @@ export type AboutData = {
   contactPhone: string;
   contactLocation: string;
   resumeURL: string;
+  profilePictureURL: string;
 };

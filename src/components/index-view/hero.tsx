@@ -52,6 +52,7 @@ function AnchorLinks() {
       label: "Collaboration",
       href: getSamePageAnchorLink(ROUTES.HOME_COLLABORATION_SECTION),
     },
+    { label: "About", href: getSamePageAnchorLink(ROUTES.HOME_ABOUT_SECTION) },
   ];
 
   return (

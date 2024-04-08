@@ -1,14 +1,34 @@
+/* eslint-disable @next/next/no-img-element */
 import { getIndexData } from "@/actions/server-actions";
 import { AboutData } from "@/utils/types";
+import ROUTES, { getSamePageSectionId } from "@/utils/routes";
 
 export default async function AboutSection() {
   const { aboutData } = await getIndexData();
 
   return (
-    <section className="py-24 md:py-32 space-y-12">
-      <Statement statement={aboutData.summaryStatement} />
+    <section
+      id={getSamePageSectionId(ROUTES.HOME_ABOUT_SECTION)}
+      className="py-24 md:py-32 space-y-12"
+    >
+      <div className="space-y-4">
+        <ProfileImage url={aboutData.profilePictureURL} />
+        <Statement statement={aboutData.summaryStatement} />
+      </div>
       <Contact data={aboutData} />
     </section>
+  );
+}
+
+function ProfileImage({ url }: { url: string }) {
+  return (
+    <div className="w-48 h-48 rounded-full overflow-hidden">
+      <img
+        src={url}
+        alt="Profile picture"
+        className="w-full h-full object-cover transform scale-125 transition-transform duration-500 ease-in-out hover:scale-100"
+      />
+    </div>
   );
 }
 
