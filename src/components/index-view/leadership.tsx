@@ -55,7 +55,7 @@ function Content({ data }: { data: LeadershipType }) {
 function CallOuts({ data }: { data: LeadershipType["leadershipData"][0] }) {
   return (
     <div className="">
-      <div className="text-[5rem] xl:text-[6rem] font-[350] leading-0">
+      <div className="text-[4rem] md:text-[5rem] xl:text-[5.5rem] font-[350] leading-0">
         {data.heading}
       </div>
       <div className="text font-[550] tracking-wider -mt-4">
