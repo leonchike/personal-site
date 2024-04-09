@@ -58,10 +58,10 @@ function CallOuts({ data }: { data: LeadershipType["leadershipData"][0] }) {
       <div className="text-[4rem] md:text-[5rem] xl:text-[5.5rem] font-[350] leading-0">
         {data.heading}
       </div>
-      <div className="text font-[550] tracking-wider -mt-4">
-        {data.subheading}
+      <div className="font-[550] tracking-wider -mt-4">{data.subheading}</div>
+      <div className="pt-2 lg:max-w-[80%] text-[0.9rem]">
+        {data.description}
       </div>
-      <div className="pt-2 lg:max-w-[80%]">{data.description}</div>
     </div>
   );
 }
@@ -91,9 +91,9 @@ function Highlights({
   return (
     <div className="pt-6 md:pt-12">
       <h3 className="font-semibold tracking-wider text-[1.2rem]">Highlights</h3>
-      <div className="flex flex-col gap-4 divide-y-[1px] mt-2">
+      <div className="flex flex-col gap-3 divide-y-[1px] mt-2">
         {highlights.map((highlight, index) => (
-          <div key={index} className="pt-4 tracking-wider">
+          <div key={index} className="pt-3 tracking-wider text-[0.9rem]">
             {highlight}
           </div>
         ))}
