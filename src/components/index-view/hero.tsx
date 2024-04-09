@@ -28,8 +28,8 @@ function Title({ aboutData }: TitleProps) {
     <div>
       <h1 className="">Hi, I&apos;m {aboutData.name},</h1>
       <h2 className="">{aboutData.currentPosition}</h2>
-      <div className="w-full md:w-[75vw] xl:w-[50vw] pt-4">
-        <p className="text-[1.2rem] md:text-[1.4rem] md:leading-9 tracking-[0.02em] font-[375] max-w-[62rem]">
+      <div className="w-full md:w-[75vw] xl:w-[50vw] py-6">
+        <p className="text-[1.5rem] md:text-[1.4rem] md:leading-9 tracking-[0.02em] font-[375] max-w-[62rem]">
           {aboutData.personalStatement}
         </p>
       </div>
@@ -56,7 +56,7 @@ function AnchorLinks() {
   ];
 
   return (
-    <div className="pt-6 flex flex-col gap-3 text-[rgb(20,20,20)]">
+    <div className="pt-2 flex flex-col gap-3 text-[rgb(20,20,20)]">
       {LINKS.map((link, index) => (
         <a
           key={index}
