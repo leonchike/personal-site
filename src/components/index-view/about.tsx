@@ -12,7 +12,9 @@ export default async function AboutSection() {
       className="py-24 md:py-32 space-y-12"
     >
       <div className="space-y-4">
-        <ProfileImage url={aboutData.profilePictureURL} />
+        <div className="flex justify-center md:justify-start">
+          <ProfileImage url={aboutData.profilePictureURL} />
+        </div>
         <Statement statement={aboutData.summaryStatement} />
       </div>
       <Contact data={aboutData} />

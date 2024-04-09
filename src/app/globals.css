@@ -10,8 +10,7 @@
   --color-primary-white: #fff;
   --color-primary-white-70: rgba(255, 255, 255, 0.7);
   --color-primary-white-90: rgba(255, 255, 255, 0.9);
-  --color-description: 
-  font-size: 18px;
+  --color-description: ;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -24,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 body {

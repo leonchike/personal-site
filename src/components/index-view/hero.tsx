@@ -8,7 +8,7 @@ export default async function Hero() {
   if (!aboutData) return null;
 
   return (
-    <section className="py-16 md:py-28">
+    <section className="pt-12 pb-8 md:pt-24 md:pb-18">
       <Title aboutData={aboutData} />
       <AnchorLinks />
     </section>
@@ -26,10 +26,10 @@ interface TitleProps {
 function Title({ aboutData }: TitleProps) {
   return (
     <div>
-      <h1 className="text-lg">Hi, I&apos;m {aboutData.name},</h1>
-      <h2 className="text-lg">{aboutData.currentPosition}</h2>
+      <h1 className="">Hi, I&apos;m {aboutData.name},</h1>
+      <h2 className="">{aboutData.currentPosition}</h2>
       <div className="w-full md:w-[75vw] xl:w-[50vw] pt-4">
-        <p className="text-[1.3rem] md:text-[1.7rem] leading-9 tracking-[0.02em] font-[375] max-w-[62rem]">
+        <p className="text-[1.2rem] md:text-[1.4rem] md:leading-9 tracking-[0.02em] font-[375] max-w-[62rem]">
           {aboutData.personalStatement}
         </p>
       </div>
@@ -61,7 +61,7 @@ function AnchorLinks() {
         <a
           key={index}
           href={link.href}
-          className="inline-flex items-center gap-1 border-b border-current hover:border-transparent transition-colors duration-300 w-min h-[1.15rem]"
+          className="inline-flex items-center gap-1 border-b border-current hover:border-transparent transition-colors duration-300 w-min h-[1.15rem] text-sm"
         >
           {link.label}{" "}
           <span>
