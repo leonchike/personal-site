@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
   sectionStatement:
-    "Shipping products is great, but what I find even more meaningful is helping others grow. I offer pro-bono mentorship to newcomers in the field trying to get their first consulting or software engineering job, and those switching careers.",
+    "Shipping products is great, but what I find even more meaningful is helping others grow. I love to offer mentorship to newcomers in the field trying to get their first consulting, product or software engineering job, and those switching careers.",
   calendlyLink: "https://calendly.com/leonchike",
   leadershipData: [
     {
@@ -18,7 +18,7 @@ export default {
     },
   ],
   highlights: [
-    "Facilitate workshops on design thinking, product management, and software engineering",
+    "Facilitate workshops on design thinking, product management, and software engineering management",
     "Instructor (Part-time) at 1863 Ventures, teaching Product Management and Design Thinking to underrepresented founders",
     "Mentor at the University of Maryland's Startup Shell, helping students in the early stages of their startup journey",
     "Led product and design trainings at Deloitte Digital",

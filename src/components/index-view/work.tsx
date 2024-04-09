@@ -34,7 +34,7 @@ function Heading() {
 
 function WorkItem({ data }: { data: WorkItemType }) {
   return (
-    <article className="space-y-8 md:space-y-12 pb-16 md:pb-18">
+    <article className="space-y-8 md:space-y-12 pb-12 md:pb-16">
       <WorkItemDescription data={data} />
       <WorkItemVisuals data={data} />
     </article>
@@ -45,14 +45,14 @@ function WorkItemDescription({ data }: { data: WorkItemType }) {
   return (
     <div className="flex flex-col lg:flex-row flex-wrap gap-4 lg:gap-8 border-t-[1px] border-primary-dark w-full pt-2 md:pt-3">
       <div className="lg:max-w-[33%] space-y-1">
-        <h3 className="font-semibold tracking-wide">{data.articleTitle}</h3>
-        <p className="text-[0.9rem] whitespace-pre-wrap leading-[1.25rem]">
+        <h3 className="font-[550] tracking-wide">{data.articleTitle}</h3>
+        <p className="text-[0.9rem] whitespace-pre-wrap leading-[1.45rem]">
           {data.articleDescription}
         </p>
       </div>
       <div className="lg:max-w-[17%] space-y-1">
-        <h3 className="font-semibold">Role</h3>
-        <p className="text-[0.9rem] flex flex-col">
+        <h3 className="font-[550]">Role</h3>
+        <p className="text-[0.9rem] flex flex-col gap-1">
           {data.role.map((role, index) => (
             <span key={index}>{role}</span>
           ))}
@@ -60,7 +60,7 @@ function WorkItemDescription({ data }: { data: WorkItemType }) {
       </div>
       {data.year && (
         <div className="lg:max-w-[17%] space-y-1">
-          <h3 className="font-semibold">Year</h3>
+          <h3 className="font-[550]">Year</h3>
           <p className="text-[0.9rem]">{data.year}</p>
         </div>
       )}
@@ -103,7 +103,7 @@ function MultipleAssets({ data }: { data: WorkItemType }) {
               />
             </div>
             <div className="py-8">
-              <p className="text-center px-4 max-w-[380px] text-[0.92rem]">
+              <p className="text-center px-4 max-w-[380px] text-sm">
                 {visual.description}
               </p>
             </div>
@@ -134,7 +134,7 @@ function SingleImage({ data }: { data: WorkItemType }) {
         />
         {data.visuals[0].description && (
           <div className="py-8">
-            <p className="text-center px-4 max-w-[380px] text-[0.92rem]">
+            <p className="text-center px-4 max-w-[380px] text-[12px]">
               {data.visuals[0].description}
             </p>
           </div>

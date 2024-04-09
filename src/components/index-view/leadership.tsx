@@ -11,7 +11,7 @@ export default async function LeadershipSection() {
   return (
     <section
       id={getSamePageSectionId(ROUTES.HOME_LEADERSHIP_SECTION)}
-      className="pt-8 md:pt-10 bg-[#61767e] pb-16 md:pb-24 w-full"
+      className="pt-8 md:pt-10 bg-[#48585e] pb-16 md:pb-24 w-full"
     >
       <WidthWrapper>
         <Heading />
@@ -33,7 +33,7 @@ function Content({ data }: { data: LeadershipType }) {
   return (
     <div className="pt-10 md:pt-12 flex flex-col md:flex-row md:space-x-6 text-white">
       <div className="min-h-4 mb-6 md:mb-0 md:w-1/2 space-y-8">
-        <div className="text-[1.2rem] lg:text-[1.777rem] max-w-[90%] xl:max-w-[70%]">
+        <div className="text-[1rem] lg:text-[1.5rem] max-w-[90%] xl:max-w-[70%]">
           {data.sectionStatement}
         </div>
         <CalendlyButton data={data} />
@@ -55,8 +55,10 @@ function Content({ data }: { data: LeadershipType }) {
 function CallOuts({ data }: { data: LeadershipType["leadershipData"][0] }) {
   return (
     <div className="">
-      <div className="text-[5rem] xl:text-[6rem] leading-0">{data.heading}</div>
-      <div className="text font-semibold tracking-wider -mt-4">
+      <div className="text-[5rem] xl:text-[6rem] font-[350] leading-0">
+        {data.heading}
+      </div>
+      <div className="text font-[550] tracking-wider -mt-4">
         {data.subheading}
       </div>
       <div className="pt-2 lg:max-w-[80%]">{data.description}</div>
