@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
   sectionStatement:
-    "Shipping products is great, but what I find even more meaningful is helping others grow. I love to offer mentorship to newcomers in the field trying to get their first consulting, product or software engineering job, and those switching careers.",
+    "While delivering high-quality products is rewarding, I find even greater fulfillment in fostering the growth of others. I'm passionate about providing mentorship to colleagues and newcomers in the industry, whether they're seeking their first role in consulting, product development, or software engineering, or navigating a career transition.",
   calendlyLink: "https://calendly.com/leonchike",
   leadershipData: [
     {

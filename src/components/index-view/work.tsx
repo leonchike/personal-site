@@ -92,9 +92,12 @@ function WorkItemVisuals({
 function MultipleAssets({ data }: { data: WorkItemType }) {
   return (
     <div className="flex justify-center">
-      <div className=" max-w-[1600px] w-full grid grid-cols-[repeat(auto-fill,minmax(min(480px,100%),1fr))] gap-x-4 gap-y-6 w-content">
+      <div className=" max-w-[1600px] w-full grid grid-cols-[repeat(auto-fill,minmax(min(300px,100%),1fr))] xl:grid-cols-[repeat(auto-fill,minmax(min(480px,100%),1fr))] gap-x-4 gap-y-6 w-content">
         {data.visuals.map((visual, index) => (
-          <div key={index} className="flex flex-col items-center">
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center"
+          >
             <div className="flex flex-col items-center">
               <img
                 src={visual.url}
