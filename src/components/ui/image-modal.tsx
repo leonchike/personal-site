@@ -2,6 +2,7 @@
 "use client";
 
 import * as Dialog from "@radix-ui/react-dialog";
+import { CloseIcon } from "@/components/ui/custom-icons";
 
 export default function ImageModal({
   title,
@@ -24,7 +25,7 @@ export default function ImageModal({
             title={title}
             subtitle={subtitle}
             imgUrl={imgUrl}
-            close={Dialog.Close}
+            // close={Dialog.Close}
           />
         </Dialog.Content>
       </Dialog.Portal>
@@ -36,20 +37,24 @@ function Content({
   title,
   subtitle,
   imgUrl,
-  close,
-}: {
+}: // close,
+{
   title: string;
   subtitle: string;
   imgUrl: string;
-  close: React.ComponentType;
+  // close: React.ComponentType;
 }) {
   return (
     <main className="flex flex-col min-h-screen">
       <header className="px-8 pt-12">
         <h2 className="font-[550]">{title}</h2>
         <p className="text-sm lg:max-w-[50%]">{subtitle}</p>
-        <Dialog.Close className="absolute top-4 right-4 text-white cursor-pointer">
-          Close
+        <Dialog.Close
+          className="absolute top-4 right-4 text-white cursor-pointer opacity-70 hover:opacity-100 
+          transition-opacity duration-300 focus:outline-none
+          "
+        >
+          <CloseIcon fill="#2c2c2e" />
         </Dialog.Close>
       </header>
       <div className="flex-grow flex items-center justify-center p-8">
