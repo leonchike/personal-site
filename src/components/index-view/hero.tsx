@@ -48,10 +48,10 @@ function AnchorLinks() {
       label: "Strategy",
       href: getSamePageAnchorLink(ROUTES.HOME_STRATEGY_SECTION),
     },
-    {
-      label: "Collaboration",
-      href: getSamePageAnchorLink(ROUTES.HOME_COLLABORATION_SECTION),
-    },
+    // {
+    //   label: "Collaboration",
+    //   href: getSamePageAnchorLink(ROUTES.HOME_COLLABORATION_SECTION),
+    // },
     { label: "About", href: getSamePageAnchorLink(ROUTES.HOME_ABOUT_SECTION) },
   ];
 

@@ -33,7 +33,7 @@ function Content({ data }: { data: LeadershipType }) {
   return (
     <div className="pt-10 md:pt-12 flex flex-col md:flex-row md:space-x-6 text-white">
       <div className="min-h-4 mb-6 md:mb-0 md:w-1/2 space-y-8">
-        <div className="text-[1rem] lg:text-[1.5rem] max-w-[90%] xl:max-w-[70%]">
+        <div className="text-[1.1rem] lg:text-[1.3rem] max-w-[90%] xl:max-w-[70%]">
           {data.sectionStatement}
         </div>
         <CalendlyButton data={data} />

@@ -50,3 +50,23 @@ export type AboutData = {
   resumeURL: string;
   profilePictureURL: string;
 };
+
+type strategyData = {
+  heading: string;
+  subheading: string;
+  description: string;
+  longDescription: string;
+  images: {
+    lg: string;
+    sm: string;
+  };
+};
+
+export type StrategyType = {
+  sectionHeading: string;
+  sectionStatement: {
+    main: string;
+    sub: string;
+  };
+  strategyData: strategyData[];
+};
