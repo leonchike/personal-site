@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import AppProviders from "@/context/contextProviders";
 import { elzaVariable, gallient } from "./typefaces/type-faces";
 import "./globals.css";
 import Header from "@/components/header";
@@ -51,8 +52,10 @@ export default function RootLayout({
       <body
         className={`${elzaVariable.variable} ${gallient.variable} min-h-screen font-sans text-primary-dark pt-[56px] tracking-[0.015em]`}
       >
-        <Header />
-        {children}
+        <AppProviders>
+          <Header />
+          {children}
+        </AppProviders>
       </body>
     </html>
   );
