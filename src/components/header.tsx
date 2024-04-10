@@ -11,7 +11,8 @@ const LINKS = [
   { name: "Work", href: ROUTES.HOME_WORK_SECTION },
   { name: "Leadership", href: ROUTES.HOME_LEADERSHIP_SECTION },
   { name: "Strategy", href: ROUTES.HOME_STRATEGY_SECTION },
-  { name: "Collaboration", href: ROUTES.HOME_COLLABORATION_SECTION },
+  // { name: "Collaboration", href: ROUTES.HOME_COLLABORATION_SECTION },
+  { name: "About", href: ROUTES.HOME_ABOUT_SECTION },
 ];
 
 export default function Header() {
