@@ -1,5 +1,3 @@
-import { describe } from "node:test";
-
 /* eslint-disable import/no-anonymous-default-export */
 export default [
   {
@@ -77,7 +75,7 @@ export default [
     ],
   },
   {
-    index: 2,
+    index: 3,
     role: [
       "0>1 Product Strategy",
       "End to end Visual Design + Interaction Design",

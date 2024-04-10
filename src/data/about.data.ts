@@ -1,5 +1,3 @@
-import { profile } from "console";
-
 /* eslint-disable import/no-anonymous-default-export */
 export default {
   name: "Leon Chike Nwankwo",

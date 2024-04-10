@@ -32,8 +32,8 @@ export default function Header() {
     >
       <WidthWrapper>
         <div className="flex justify-between items-center py-3 opacity-0 animate-fadeIn300">
-          <Link href={ROUTES.HOME}>
-            <span className="uppercase text-[0.7rem] font-[500] tracking-[0.15em]">
+          <Link href={ROUTES.HOME} className="leading-0 block">
+            <span className="uppercase text-[0.65rem] font-[500] tracking-[0.15em] leading-0 block">
               Leon Nwankwo [Chike]
             </span>
           </Link>
@@ -47,10 +47,10 @@ export default function Header() {
 
 function DesktopLinks() {
   return (
-    <div className="hidden md:flex space-x-8 lg:space-x-12">
+    <div className="hidden md:flex space-x-8 lg:space-x-10">
       {LINKS.map((link) => (
-        <Link key={link.name} href={link.href}>
-          <span className="uppercase text-[0.7rem] font-[400] tracking-[0.15em]">
+        <Link key={link.name} href={link.href} className="leading-0 block">
+          <span className="uppercase text-[0.65rem] font-[400] tracking-[0.15em] leading-0 block">
             {link.name}
           </span>
         </Link>
