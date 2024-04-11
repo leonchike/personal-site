@@ -91,9 +91,9 @@ export default [
       "Spearheaded the development of an innovative RPA application that transformed pension processing for a major client. By leveraging Azure, machine learning, and React, we automated complex tasks, extracting data from 200 million scanned documents. The application led to $2.9M in annual cost reductions, freed up 95,000 hours of manual labor, and improved accuracy and efficiency, benefiting over 265,000 pension plan members. This project showcased my ability to drive innovation, lead cross-functional teams, and deliver significant cost savings and operational efficiencies.",
     visuals: [
       {
-        url: "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/6ae0c63a-dadd-46a5-917d-8cb0c68f4500/largeartwork",
+        url: "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/a8ceb694-44df-4d55-2127-f03085def400/largeartwork",
         smallurl:
-          "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/6ae0c63a-dadd-46a5-917d-8cb0c68f4500/original",
+          "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/a8ceb694-44df-4d55-2127-f03085def400/original",
         alt: "Rebuildee",
         mediaType: "image",
         description: null,
