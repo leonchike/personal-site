@@ -2,6 +2,7 @@
 import { getPageVisitsServerAction } from "@/actions/page-visits-actions";
 import useSWR from "swr";
 import useSWRInfinite from "swr/infinite";
+import { knownIps } from "@/data/known-ip-addresses";
 
 interface PageVisitInterface {
   _id: string;
@@ -57,18 +58,7 @@ export default function AdminView() {
           </thead>
           <tbody>
             {pageVisits.map((visit) => (
-              <tr key={visit._id} className="text-sm">
-                <td className="py-3 px-4">
-                  {new Date(visit.timestamp).toLocaleString()}
-                </td>
-                <td className="py-3 px-4">{visit.ipAddress}</td>
-                <td className="py-3 px-4">
-                  {visit.location
-                    ? `${visit.location.city}, ${visit.location.country}`
-                    : "-"}
-                </td>
-                <td className="py-3 px-4">{visit.pathname}</td>
-              </tr>
+              <PageVisitRow key={visit._id} visit={visit} />
             ))}
           </tbody>
         </table>
@@ -86,5 +76,30 @@ export default function AdminView() {
         )}
       </div>
     </div>
+  );
+}
+
+function PageVisitRow({ visit }: { visit: PageVisitInterface }) {
+  function isKnownIp(ipAddress: string) {
+    return knownIps.includes(ipAddress);
+  }
+
+  const ipAddressStyles = `py-3 px-4 ${
+    !isKnownIp(visit.ipAddress) ? "text-green-500" : ""
+  }`;
+
+  return (
+    <tr key={visit._id} className="text-sm">
+      <td className="py-3 px-4">
+        {new Date(visit.timestamp).toLocaleString()}
+      </td>
+      <td className={ipAddressStyles}>{visit.ipAddress}</td>
+      <td className="py-3 px-4">
+        {visit.location
+          ? `${visit.location.city}, ${visit.location.country}`
+          : "-"}
+      </td>
+      <td className="py-3 px-4">{visit.pathname}</td>
+    </tr>
   );
 }
