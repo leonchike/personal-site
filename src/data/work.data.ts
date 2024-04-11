@@ -5,6 +5,7 @@ export default [
     role: [
       "Product Strategy",
       "End-to-end Visual + Interaction Design",
+      "Business Intelligence",
       "Frontend Engineering",
     ],
     company: "Rebuildee",
