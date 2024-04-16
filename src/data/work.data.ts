@@ -79,6 +79,7 @@ export default [
     index: 3,
     role: [
       "0>1 Product Strategy",
+      "Algorithm Design",
       "End to end Visual Design + Interaction Design",
       "Engagement Lead",
     ],
@@ -88,7 +89,7 @@ export default [
     articleTitle:
       "Revolutionizing Pension Processing with Robotic Process Automation (RPA)",
     articleDescription:
-      "Spearheaded the development of an innovative RPA application that transformed pension processing for a major client. By leveraging Azure, machine learning, and React, we automated complex tasks, extracting data from 200 million scanned documents. The application led to $2.9M in annual cost reductions, freed up 95,000 hours of manual labor, and improved accuracy and efficiency, benefiting over 265,000 pension plan members. This project showcased my ability to drive innovation, lead cross-functional teams, and deliver significant cost savings and operational efficiencies.",
+      "I spearheaded the development of an innovative Robotic Process Automation (RPA) application that transformed pension processing for a major client. By leveraging Azure and machine learning algorithms, we automated complex tasks, extracting data from 200 million scanned documents. The application led to $2.9M in annual cost reductions, freed 95,000 hours of manual labor, and improved accuracy and efficiency, benefiting over 265,000 pension plan members.\nThe true challenge we faced was not the implementation of the technology itself, but rather building systems that triggered alerts and warnings when an individual's benefit could potentially be impacted by erroneous or missing data. This is where my team and I invested a considerable amount of time. We collaborated with actuaries, data scientists, and subject matter experts to identify financial and data risks. We then took these risks and built algorithms to help monitor, detect, and alert pension management teams to potential issues. Though no system is perfect, the iterative approach we adopted will live on with this project and continue to improve pension management for years to come.\nThis project showcased my ability to drive innovation, lead cross-functional teams, and deliver significant cost savings and operational efficiencies through cutting-edge technology solutions.",
     visuals: [
       {
         url: "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/a8ceb694-44df-4d55-2127-f03085def400/largeartwork",
