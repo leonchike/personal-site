@@ -46,9 +46,13 @@ function WorkItemDescription({ data }: { data: WorkItemType }) {
     <div className="flex flex-col lg:flex-row flex-wrap gap-4 lg:gap-8 border-t-[1px] border-primary-dark w-full pt-2 md:pt-3">
       <div className="lg:max-w-[33%] space-y-1">
         <h3 className="font-[550] tracking-wide">{data.articleTitle}</h3>
-        <p className="text-[0.9rem] whitespace-pre-wrap leading-[1.45rem]">
-          {data.articleDescription}
-        </p>
+        <div>
+          {data.articleDescription.split("\n").map((paragraph, index) => (
+            <p key={index} className="text-[0.9rem] leading-[1.45rem] mb-4">
+              {paragraph}
+            </p>
+          ))}
+        </div>
       </div>
       <div className="lg:max-w-[17%] space-y-1">
         <h3 className="font-[550]">Role</h3>
