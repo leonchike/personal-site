@@ -15,7 +15,10 @@ export default async function AboutSection() {
         <div className="flex justify-center md:justify-start">
           <ProfileImage url={aboutData.profilePictureURL} />
         </div>
-        <Statement statement={aboutData.summaryStatement} />
+        <Statement
+          statement={aboutData.summaryStatement}
+          name={aboutData.name}
+        />
       </div>
       <Contact data={aboutData} />
     </section>
@@ -36,12 +39,14 @@ function ProfileImage({ url }: { url: string }) {
 
 function Statement({
   statement,
+  name,
 }: {
   statement: AboutData["summaryStatement"];
+  name: AboutData["name"];
 }) {
   return (
     <div className="space-y-2">
-      <div className="font-semibold tracking-wider">About me</div>
+      <div className="font-[550] tracking-wider">{name}</div>
       <div className="max-w-[700px] text-[0.95rem]">{statement}</div>
     </div>
   );
@@ -50,7 +55,7 @@ function Statement({
 function Contact({ data }: { data: AboutData }) {
   return (
     <div className="space-y-2">
-      <div className="font-semibold tracking-wider">Contact</div>
+      <div className="font-[550] tracking-wider">Contact</div>
       <div className="text-[0.95rem]">
         <div>{data.contactEmail}</div>
         <div>{data.contactPhone}</div>

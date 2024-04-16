@@ -6,6 +6,7 @@ import LeadershipSection from "@/components/index-view/leadership";
 import AboutSection from "@/components/index-view/about";
 import StrategySection from "@/components/index-view/strategy";
 import BackToTopButton from "@/components/ui/back-to-top";
+import Footer from "@/components/ui/footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <StrategySection />
         <WidthWrapper>
           <AboutSection />
+          <Footer />
         </WidthWrapper>
         <BackToTopButton />
       </div>
