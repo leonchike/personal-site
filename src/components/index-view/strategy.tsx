@@ -5,6 +5,7 @@ import { StrategyType } from "@/utils/types";
 import { getIndexData } from "@/actions/server-actions";
 import { WidthWrapper } from "@/components/ui/layout";
 import ImageModal from "@/components/ui/image-modal";
+import { ExpandIconSimple } from "@/components/ui/custom-icons";
 
 export default async function StrategySection() {
   const { strategyData } = await getIndexData();
@@ -72,17 +73,22 @@ function Work({ work }: { work: StrategyType["strategyData"][0] }) {
         subtitle={work.description}
         imgUrl={work.images.lg}
       >
-        <div className="flex flex-col items-center rounded-md overflow-hidden">
+        <div className="relative group flex flex-col items-center rounded-md overflow-hidden cursor-pointer">
           <img
             src={work.images.lg}
             alt={work.heading}
-            className="w-full md:hidden max-h-[80vh]"
+            className="w-full md:hidden max-h-[80vh] transition-opacity duration-250 group-hover:opacity-50"
           />
           <img
             src={work.images.sm}
             alt={work.heading}
-            className="hidden md:block w-full max-h-[80vh]"
+            className="hidden md:block w-full max-h-[80vh] transition-opacity duration-250 group-hover:opacity-50"
           />
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-350 group-hover:opacity-100">
+            <span className="text-white font-medium tracking-wider text-lg">
+              <ExpandIconSimple className="" width="60" height="60" />
+            </span>
+          </div>
         </div>
       </ImageModal>
     </div>
