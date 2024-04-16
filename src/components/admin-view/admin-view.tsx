@@ -1,5 +1,6 @@
 "use client";
 import { getPageVisitsServerAction } from "@/actions/page-visits-actions";
+import { useState, useEffect } from "react";
 import useSWR from "swr";
 import useSWRInfinite from "swr/infinite";
 import { knownIps } from "@/data/known-ip-addresses";
@@ -25,10 +26,12 @@ const fetcher = async (url: string) => {
     parseInt(page),
     parseInt(limit)
   );
-  return { visits, hasMore };
+  const lastFetched = new Date();
+  return { visits, hasMore, lastFetched };
 };
 
 export default function AdminView() {
+  const [lastUpdated, setLastUpdated] = useState<null | Date>(null);
   const limit = 100;
   const { data, error, size, setSize } = useSWRInfinite(
     (index) => `/api/page-visits/${index + 1}/${limit}`,
@@ -43,10 +46,21 @@ export default function AdminView() {
     setSize(size + 1);
   };
 
+  // Update lastUpdated
+  useEffect(() => {
+    if (data) {
+      const lastFetched = data[data.length - 1].lastFetched;
+      setLastUpdated(lastFetched);
+    }
+  }, [data]);
+
   return (
     <div className="min-h-screen flex justify-center">
       <div className="max-w-5xl m-auto mt-8">
         <h1 className="text-3xl font-medium mb-6">Admin Log View</h1>
+        <div className="mb-6">
+          <RenderLastUpdated lastUpdated={lastUpdated} />
+        </div>
         <table className="w-full max-w-4xl bg-white shadow-md rounded-sm overflow-hidden">
           <thead>
             <tr className="bg-gray-100 text-gray-700 text-left">
@@ -101,5 +115,17 @@ function PageVisitRow({ visit }: { visit: PageVisitInterface }) {
       </td>
       <td className="py-3 px-4">{visit.pathname}</td>
     </tr>
+  );
+}
+
+function RenderLastUpdated({ lastUpdated }: { lastUpdated: Date | null }) {
+  if (lastUpdated === null) {
+    return null;
+  }
+
+  return (
+    <div className="text-sm text-gray-500 mt-4">
+      Last updated: {lastUpdated.toLocaleString()}
+    </div>
   );
 }
