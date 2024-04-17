@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import useSWR from "swr";
 import useSWRInfinite from "swr/infinite";
 import { knownIps } from "@/data/known-ip-addresses";
+import SignOut from "@/components/admin-view/sign-out";
 
 interface PageVisitInterface {
   _id: string;
@@ -57,7 +58,7 @@ export default function AdminView() {
   return (
     <div className="min-h-screen flex justify-center">
       <div className="max-w-5xl m-auto mt-8">
-        <h1 className="text-3xl font-medium mb-6">Admin Log View</h1>
+        <Header />
         <div className="mb-6">
           <RenderLastUpdated lastUpdated={lastUpdated} />
         </div>
@@ -89,6 +90,15 @@ export default function AdminView() {
           )
         )}
       </div>
+    </div>
+  );
+}
+
+function Header() {
+  return (
+    <div className="flex justify-between items-start">
+      <h1 className="text-3xl font-medium mb-6">Admin Log View</h1>
+      <SignOut />
     </div>
   );
 }
