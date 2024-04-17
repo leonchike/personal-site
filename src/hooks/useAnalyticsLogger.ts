@@ -9,7 +9,7 @@ export const useAnalyticsLogger = () => {
     const logPageVisit = async () => {
       if (
         process.env.NODE_ENV === "development" ||
-        pathname === "/login" ||
+        pathname === "/auth/signin" ||
         pathname === "/admin"
       ) {
         return;
