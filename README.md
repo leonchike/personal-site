@@ -53,11 +53,11 @@ This repository contains the code for my personal portfolio website, built using
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/personal-portfolio.git
+   git clone https://github.com/leonchike/personal-site.git
    ```
 2. Install dependencies:
    ```
-   cd personal-portfolio
+   cd personal-site
    npm install
    ```
 3. Set up environment variables:
