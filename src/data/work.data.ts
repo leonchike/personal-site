@@ -1,6 +1,40 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default [
   {
+    index: 0,
+    role: [
+      "Systems Architect",
+      "OpenAI Product Integration",
+      "End-to-end Visual + Interaction Design",
+    ],
+    company: "Rebuildee",
+    location: "Remote",
+    year: 2023,
+    articleTitle:
+      "Intelligent Error Resolution: Harnessing AI for Enhanced Application Stability",
+    articleDescription:
+      "As the Systems Architect and Product Strategist, I spearheaded the development of an advanced error resolution application that utilizes pre-trained OpenAI model to analyze production errors, provide detailed error descriptions, and suggest targeted resolutions. By integrating AI into the error resolution workflow, we significantly reduced the time required for developers to identify and resolve issues, resulting in improved application stability.\nTo ensure that our system had access to the most recent codebase, I architected and implemented a server that integrated with our GitHub repository through webhooks. This server automatically fetched the latest pull requests and branches, enabling the custom AI model to access our codebase in real-time. By leveraging this integration, the application could perform in-depth code analysis and provide highly relevant and context-specific error resolutions.\nI collaborated closely with our UX/UI team to design an intuitive interface that presents error information and recommended resolutions in a clear and actionable manner.\nThroughout the development lifecycle, I conducted thorough testing and iterative refinements to enhance the accuracy of the AI models in generating error descriptions and resolutions. The resulting tool empowers developers to efficiently resolve production errors, reducing mean time to resolution (MTTR) and saving valuable development resources.",
+    visuals: [
+      {
+        url: "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/20277374-b5c3-4bac-b71d-094999361b00/largeartwork",
+        smallurl:
+          "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/20277374-b5c3-4bac-b71d-094999361b00/original",
+        alt: "Rebuildee",
+        mediaType: "image",
+        description: null,
+        bgColor: "#F1F1F1",
+      },
+    ],
+    displayType: "single-image",
+    References: [
+      {
+        url: "https://www.rebuildee.com",
+        title: "Rebuildee",
+        description: "Rebuildee",
+      },
+    ],
+  },
+  {
     index: 1,
     role: [
       "Product Strategy",

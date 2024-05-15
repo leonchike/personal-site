@@ -58,8 +58,18 @@ function Contact({ data }: { data: AboutData }) {
       <div className="font-[550] tracking-wider">Contact</div>
       <div className="text-[0.95rem]">
         <div>{data.contactEmail}</div>
-        <div>{data.contactPhone}</div>
+        {/* <div>{data.contactPhone}</div> */}
         <div>{data.contactLocation}</div>
+        <div>
+          <a
+            href={data.linkedInURL}
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
+            LinkedIn
+          </a>
+        </div>
       </div>
       <DownloadResume url={data.resumeURL} />
     </div>
