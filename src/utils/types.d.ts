@@ -46,6 +46,7 @@ export type AboutData = {
   summaryStatement: string;
   contactEmail: string;
   contactPhone: string;
+  linkedInURL: string;
   contactLocation: string;
   resumeURL: string;
   profilePictureURL: string;

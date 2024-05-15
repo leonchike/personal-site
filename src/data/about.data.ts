@@ -9,6 +9,7 @@ export default {
   contactEmail: "lnwankwo@outlook.com",
   contactPhone: "+1 (619) 431-0234",
   contactLocation: "Washington, DC",
+  linkedInURL: "https://www.linkedin.com/in/leonchike/",
   resumeURL:
     "https://s3.amazonaws.com/leonchike.me/Leon-Chike-Nwankwo-Resume.pdf",
   profilePictureURL:
