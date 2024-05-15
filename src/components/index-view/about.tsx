@@ -2,6 +2,7 @@
 import { getIndexData } from "@/actions/server-actions";
 import { AboutData } from "@/utils/types";
 import ROUTES, { getSamePageSectionId } from "@/utils/routes";
+import ObfuscatedEmail from "./obfuscated-email";
 
 export default async function AboutSection() {
   const { aboutData } = await getIndexData();
@@ -57,7 +58,9 @@ function Contact({ data }: { data: AboutData }) {
     <div className="space-y-2">
       <div className="font-[550] tracking-wider">Contact</div>
       <div className="text-[0.95rem]">
-        <div>{data.contactEmail}</div>
+        <div>
+          <ObfuscatedEmail email={data.contactEmail} />
+        </div>
         {/* <div>{data.contactPhone}</div> */}
         <div>{data.contactLocation}</div>
         <div>
