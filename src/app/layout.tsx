@@ -4,6 +4,7 @@ import { elzaVariable, gallient } from "./typefaces/type-faces";
 import "./globals.css";
 import Header from "@/components/header";
 import GoogleAnalytics from "@/lib/google-analytics";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Leon Nwankwo - Personal Site",
@@ -57,6 +58,11 @@ export default function RootLayout({
           <GoogleAnalytics />
           <Header />
           {children}
+          <Script
+            defer
+            data-domain="leonchike.me"
+            src="https://plausible.io/js/script.js"
+          />
         </AppProviders>
       </body>
     </html>
