@@ -7,6 +7,8 @@ export const useAnalyticsLogger = () => {
 
   useEffect(() => {
     const logPageVisit = async () => {
+      if (!!localStorage.getItem("leonchike_analytics_blocker")) return;
+
       if (
         process.env.NODE_ENV === "development" ||
         pathname === "/auth/signin" ||

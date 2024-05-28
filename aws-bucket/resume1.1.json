@@ -1,0 +1,120 @@
+{
+  "header": {
+    "name": "Leon Chike Nwankwo",
+    "location": "Washington, D.C.",
+    "phone": "(240) 676-7727",
+    "email": "leon.nwankwo@gmail.com",
+    "linkedIn": "linkedin.com/in/chike-nwankwo",
+    "linkedInURL": "https://www.linkedin.com/in/chike-nwankwo/",
+    "personalWebsite": "leonchike.me",
+    "personalWebsiteURL": "https://leonchike.me",
+    "personalStatement": "Product Leader skilled in creating data-driven platforms and shipping delightful experiences. Adept in strategic road mapping, user-centered design, and aligning product strategy with business objectives to drive growth.",
+    "personalStatementV2": ""
+  },
+  "sections": {
+    "education": [
+      {
+        "title": "Master of Business Administration",
+        "dateRange": "2022",
+        "subtitle": "",
+        "bullets": [],
+        "list":"Georgetown University, \nWashington, D.C."
+      },
+      {
+        "title": "Bachelor of Science, Finance, Accounting, and Rhetoric",
+        "dateRange": "2014",
+        "subtitle": "",
+        "bullets": [],
+        "list":"University of Maryland, \nCollege Park, MD"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Senior Technical Product Manager",
+        "dateRange": "06/2022 - 02/2024",
+        "subtitle": "Rebuildee, Inc.",
+        "company_tags" : ["Fintech", "ML/NLP", "Supply Chain API"],
+        "bullets": [
+          "Increased average order value by 23% and exceeded conversion rate targets by 15% through the design and integration of a machine-learning product recommendation engine; leveraging customer data and purchase patterns to provide personalized product recommendations",
+          "Engineered an error resolution app that utilized pre-trained AI to analyze production errors, provide clear error descriptions, and offer targeted resolutions; accelerating error resolution and boosting application stability",
+          "Architected a robust, enterprise-grade microservices platform using Node.js, Docker, and AWS ECS, supporting 4x customer growth and handling a 17x increase in API usage over 2 years",
+          "Designed a centralized KPI dashboard providing real-time visibility into financial, engineering, and operational metrics, driving data-driven decisions and enabling cross-functional alignment",
+          "Spearheaded process improvements across design and engineering, resulting in a 30% decrease in time-to-market, strengthening competitive positioning, and enabling rapid, iterative feature releases"
+        ] 
+      },
+      {
+        "title": "Manager, Management Consultant",
+        "dateRange": "06/2016 - 06/2022",
+        "subtitle": "Deloitte Consulting / Deloitte Digital, LLC",
+        "company_tags" : ["AI/RPA", "SaaS", "B2B"],
+        "bullets": [
+          "Led a cross-functional team to develop a machine learning application for JP Morgan Chase, organizing 200M+ pension files into a database resilient to regulatory audits. Streamlined the data pipeline, saving $12.9M and 95,000 hours of manual processing annually, while improving projected free cash flow",
+          "Improved corporate expense reporting user experience through user research, A/B testing, and prototyping, resulting in a 16% increase in engagement, better real-time operational visibility, and 37% more accurate expense tracking",
+          "Managed multiple concurrent engagements, effectively communicating project status, risks, and strategic recommendations to executive-level stakeholders at client organizations and internal business leaders. Navigated complex organizational dynamics to drive alignment and achieve project objectives",
+          "Scaled a product-focused practice from 11 to 40+ members through proactive recruiting, mentorship, and promoting a culture of innovation; while fostering cross-functional collaboration between design and engineering teams"
+        ]
+      },
+      {
+        "title": "Product Manager",
+        "dateRange": "09/2015 - 06/2016",
+        "subtitle": "Capital One Innovation Labs, LLC",
+        "company_tags" : ["FinTech", "Risk Management", "Data Analytics"],
+        "bullets": [
+          "Led the development of a data-driven risk algorithm to address unmet needs for personalized financial advising, enabling 500+ advisors to deliver tailored investment strategies",
+          "Managed the integration of a risk algorithm and client life updates into the advisor dashboard, syncing data with legacy systems; increasing advisor-client interactions by 35%, and raising client satisfaction to an NPS of 76"
+        ]
+      },
+      {
+        "title": "Co-Founder, Software Engineering",
+        "dateRange": "01/2013 - 09/2015",
+        "subtitle": "Kivvik, Inc.",
+        "company_tags" : ["FinTech", "B2B", "SaaS"],
+        "bullets": [
+          "Co-founded a client communication platform, integrating real-time life updates, risk data, and performance tracking to enhance advisor responsiveness and personalization; scaling the platform to 60,000+ users"
+        ]
+      }
+    ],
+    "coursesCertifications": [
+      {
+        "title": "Human-Computer Interaction Graduate Certificate",
+        "dateRange": "2020",
+        "subtitle": "",
+        "bullets": [],
+        "list": "Stanford School of Engineering"
+      },
+      {
+        "title": "Product Manager Certification (PMC)",
+        "dateRange": "2016",
+        "subtitle": "",
+        "bullets": [],
+        "list": "Product School"
+      }
+    ],
+    "skills": [
+      {
+        "title": "Product Management",
+        "dateRange": "",
+        "subtitle": "",
+        "type": "pm",
+        "bullets": [],
+        "list": "Synthesizing Product/User Experience Requirements, Writing detailed functional specifications, Data driven cost/benefit analysis, Data Analysis and Visualization, Agile/Scrum, User Experience (UX) Design, User Story Development, Persona Development, Market and Competitive Analysis, A/B Testing, Jira/Confluence, Mixpanel, Amplitude, Figma"
+      },  
+      {
+        "title": "Technical",
+        "dateRange": "",
+        "subtitle": "",
+        "type": "technical",
+        "bullets": [],
+        "list": "Typescript, Python, ReactJS, NextJS, TensorFlow (AI/ML), SQL/NoSQL, PostgreSQL, MongoDB, Redis, Docker, CI/CD, AWS (ECS, Lambda, S3, CloudFront), Google Cloud Platform (GCP), Git, Stripe, OAuth"
+      },
+      {
+        "title": "Leadership and Communication",
+        "dateRange": "",
+        "subtitle": "",
+        "type": "leadercomm",
+        "bullets": [],
+        "list": "Strategic Planning, Stakeholder Management, Cross-Functional Collaboration, Coaching/Mentoring, Team Management"
+      }      
+    ]
+  }
+}
