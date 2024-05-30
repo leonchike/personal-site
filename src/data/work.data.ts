@@ -13,13 +13,13 @@ export default [
     articleTitle:
       "Intelligent Error Resolution: Harnessing AI for Enhanced Application Stability",
     articleDescription:
-      "As the Systems Architect and Product Strategist, I spearheaded the development of an advanced error resolution application that utilizes pre-trained OpenAI model to analyze production errors, provide detailed error descriptions, and suggest targeted resolutions. By integrating AI into the error resolution workflow, we significantly reduced the time required for software engineers to identify and resolve issues, resulting in improved application stability.\nTo ensure that our system had access to the most recent codebase, I architected and implemented a server that integrated with our GitHub repository through webhooks. This server automatically fetched the latest pull requests and branches, enabling the custom AI model to access our codebase in real-time. By leveraging this integration, the application could perform in-depth code analysis and provide highly relevant and context-specific error resolutions.\nI collaborated closely with our UX/UI team to design an intuitive interface that presents error information and recommended resolutions in a clear and actionable manner.\nThroughout the development lifecycle, I conducted thorough testing and iterative refinements to enhance the accuracy of the AI models in generating error descriptions and resolutions. The resulting tool empowers engineers to efficiently resolve production errors, reducing mean time to resolution (MTTR) and saving valuable development resources.",
+      "As the Systems Architect and Product Strategist, I spearheaded the development of an advanced error resolution application that utilizes pre-trained OpenAI model to analyze production errors, provide detailed error descriptions, and suggest targeted resolutions. By integrating AI into the error resolution workflow, we significantly reduced the time required for software engineers to identify and resolve issues, resulting in improved application stability.\nTo ensure that our system had access to the most recent codebase, I architected and implemented a server that integrated with our GitHub repository through webhooks. This server automatically fetched the latest pull requests and branches, enabling the custom AI model to access our codebase in real-time. By leveraging this integration, the application could perform in-depth code analysis and provide highly relevant and context-specific error resolutions.\nOn the presentation layer, I collaborated closely with our UX/UI team to design an intuitive interface that presents error information and recommended resolutions in a clear and actionable manner.\nThroughout the development lifecycle, I conducted thorough testing and iterative refinements to enhance the accuracy of the AI models in generating error descriptions and resolutions. The resulting tool empowers engineers to efficiently resolve production errors, reducing mean time to resolution (MTTR) and saving valuable development resources.",
     visuals: [
       {
-        url: "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/20277374-b5c3-4bac-b71d-094999361b00/largeartwork",
+        url: "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/14701d5b-66e5-4f06-2361-ee274880ab00/largeartwork",
         smallurl:
-          "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/20277374-b5c3-4bac-b71d-094999361b00/original",
-        alt: "Rebuildee",
+          "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/14701d5b-66e5-4f06-2361-ee274880ab00/original",
+        alt: "Error Resolution",
         mediaType: "image",
         description: null,
         bgColor: "#F1F1F1",
@@ -54,21 +54,21 @@ export default [
         alt: "Rebuildee",
         mediaType: "image",
         description:
-          "Users can upload any documents related to their claim, such as receipts, photos, or insurance papers.",
+          "Users upload any documents related to their claim, such as receipts, or insurance documents.",
       },
       {
         url: "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/e3a75e71-bcaf-4308-bb62-c1d7281f7b00/original",
         alt: "Rebuildee",
         mediaType: "image",
         description:
-          "We use a pre-trained model to extract the information from the documents to generate a cart for the user.",
+          "A pre-trained model extracts the relevant data to generate a cart.",
       },
       {
         url: "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/e0c0d106-b125-428e-bbb1-c607bc33d700/original",
         alt: "Rebuildee",
         mediaType: "image",
         description:
-          "Users can review the cart and make any changes before finalizing onboarding.",
+          "Users review the cart to make any changes before finalizing onboarding.",
       },
     ],
     displayType: "multi-images",
