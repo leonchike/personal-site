@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
+import { PostType } from "@/lib/types";
 
 const postsDirectory = path.join(process.cwd(), "./src/data/blog");
 
@@ -14,15 +15,20 @@ export async function getSortedPostsData() {
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const matterResult = matter(fileContents);
+
+    if (!matterResult.data.live || !matterResult.data.publishDate) {
+      return;
+    }
+
     return {
       id: slug,
       fullPath,
-      fileContents,
-      publishDate: matterResult.data.publishDate,
-      ...matterResult.data,
+      publishDate: matterResult.data.publishDate as string,
     };
   });
-  return allPostsData.sort((a, b) => (a.publishDate < b.publishDate ? 1 : -1));
+  return allPostsData
+    .sort((a, b) => ((a?.publishDate ?? "") < (b?.publishDate ?? "") ? 1 : -1))
+    .filter(Boolean) as { id: string; fullPath: string; publishDate: string }[];
 }
 
 export async function getPost(slug: string) {
@@ -36,6 +42,7 @@ export async function getPost(slug: string) {
     id: slug,
     publishDate: data.publishDate,
     content,
+    postMetadata: data,
     mdxSource,
-  };
+  } as PostType;
 }

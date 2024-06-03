@@ -1,5 +1,6 @@
 import { getPost } from "@/lib/actions";
 import { CustomMDX } from "@/components/ui/mdx-remote";
+import BlogHeader from "@/components/blog/blog-header";
 
 export default async function BlogPost({
   params,
@@ -10,12 +11,11 @@ export default async function BlogPost({
   console.log(post);
 
   return (
-    <div>
-      <h1>{post.id}</h1>
-      <p>{post.publishDate}</p>
-      <article className="mx-auto max-w-[37rem]">
+    <main className="my-8 md:my-12 max-w-[52rem] mx-auto px-4 text-[#231A16]">
+      <BlogHeader post={post} />
+      <article className="mx-auto max-w-[34rem] font-blog">
         <CustomMDX source={post.content} />
       </article>
-    </div>
+    </main>
   );
 }

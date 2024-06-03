@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-elzavariable)", "ui-sans-serif", "system-ui"],
         serif: ["var(--font-gallient)", "ui-serif", "Georgia"],
+        blog: ["var(--font-gestura)", "ui-sans-serif", "system-ui"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
