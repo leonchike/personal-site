@@ -11,3 +11,18 @@ export const gallient = localFont({
   display: "swap",
   variable: "--font-gallient",
 });
+
+export const gesturaText = localFont({
+  src: [
+    {
+      path: "./GesturaText-Regular.woff2",
+      weight: "400",
+    },
+    {
+      path: "./GesturaText-Semibold.woff2",
+      weight: "600",
+    },
+  ],
+  display: "swap",
+  variable: "--font-gestura",
+});

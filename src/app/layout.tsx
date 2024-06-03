@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import AppProviders from "@/context/contextProviders";
-import { elzaVariable, gallient } from "./typefaces/type-faces";
+import { elzaVariable, gallient, gesturaText } from "./typefaces/type-faces";
 import "./globals.css";
 import Header from "@/components/header";
 import GoogleAnalytics from "@/lib/google-analytics";
@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${elzaVariable.variable} ${gallient.variable} min-h-screen font-sans text-primary-dark pt-[56px] tracking-[0.015em]`}
+        className={`${elzaVariable.variable} ${gallient.variable} ${gesturaText.variable} min-h-screen font-sans text-primary-dark pt-[56px] tracking-[0.015em]`}
       >
         <AppProviders>
           <GoogleAnalytics />
