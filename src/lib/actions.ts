@@ -38,6 +38,7 @@ export async function getSortedPostsData(filter?: string) {
       heroImage: string;
       categories: string[];
       authorId: string;
+      excerpt?: string;
     };
   }[];
 }

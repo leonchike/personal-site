@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { PostType } from "@/lib/types";
+import { formatDate } from "@/utils/helpers";
 
 interface BlogHeaderProps {
   post: PostType;
@@ -72,10 +73,3 @@ const AUTHORS = [
 function getAuthor(authorId: string) {
   return AUTHORS.find((author) => author.id === authorId);
 }
-
-const formatDate = (dateString: string) => {
-  const options = { year: "numeric", month: "short", day: "numeric" };
-  const date = new Date(dateString);
-  // @ts-ignore
-  return date.toLocaleDateString(undefined, options);
-};
