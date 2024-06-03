@@ -9,6 +9,7 @@ export interface PostType {
     authorId: string;
     heroImage?: string;
     live: boolean;
+    excerpt?: string;
   };
   mdxSource: any;
 }
