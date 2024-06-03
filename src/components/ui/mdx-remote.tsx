@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 // components/mdx-remote.js
 import { MDXRemote } from "next-mdx-remote/rsc";
+import CodeBlock from "@/components/blog/code-block";
 
 const components = {
   h1: (props: React.HTMLProps<HTMLHeadingElement>) => (
@@ -20,7 +21,7 @@ const components = {
     </h3>
   ),
   p: (props: React.HTMLProps<HTMLParagraphElement>) => (
-    <p {...props} className="leading-6 mb-5 text-[0.8888rem]">
+    <p {...props} className="leading-6 mb-6 text-[0.8888rem]">
       {props.children}
     </p>
   ),
@@ -28,6 +29,9 @@ const components = {
     <div className="-mx-4 md:-mx-8">
       <img {...props} className="w-full h-auto" />
     </div>
+  ),
+  pre: (props: React.HTMLProps<HTMLPreElement>) => (
+    <CodeBlock {...props}>{props.children}</CodeBlock>
   ),
 };
 

@@ -8,7 +8,7 @@ import { PostType } from "@/lib/types";
 
 const postsDirectory = path.join(process.cwd(), "./src/data/blog");
 
-export async function getSortedPostsData() {
+export async function getSortedPostsData(filter?: string) {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
     const slug = fileName.replace(/\.mdx$/, "");
@@ -24,11 +24,22 @@ export async function getSortedPostsData() {
       id: slug,
       fullPath,
       publishDate: matterResult.data.publishDate as string,
+      metadata: matterResult.data,
     };
   });
   return allPostsData
     .sort((a, b) => ((a?.publishDate ?? "") < (b?.publishDate ?? "") ? 1 : -1))
-    .filter(Boolean) as { id: string; fullPath: string; publishDate: string }[];
+    .filter(Boolean) as {
+    id: string;
+    fullPath: string;
+    publishDate: string;
+    metadata: {
+      title: string;
+      heroImage: string;
+      categories: string[];
+      authorId: string;
+    };
+  }[];
 }
 
 export async function getPost(slug: string) {
