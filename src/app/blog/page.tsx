@@ -1,8 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
 import { getSortedPostsData } from "@/lib/actions";
-import { formatDate } from "@/utils/helpers";
-import { PostType } from "@/utils/types";
 import { SmallPost, LargePost } from "@/components/blog/post-previews";
 
 export default async function BlogHome() {

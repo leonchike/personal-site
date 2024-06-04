@@ -15,7 +15,7 @@ export default function BlogCallout() {
 
   return (
     isVisible && (
-      <div className="h-[50px]">
+      <div className="h-[14rem] md:h-[7rem]">
         <div className="bg-white py-4 fixed bottom-0 w-full top-shadown">
           <WidthWrapper>
             <div className="flex justify-between items-center flex-col md:flex-row gap-y-4 gap-x-4">
