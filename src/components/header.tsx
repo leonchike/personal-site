@@ -8,6 +8,7 @@ import clsx from "clsx";
 import { WidthWrapper } from "@/components/ui/layout";
 
 const LINKS = [
+  { name: "Blog", href: ROUTES.BLOG },
   { name: "Work", href: ROUTES.HOME_WORK_SECTION },
   { name: "Leadership", href: ROUTES.HOME_LEADERSHIP_SECTION },
   { name: "Strategy", href: ROUTES.HOME_STRATEGY_SECTION },

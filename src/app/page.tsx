@@ -7,6 +7,7 @@ import AboutSection from "@/components/index-view/about";
 import StrategySection from "@/components/index-view/strategy";
 import BackToTopButton from "@/components/ui/back-to-top";
 import Footer from "@/components/ui/footer";
+import BlogCallout from "@/components/index-view/blog-callout";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
           <Footer />
         </WidthWrapper>
         <BackToTopButton />
+        <BlogCallout />
       </div>
     </Suspense>
   );

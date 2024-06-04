@@ -32,9 +32,11 @@ export default async function BlogHome() {
 function Header() {
   return (
     <header className="mb-6">
-      <h1 className="text-3xl font-medium mb-2">Welcome to My Blog</h1>
-      <p className="text text-gray-800 font-blog">
-        Sharing my experiences and insights on web development, programming and
+      <h1 className="text-3xl md:text-4xl font-medium mb-4 font-blog">
+        Welcome to My Blog
+      </h1>
+      <p className="text text-gray-800 ">
+        Sharing my experiences and insights on web development, product and
         leadership.
       </p>
     </header>
@@ -48,7 +50,7 @@ function FilterComponent({ tags }: { tags: string[] }) {
         {tags.map((tag, index) => (
           <span
             key={index}
-            className="px-4 py-1 border-gray-700 border-[1px] text-gray-700 rounded-full cursor-pointer hover:bg-gray-200 text-[0.75rem] tracking-wider"
+            className="px-4 py-1 border-gray-500 border-[1px] text-gray-700 rounded-sm cursor-pointer hover:bg-gray-200 text-[0.75rem] tracking-wider"
           >
             {tag}
           </span>
@@ -73,8 +75,8 @@ interface PostType {
 
 function LargePost({ post }: { post: PostType }) {
   return (
-    <div className="">
-      <Link href={`/blog/${post.id}`}>
+    <div>
+      <Link href={`/blog/${post.id}`} className="group">
         <img
           src={post.metadata.heroImage}
           alt={post.metadata.title}
@@ -91,11 +93,11 @@ function LargePost({ post }: { post: PostType }) {
               </span>
             ))}
           </div>
-          <h3 className="text-xl font-semibold mb-2 font-blog">
+          <h3 className="text-xl font-semibold mb-2 font-blog group-hover:underline">
             {post.metadata.title}
           </h3>
 
-          <p className="text-gray-600 mb-4 text-sm">
+          <p className="text-gray-600 mb-4 text-sm group-hover:underline">
             {formatDate(post.publishDate)}
           </p>
           {post.metadata.excerpt && (
@@ -111,7 +113,7 @@ function LargePost({ post }: { post: PostType }) {
 
 function SmallPost({ post }: { post: PostType }) {
   return (
-    <Link href={`/blog/${post.id}`}>
+    <Link href={`/blog/${post.id}`} className="group">
       <div className="border-t-[1px] pt-4 pb-12 flex flex-col sm:flex-row gap-4">
         <div className="flex-1 flex gap-2 flex-col sm:flex-row">
           <div className="flex gap-2 flex-wrap pr-4 md:pr-8">
@@ -125,10 +127,10 @@ function SmallPost({ post }: { post: PostType }) {
             ))}
           </div>
           <div>
-            <h3 className="text-lg font-semibold font-blog  mb-2 -mt-1">
+            <h3 className="text-lg font-semibold font-blog  mb-2 -mt-1 group-hover:underline">
               {post.metadata.title}
             </h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-sm group-hover:underline">
               {formatDate(post.publishDate)}
             </p>
           </div>
