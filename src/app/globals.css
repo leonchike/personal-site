@@ -37,6 +37,11 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
+.top-shadown {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 2px, rgba(0, 0, 0, 0.05) 0px -2px 4px,
+    rgba(0, 0, 0, 0.1) 0px -4px 16px;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

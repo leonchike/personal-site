@@ -12,7 +12,7 @@ export default function BlogHeader({ post }: BlogHeaderProps) {
 
   return (
     <div className="flex flex-col items-center gap-10 md:gap-16  mb-10 md:mb-12">
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col sm:items-center gap-4">
         <div>
           {categories.map((category) => (
             <span key={category} className="text-sm text-dark-gold font-medium">
@@ -20,7 +20,7 @@ export default function BlogHeader({ post }: BlogHeaderProps) {
             </span>
           ))}
         </div>
-        <h1 className="text-3xl font-medium text-center">{title}</h1>
+        <h1 className="text-3xl font-medium sm:text-center">{title}</h1>
         <div className="pt-2">
           <AuthorInfo
             authorId={authorId}
@@ -56,7 +56,7 @@ function AuthorInfo({
       <img
         src={author.image}
         alt={author.name}
-        className="w-14 h-14 rounded-full mr-3"
+        className="w-10 h-10 md:w-12 md:h-12 rounded-full mr-3"
       />
       <div className="flex flex-col">
         <p className="text-sm">By {author.name}</p>

@@ -6,6 +6,7 @@ const ROUTES = {
   HOME_COLLABORATION_SECTION: "/#collaboration",
   HOME_MORE_SECTION: "/#more",
   HOME_ABOUT_SECTION: "/#about",
+  BLOG: "/blog",
 };
 
 export default ROUTES;
