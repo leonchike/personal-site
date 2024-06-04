@@ -23,6 +23,7 @@ const config: Config = {
         "primary-white": "var(--color-primary-white)",
         "primary-white-70": "var(--color-primary-white-70)",
         "primary-white-90": "var(--color-primary-white-90)",
+        "dark-gold": "var(--color-dark-gold)",
       },
       keyframes: {
         fadeIn: {
