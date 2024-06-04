@@ -45,7 +45,7 @@ function WorkItem({ data }: { data: WorkItemType }) {
 
 function WorkItemDescription({ data }: { data: WorkItemType }) {
   return (
-    <div className="flex flex-col lg:flex-row flex-wrap gap-4 lg:gap-8 border-t-[1px] border-primary-dark w-full pt-2 md:pt-3">
+    <div className="flex flex-col lg:flex-row flex-wrap gap-4 lg:gap-8 border-t-[1px] border-primary-dark w-full pt-3 md:pt-6">
       <div className="lg:max-w-[33%] space-y-1">
         <h3 className="font-[550] tracking-wide">{data.articleTitle}</h3>
         <div>
@@ -78,7 +78,7 @@ function WorkItemDescription({ data }: { data: WorkItemType }) {
               <Link
                 key={index}
                 href={reference.url}
-                className="underline flex gap-2 items-center"
+                className="underline flex gap-1 items-center"
               >
                 <span>{reference.title}</span>{" "}
                 <span>
