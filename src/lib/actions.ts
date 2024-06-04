@@ -4,7 +4,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
-import { PostType } from "@/lib/types";
+import { PostType } from "@/utils/types";
 
 const postsDirectory = path.join(process.cwd(), "./src/data/blog");
 
@@ -22,25 +22,15 @@ export async function getSortedPostsData(filter?: string) {
 
     return {
       id: slug,
-      fullPath,
       publishDate: matterResult.data.publishDate as string,
-      metadata: matterResult.data,
+      content: matterResult.data.content as string,
+      postMetadata: matterResult.data,
+      mdxSource: null, // This will be populated in the getPost function when the mdx content is needed
     };
   });
   return allPostsData
     .sort((a, b) => ((a?.publishDate ?? "") < (b?.publishDate ?? "") ? 1 : -1))
-    .filter(Boolean) as {
-    id: string;
-    fullPath: string;
-    publishDate: string;
-    metadata: {
-      title: string;
-      heroImage: string;
-      categories: string[];
-      authorId: string;
-      excerpt?: string;
-    };
-  }[];
+    .filter(Boolean) as PostType[];
 }
 
 export async function getPost(slug: string) {

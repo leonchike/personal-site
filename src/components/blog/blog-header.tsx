@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { PostType } from "@/lib/types";
+import { PostType } from "@/utils/types";
 import { formatDate, calculateReadingTime } from "@/utils/helpers";
 
 interface BlogHeaderProps {
