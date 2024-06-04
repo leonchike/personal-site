@@ -48,7 +48,13 @@ function Statement({
   return (
     <div className="space-y-2">
       <div className="font-[550] tracking-wider">{name}</div>
-      <div className="max-w-[700px] text-[0.95rem]">{statement}</div>
+      <div className="max-w-[700px] text-[0.95rem] leading-[1.45rem] mb-4">
+        {statement.split("\n").map((paragraph, index) => (
+          <p key={index} className="mb-4">
+            {paragraph}
+          </p>
+        ))}
+      </div>
     </div>
   );
 }
