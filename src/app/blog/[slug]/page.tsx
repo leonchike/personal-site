@@ -1,6 +1,7 @@
 import { getPost } from "@/lib/actions";
 import { CustomMDX } from "@/components/ui/mdx-remote";
 import BlogHeader from "@/components/blog/blog-header";
+import ReadNext from "@/components/blog/read-next";
 
 export default async function BlogPost({
   params,
@@ -15,6 +16,7 @@ export default async function BlogPost({
       <article className="mx-auto max-w-[34rem] font-blog">
         <CustomMDX source={post.content} />
       </article>
+      <ReadNext currentPostId={post.id} />
     </main>
   );
 }
