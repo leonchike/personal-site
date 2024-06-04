@@ -31,11 +31,17 @@ const config: Config = {
           "25%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        slideIn: {
+          "0%": { transform: "translateY(100%)" },
+          "50%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(0)" },
+        },
       },
       animation: {
         fadeIn300: "fadeIn 300ms ease-out forwards",
         fadeIn750: "fadeIn 750ms ease-out forwards",
         fadeIn1000: "fadeIn 1.5s ease-out forwards",
+        slideIn: "slideIn 1300ms ease-out forwards",
       },
       container: {
         center: true,
