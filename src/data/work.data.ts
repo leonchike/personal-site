@@ -72,7 +72,13 @@ export default [
       },
     ],
     displayType: "multi-images",
-    references: [],
+    references: [
+      {
+        url: "/blog/ai-improved-user-onboarding",
+        title: "Blog Post",
+        description: "Rebuildee",
+      },
+    ],
   },
 
   {

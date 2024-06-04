@@ -26,7 +26,7 @@ const components = {
     </p>
   ),
   img: (props: React.HTMLProps<HTMLImageElement>) => (
-    <div className="-mx-4 md:-mx-8">
+    <div className="-mx-4 md:-mx-12 lg:-mx-24">
       <img {...props} className="w-full h-auto" />
     </div>
   ),

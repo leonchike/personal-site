@@ -10,7 +10,7 @@ export function SmallPost({ post }: { post: PostType }) {
     <Link href={`/blog/${post.id}`} className="group">
       <div className="border-t-[1px] pt-4 pb-12 flex flex-col sm:flex-row gap-4">
         <div className="flex-1 flex gap-2 flex-col sm:flex-row">
-          <div className="flex gap-2 flex-wrap pr-4 md:pr-8">
+          <div className="flex gap-2 flex-wrap pr-4 md:pr-8 w-[12ch]">
             {post.postMetadata.categories.map((category) => (
               <span
                 key={category}
@@ -20,8 +20,8 @@ export function SmallPost({ post }: { post: PostType }) {
               </span>
             ))}
           </div>
-          <div>
-            <h3 className="text-lg font-semibold font-blog  mb-2 -mt-1 group-hover:underline">
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold font-blog mb-2 -mt-1 group-hover:underline break-words">
               {post.postMetadata.title}
             </h3>
             <p className="text-gray-600 text-sm group-hover:underline">
@@ -29,11 +29,11 @@ export function SmallPost({ post }: { post: PostType }) {
             </p>
           </div>
         </div>
-        <div className="w-full sm:w-auto">
+        <div className="w-full sm:w-48 sm:flex-shrink-0">
           <img
             src={post.postMetadata.heroImage}
             alt={post.postMetadata.title}
-            className="w-full h-auto sm:w-48 sm:h-32 object-cover"
+            className="w-full h-auto sm:h-32 object-cover"
           />
         </div>
       </div>
