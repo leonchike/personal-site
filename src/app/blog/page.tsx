@@ -9,10 +9,8 @@ export default async function BlogHome() {
     new Set(allPostsData.flatMap((post) => post.metadata.categories ?? []))
   );
 
-  console.log(allPostsData);
-
   return (
-    <main className="my-8 md:my-12 max-w-3xl mx-auto px-4 text-[#231A16]">
+    <main className="my-8 md:my-12 max-w-3xl mx-auto px-4 text-[#231A16] ">
       <Header />
       <FilterComponent tags={allTags} />
       <section className="mt-16 space-y-12">
@@ -83,6 +81,16 @@ function LargePost({ post }: { post: PostType }) {
           className="w-full h-64 object-cover"
         />
         <div className="pt-6">
+          <div>
+            {post.metadata.categories.map((category) => (
+              <span
+                key={category}
+                className="text-sm text-dark-gold font-medium pb-2"
+              >
+                {category}
+              </span>
+            ))}
+          </div>
           <h3 className="text-xl font-semibold mb-2 font-blog">
             {post.metadata.title}
           </h3>
@@ -110,7 +118,7 @@ function SmallPost({ post }: { post: PostType }) {
             {post.metadata.categories.map((category) => (
               <span
                 key={category}
-                className="text-sm text-gray-700 font-medium"
+                className="text-sm text-dark-gold font-medium"
               >
                 {category}
               </span>
@@ -135,40 +143,4 @@ function SmallPost({ post }: { post: PostType }) {
       </div>
     </Link>
   );
-  // return (
-  //   <Link href={`/blog/${post.id}`}>
-  //     <div className="flex border-t-[1px] pt-4 pb-12">
-  //       <div className="flex gap-2 flex-1">
-  //         <div className="pr-4 md:pr-8">
-  //           {post.metadata.categories.map((category) => (
-  //             <span
-  //               key={category}
-  //               className="text-sm text-gray-700 font-medium"
-  //             >
-  //               {category}
-  //             </span>
-  //           ))}
-  //         </div>
-
-  //         <div className="flex flex-col justify-between pr-4">
-  //           <div>
-  //             <h3 className="text-lg font-semibold font-blog mb-2">
-  //               {post.metadata.title}
-  //             </h3>
-  //             <p className="text-gray-600 mb-2 text-sm">
-  //               {formatDate(post.publishDate)}
-  //             </p>
-  //           </div>
-  //         </div>
-  //       </div>
-  //       <div>
-  //         <img
-  //           src={post.metadata.heroImage}
-  //           alt={post.metadata.title}
-  //           className="w-48 h-32 object-cover"
-  //         />
-  //       </div>
-  //     </div>
-  //   </Link>
-  // );
 }

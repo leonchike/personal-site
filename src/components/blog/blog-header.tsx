@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { PostType } from "@/lib/types";
-import { formatDate } from "@/utils/helpers";
+import { formatDate, calculateReadingTime } from "@/utils/helpers";
 
 interface BlogHeaderProps {
   post: PostType;
@@ -11,18 +11,22 @@ export default function BlogHeader({ post }: BlogHeaderProps) {
     post.postMetadata;
 
   return (
-    <div className="flex flex-col items-center gap-10 md:gap-16 mb-10 md:mb-16">
+    <div className="flex flex-col items-center gap-10 md:gap-16  mb-10 md:mb-12">
       <div className="flex flex-col items-center gap-4">
         <div>
           {categories.map((category) => (
-            <span key={category} className="text-sm text-gray-700 font-medium">
+            <span key={category} className="text-sm text-dark-gold font-medium">
               {category}
             </span>
           ))}
         </div>
-        <h1 className="text-3xl font-medium">{title}</h1>
+        <h1 className="text-3xl font-medium text-center">{title}</h1>
         <div className="pt-2">
-          <AuthorInfo authorId={authorId} publishDate={publishDate} />
+          <AuthorInfo
+            authorId={authorId}
+            publishDate={publishDate}
+            content={post.content}
+          />
         </div>
       </div>
       {heroImage && (
@@ -39,9 +43,11 @@ export default function BlogHeader({ post }: BlogHeaderProps) {
 function AuthorInfo({
   authorId,
   publishDate,
+  content,
 }: {
   authorId: string;
   publishDate: string;
+  content: string;
 }) {
   const author = getAuthor(authorId);
   if (!author) return null;
@@ -50,11 +56,15 @@ function AuthorInfo({
       <img
         src={author.image}
         alt={author.name}
-        className="w-10 h-10 rounded-full mr-3"
+        className="w-14 h-14 rounded-full mr-3"
       />
       <div className="flex flex-col">
         <p className="text-sm">By {author.name}</p>
-        <p className="text-xs text-gray-500">{formatDate(publishDate)}</p>
+        <div className="text-xs text-gray-500 flex items-center">
+          <p>{formatDate(publishDate)}</p>
+          <span className="mx-2 w-1 h-1 bg-gray-500 rounded-full"></span>
+          <ReadingTime content={content} />
+        </div>
       </div>
     </div>
   );
@@ -66,10 +76,17 @@ const AUTHORS = [
     name: "Leon Nwankwo",
     email: "leon.nwankwo@gmail.com",
     image:
-      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/7b87c386-8cac-4b58-f46c-09892d5a1700/original",
+      "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/73383366-5cbf-4db7-be1b-11684c496a00/thumbnails",
   },
 ];
 
 function getAuthor(authorId: string) {
   return AUTHORS.find((author) => author.id === authorId);
+}
+
+function ReadingTime({ content }: { content: string }) {
+  console.log(content);
+  const time = calculateReadingTime(content);
+
+  return <span>{time} minute read</span>;
 }

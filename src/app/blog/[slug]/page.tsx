@@ -8,10 +8,9 @@ export default async function BlogPost({
   params: { slug: string };
 }) {
   const post = await getPost(params.slug);
-  console.log(post);
 
   return (
-    <main className="my-8 md:my-12 max-w-[52rem] mx-auto px-4 text-[#231A16]">
+    <main className="my-8 md:my-12 max-w-[52rem] mx-auto px-4 text-[#231A16] leading-6  text-[0.8888rem]">
       <BlogHeader post={post} />
       <article className="mx-auto max-w-[34rem] font-blog">
         <CustomMDX source={post.content} />
