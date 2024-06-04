@@ -3,6 +3,8 @@ import ROUTES, { getSamePageSectionId } from "@/utils/routes";
 import { SectionTitle } from "./reusable-index-components";
 import { WorkItemType } from "@/utils/types";
 import { getIndexData } from "@/actions/server-actions";
+import { ArrowUpRightIcon } from "@/components/ui/custom-icons";
+import Link from "next/link";
 
 export default async function WorkSection() {
   const { workData } = await getIndexData();
@@ -66,6 +68,25 @@ function WorkItemDescription({ data }: { data: WorkItemType }) {
         <div className="lg:max-w-[17%] space-y-1">
           <h3 className="font-[550]">Year</h3>
           <p className="text-[0.9rem]">{data.year}</p>
+        </div>
+      )}
+      {!!data.references?.length && (
+        <div className="lg:max-w-[33%] space-y-1">
+          <h3 className="font-[550]">Sources</h3>
+          <p className="text-[0.9rem] flex flex-col gap-1">
+            {data.references.map((reference, index) => (
+              <Link
+                key={index}
+                href={reference.url}
+                className="underline flex gap-2 items-center"
+              >
+                <span>{reference.title}</span>{" "}
+                <span>
+                  <ArrowUpRightIcon className="w-[0.65rem]" />
+                </span>
+              </Link>
+            ))}
+          </p>
         </div>
       )}
     </div>

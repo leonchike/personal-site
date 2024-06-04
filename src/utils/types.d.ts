@@ -8,7 +8,7 @@ export type WorkItemType = {
   articleDescription: string;
   visuals: Visual[];
   displayType: string;
-  References: Reference[];
+  references: Reference[];
 };
 
 type Visual = {

@@ -26,10 +26,10 @@ export default [
       },
     ],
     displayType: "single-image",
-    References: [
+    references: [
       {
-        url: "https://www.rebuildee.com",
-        title: "Rebuildee",
+        url: "/blog/dev-tooling-ai-error-resolutions",
+        title: "Blog Post",
         description: "Rebuildee",
       },
     ],
@@ -47,7 +47,7 @@ export default [
     year: 2023,
     articleTitle: "Fast tracking user onboarding with AI",
     articleDescription:
-      "Designed and programmed a new onboarding experience to drive comprehension and improve engagement rates for new users – delivering on a company level initiative of aligning orders with items lost in natural disaster.\nUsing the OpenAI API and a custom trained model, we developed the capability to allow users to upload claims documents, photos and receipts to automatically to pregrenerate their cart and profile. Saving an average of 35 minutes per user.",
+      "I designed and programmed a new onboarding experience to drive comprehension and improve engagement rates for new users, delivering on a company-level initiative of aligning orders with items lost in natural disasters.\nOur custom-trained model, built using OpenAI's platform, employs a combination of natural language processing (NLP) and computer vision algorithms to extract relevant information from the uploaded documents. The NLP component analyzes the text within the documents, identifying key details such as item descriptions, quantities, and prices. Meanwhile, the computer vision algorithms process the uploaded images, recognizing and categorizing the items present.\nOnce the information is extracted, the LLMs come into play, generating accurate and context-aware product descriptions and user profiles. By understanding the context and semantics of the extracted information, the LLMs can create highly personalized and relevant content for each user.\nThe result is a streamlined onboarding process that automatically pre-generates users' carts and profiles based on their uploaded documents. This intelligent automation saves an average of 35 minutes per user, significantly enhancing the user experience and reducing the time and effort required to place orders for items lost in natural disasters.",
     visuals: [
       {
         url: "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/10285342-fee4-464c-d385-83bc20129500/original",
@@ -72,16 +72,40 @@ export default [
       },
     ],
     displayType: "multi-images",
-    References: [
-      {
-        url: "https://www.rebuildee.com",
-        title: "Rebuildee",
-        description: "Rebuildee",
-      },
-    ],
+    references: [],
   },
+
   {
     index: 2,
+    role: [
+      "0>1 Product Strategy",
+      "Algorithm Design",
+      "End to end Visual Design + Interaction Design",
+      "Engagement Lead",
+    ],
+    company: "Deloitte",
+    location: "Remote",
+    year: 2021,
+    articleTitle:
+      "Revolutionizing Pension Processing with Robotic Process Automation (RPA)",
+    articleDescription:
+      "I spearheaded the development of an innovative Robotic Process Automation (RPA) application that transformed pension processing for a major client. By leveraging Azure Machine Learning (Azure ML) for supervised regression models and Azure Document Intelligence for unsupervised document clustering, we automated complex tasks, extracting data from 200 million scanned documents. The application freed 95,000 hours of manual labor, improved accuracy and efficiency, and benefited over 265,000 pension plan members.\nThe true challenge we faced was not the implementation of the technology itself, but rather building systems that triggered alerts and warnings when an individual's benefit could potentially be impacted by erroneous or missing data. This is where my team and I invested a considerable amount of time. We trained ML models using both supervised learning (regressions) in Azure ML and unsupervised learning (document clustering) with Azure Document Intelligence to build the algorithms that drove the project. We collaborated with actuaries, data scientists, and subject matter experts to identify financial and data risks. We then incorporated these risks into our algorithms to monitor, detect, and alert pension management teams to potential issues. Though no system is perfect, the iterative approach we adopted will live on with this project and continue to improve pension management for years to come.\nThis project showcased my ability to drive innovation, lead cross-functional teams, and deliver significant cost savings and operational efficiencies through cutting-edge technology solutions, leveraging advanced machine learning techniques and cloud-based platforms like Azure ML and Azure Document Intelligence.",
+    visuals: [
+      {
+        url: "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/a8ceb694-44df-4d55-2127-f03085def400/largeartwork",
+        smallurl:
+          "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/a8ceb694-44df-4d55-2127-f03085def400/original",
+        alt: "Rebuildee",
+        mediaType: "image",
+        description: null,
+        bgColor: "#F1F1F1",
+      },
+    ],
+    displayType: "single-image",
+    references: [],
+  },
+  {
+    index: 3,
     role: ["Engineering Management", "Backend Architecture", "Systems Design"],
     company: "Rebuildee",
     location: "Remote",
@@ -101,47 +125,6 @@ export default [
       },
     ],
     displayType: "single-image",
-    References: [
-      {
-        url: "https://www.rebuildee.com",
-        title: "Rebuildee",
-        description: "Rebuildee",
-      },
-    ],
-  },
-  {
-    index: 3,
-    role: [
-      "0>1 Product Strategy",
-      "Algorithm Design",
-      "End to end Visual Design + Interaction Design",
-      "Engagement Lead",
-    ],
-    company: "Deloitte",
-    location: "Remote",
-    year: 2021,
-    articleTitle:
-      "Revolutionizing Pension Processing with Robotic Process Automation (RPA)",
-    articleDescription:
-      "I spearheaded the development of an innovative Robotic Process Automation (RPA) application that transformed pension processing for a major client. By leveraging Azure and machine learning algorithms, we automated complex tasks, extracting data from 200 million scanned documents. The application freed 95,000 hours of manual labor, and improved accuracy and efficiency, benefiting over 265,000 pension plan members.\nThe true challenge we faced was not the implementation of the technology itself, but rather building systems that triggered alerts and warnings when an individual's benefit could potentially be impacted by erroneous or missing data. This is where my team and I invested a considerable amount of time. We collaborated with actuaries, data scientists, and subject matter experts to identify financial and data risks. We then took these risks and built algorithms to help monitor, detect, and alert pension management teams to potential issues. Though no system is perfect, the iterative approach we adopted will live on with this project and continue to improve pension management for years to come.\nThis project showcased my ability to drive innovation, lead cross-functional teams, and deliver significant cost savings and operational efficiencies through cutting-edge technology solutions.",
-    visuals: [
-      {
-        url: "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/a8ceb694-44df-4d55-2127-f03085def400/largeartwork",
-        smallurl:
-          "https://imagedelivery.net/camphNQlX5poswEZJbu_Cw/a8ceb694-44df-4d55-2127-f03085def400/original",
-        alt: "Rebuildee",
-        mediaType: "image",
-        description: null,
-        bgColor: "#F1F1F1",
-      },
-    ],
-    displayType: "single-image",
-    References: [
-      {
-        url: "https://www.rebuildee.com",
-        title: "Rebuildee",
-        description: "Rebuildee",
-      },
-    ],
+    references: [],
   },
 ];

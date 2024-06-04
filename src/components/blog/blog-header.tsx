@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import { PostType } from "@/utils/types";
 import { formatDate, calculateReadingTime } from "@/utils/helpers";
+import ROUTES from "@/utils/routes";
 
 interface BlogHeaderProps {
   post: PostType;
@@ -15,9 +17,11 @@ export default function BlogHeader({ post }: BlogHeaderProps) {
       <div className="flex flex-col sm:items-center gap-4">
         <div>
           {categories.map((category) => (
-            <span key={category} className="text-sm text-dark-gold font-medium">
-              {category}
-            </span>
+            <Link key={category} href={ROUTES.BLOG}>
+              <span className="text-sm text-dark-gold font-medium hover:underline focus:underline">
+                {category}
+              </span>
+            </Link>
           ))}
         </div>
         <h1 className="text-3xl font-medium sm:text-center">{title}</h1>
