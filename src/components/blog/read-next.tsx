@@ -1,6 +1,7 @@
 import { getSortedPostsData } from "@/lib/actions";
 import { PostType } from "@/utils/types";
 import { ReadNextPostPreview } from "@/components/blog/post-previews";
+import clsx from "clsx";
 
 export default async function ReadNext({
   currentPostId,
@@ -13,27 +14,35 @@ export default async function ReadNext({
   return featuredPosts.length ? (
     <section className="border-t-[1px] border-primary-dark mt-16 lg:mt-24">
       <div className="py-4 font-medium">Read Next</div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {/* First post */}
         <div>
           {featuredPosts[0] && (
-            <ReadNextPostPreview
-              key={featuredPosts[0].id}
-              post={featuredPosts[0]}
-              showExcerpt={false}
-              index={0}
-            />
+            <div className="border-b-[1px] border-dark-gold pb-8 md:border-none">
+              <ReadNextPostPreview
+                key={featuredPosts[0].id}
+                post={featuredPosts[0]}
+                showExcerpt={false}
+                index={0}
+              />
+            </div>
           )}
         </div>
         {/* Remaining posts */}
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 divide-y-[1px] divide-dark-gold">
           {featuredPosts.slice(1).map((post, index) => (
-            <ReadNextPostPreview
+            <div
               key={post.id}
-              post={post}
-              showExcerpt={false}
-              index={index + 1}
-            />
+              className={clsx({
+                "pt-6": index > 0,
+              })}
+            >
+              <ReadNextPostPreview
+                post={post}
+                showExcerpt={false}
+                index={index + 1}
+              />
+            </div>
           ))}
         </div>
       </div>

@@ -103,7 +103,7 @@ export function ReadNextPostPreview({
               key={category}
               className={clsx("pb-4", {
                 "": !!index,
-                hidden: !index,
+                "block md:hidden": !index,
               })}
             >
               <span className="text-sm text-dark-gold font-medium pb-2">
