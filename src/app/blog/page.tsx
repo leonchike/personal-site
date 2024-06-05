@@ -49,7 +49,7 @@ function FilterComponent({ tags }: { tags: string[] }) {
         {tags.map((tag, index) => (
           <span
             key={index}
-            className="px-4 py-1 border-gray-500 border-[1px] text-gray-700 rounded-sm cursor-pointer hover:bg-gray-200 text-[0.75rem] tracking-wider"
+            className="px-4 py-1 border-gray-500 border-[1px] text-gray-700 rounded-sm text-[0.75rem] tracking-wider select-none"
           >
             {tag}
           </span>
