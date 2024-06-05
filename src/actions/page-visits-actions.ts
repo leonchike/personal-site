@@ -8,6 +8,7 @@ interface PageVisit {
   pathname: string;
   timestamp: string;
   ipAddress: string;
+  referrer: string | null;
 }
 
 export async function logPageVisitServerAction(pageVisit: PageVisit) {
@@ -65,6 +66,7 @@ export async function getPageVisitsServerAction(
       pathname: visit.pathname,
       timestamp: visit.timestamp.toISOString(),
       ipAddress: visit.ipAddress,
+      referrer: visit.referrer || null,
       location: visit.location
         ? {
             city: visit.location.city,

@@ -5,6 +5,7 @@ export interface IPageVisit extends Document {
   pathname: string;
   timestamp: Date;
   ipAddress: string;
+  referrer?: string;
   location: {
     city: string;
     state_prov: string;
@@ -19,6 +20,7 @@ const pageVisitSchema: Schema = new Schema({
   pathname: { type: String, required: true },
   timestamp: { type: Date, required: true },
   ipAddress: { type: String, required: true },
+  referrer: { type: String, default: null },
   location: {
     city: String,
     state_prov: String,

@@ -19,11 +19,12 @@ export const useAnalyticsLogger = () => {
 
       try {
         const timestamp = new Date().toISOString();
+        const referrer = document.referrer || null; // Get the referrer URL
         const ipAddress = await fetch("https://api.ipify.org?format=json")
           .then((response) => response.json())
           .then((data) => data.ip);
 
-        const pageVisit = { pathname, timestamp, ipAddress };
+        const pageVisit = { pathname, timestamp, ipAddress, referrer };
         logPageVisitServerAction(pageVisit);
       } catch (error) {
         console.error("Error logging page visit:", error);

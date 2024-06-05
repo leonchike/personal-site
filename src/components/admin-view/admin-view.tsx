@@ -10,6 +10,7 @@ interface PageVisitInterface {
   _id: string;
   timestamp: string;
   ipAddress: string;
+  referrer: string | null;
   location: {
     city: string;
     state_prov: string;
@@ -57,7 +58,7 @@ export default function AdminView() {
 
   return (
     <div className="min-h-screen flex justify-center">
-      <div className="max-w-5xl m-auto mt-8">
+      <div className="max-w-6xl m-auto mt-8">
         <Header />
         <div className="mb-6">
           <RenderLastUpdated lastUpdated={lastUpdated} />
@@ -69,6 +70,7 @@ export default function AdminView() {
               <th className="py-3 px-4">IP Address</th>
               <th className="py-3 px-4">Location</th>
               <th className="py-3 px-4">Pathname</th>
+              <th className="py-3 px-4">Referrer</th>
             </tr>
           </thead>
           <tbody>
@@ -124,6 +126,7 @@ function PageVisitRow({ visit }: { visit: PageVisitInterface }) {
           : "-"}
       </td>
       <td className="py-3 px-4">{visit.pathname}</td>
+      <td className="py-3 px-4">{visit.referrer || "-"}</td>
     </tr>
   );
 }
