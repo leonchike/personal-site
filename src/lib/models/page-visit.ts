@@ -5,6 +5,7 @@ export interface IPageVisit extends Document {
   pathname: string;
   timestamp: Date;
   ipAddress: string;
+  referrer?: string;
   location: {
     city: string;
     state_prov: string;
@@ -13,12 +14,16 @@ export interface IPageVisit extends Document {
     lat: number;
     lon: number;
   };
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
 }
 
 const pageVisitSchema: Schema = new Schema({
   pathname: { type: String, required: true },
   timestamp: { type: Date, required: true },
   ipAddress: { type: String, required: true },
+  referrer: { type: String, default: null },
   location: {
     city: String,
     state_prov: String,
@@ -27,6 +32,9 @@ const pageVisitSchema: Schema = new Schema({
     lat: Number,
     lon: Number,
   },
+  utmSource: { type: String, default: null },
+  utmMedium: { type: String, default: null },
+  utmCampaign: { type: String, default: null },
 });
 
 export const PageVisit: Model<IPageVisit> =

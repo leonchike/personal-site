@@ -19,12 +19,22 @@ export const useAnalyticsLogger = () => {
 
       try {
         const timestamp = new Date().toISOString();
+        const referrer = document.referrer || null; // Get the referrer URL
         const ipAddress = await fetch("https://api.ipify.org?format=json")
           .then((response) => response.json())
           .then((data) => data.ip);
 
-        const pageVisit = { pathname, timestamp, ipAddress };
-        console.log("Logging page visit:", pageVisit);
+        const { utmSource, utmMedium, utmCampaign } = getCustomTracking();
+
+        const pageVisit = {
+          pathname,
+          timestamp,
+          ipAddress,
+          referrer,
+          utmSource,
+          utmMedium,
+          utmCampaign,
+        };
         logPageVisitServerAction(pageVisit);
       } catch (error) {
         console.error("Error logging page visit:", error);
@@ -34,3 +44,12 @@ export const useAnalyticsLogger = () => {
     logPageVisit();
   }, [pathname]);
 };
+
+function getCustomTracking() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const utmSource = urlParams.get("utm_source") || null;
+  const utmMedium = urlParams.get("utm_medium") || null;
+  const utmCampaign = urlParams.get("utm_campaign") || null;
+
+  return { utmSource, utmMedium, utmCampaign };
+}
