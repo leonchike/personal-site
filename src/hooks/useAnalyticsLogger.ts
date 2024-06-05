@@ -51,5 +51,22 @@ function getCustomTracking() {
   const utmMedium = urlParams.get("utm_medium") || null;
   const utmCampaign = urlParams.get("utm_campaign") || null;
 
+  removeUtmParams();
+
   return { utmSource, utmMedium, utmCampaign };
+}
+
+function removeUtmParams() {
+  const url = new URL(window.location.href);
+  const searchParams = url.searchParams;
+
+  searchParams.delete("utm_source");
+  searchParams.delete("utm_medium");
+  searchParams.delete("utm_campaign");
+
+  const newUrl =
+    url.origin +
+    url.pathname +
+    (searchParams.toString() ? "?" + searchParams.toString() : "");
+  window.history.replaceState({}, document.title, newUrl);
 }
