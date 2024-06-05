@@ -24,7 +24,6 @@ export const useAnalyticsLogger = () => {
           .then((data) => data.ip);
 
         const pageVisit = { pathname, timestamp, ipAddress };
-        console.log("Logging page visit:", pageVisit);
         logPageVisitServerAction(pageVisit);
       } catch (error) {
         console.error("Error logging page visit:", error);
