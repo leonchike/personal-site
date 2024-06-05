@@ -14,6 +14,9 @@ export interface IPageVisit extends Document {
     lat: number;
     lon: number;
   };
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
 }
 
 const pageVisitSchema: Schema = new Schema({
@@ -29,6 +32,9 @@ const pageVisitSchema: Schema = new Schema({
     lat: Number,
     lon: Number,
   },
+  utmSource: { type: String, default: null },
+  utmMedium: { type: String, default: null },
+  utmCampaign: { type: String, default: null },
 });
 
 export const PageVisit: Model<IPageVisit> =

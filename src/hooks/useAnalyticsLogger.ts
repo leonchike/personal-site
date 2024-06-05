@@ -24,7 +24,17 @@ export const useAnalyticsLogger = () => {
           .then((response) => response.json())
           .then((data) => data.ip);
 
-        const pageVisit = { pathname, timestamp, ipAddress, referrer };
+        const { utmSource, utmMedium, utmCampaign } = getCustomTracking();
+
+        const pageVisit = {
+          pathname,
+          timestamp,
+          ipAddress,
+          referrer,
+          utmSource,
+          utmMedium,
+          utmCampaign,
+        };
         logPageVisitServerAction(pageVisit);
       } catch (error) {
         console.error("Error logging page visit:", error);
@@ -34,3 +44,12 @@ export const useAnalyticsLogger = () => {
     logPageVisit();
   }, [pathname]);
 };
+
+function getCustomTracking() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const utmSource = urlParams.get("utm_source") || null;
+  const utmMedium = urlParams.get("utm_medium") || null;
+  const utmCampaign = urlParams.get("utm_campaign") || null;
+
+  return { utmSource, utmMedium, utmCampaign };
+}

@@ -20,6 +20,9 @@ interface PageVisitInterface {
     lon: number;
   } | null;
   pathname: string;
+  utmSource: string | null;
+  utmMedium: string | null;
+  utmCampaign: string | null;
 }
 
 const fetcher = async (url: string) => {
@@ -65,12 +68,15 @@ export default function AdminView() {
         </div>
         <table className="w-full max-w-4xl bg-white shadow-md rounded-sm overflow-hidden">
           <thead>
-            <tr className="bg-gray-100 text-gray-700 text-left">
-              <th className="py-3 pt-4 px-4">Timestamp</th>
-              <th className="py-3 px-4">IP Address</th>
-              <th className="py-3 px-4">Location</th>
-              <th className="py-3 px-4">Pathname</th>
-              <th className="py-3 px-4">Referrer</th>
+            <tr className="bg-gray-100 text-gray-700 text-left text-sm">
+              <th className="py-3 pt-4 px-4 font-medium">Timestamp</th>
+              <th className="py-3 px-4 font-medium">IP Address</th>
+              <th className="py-3 px-4 font-medium">Location</th>
+              <th className="py-3 px-4 font-medium">Pathname</th>
+              <th className="py-3 px-4 font-medium">Referrer</th>
+              <th className="py-3 px-4 font-medium">UTM Source</th>
+              <th className="py-3 px-4 font-medium">UTM Medium</th>
+              <th className="py-3 px-4 font-medium">UTM Campaign</th>
             </tr>
           </thead>
           <tbody>
@@ -127,6 +133,9 @@ function PageVisitRow({ visit }: { visit: PageVisitInterface }) {
       </td>
       <td className="py-3 px-4">{visit.pathname}</td>
       <td className="py-3 px-4">{visit.referrer || "-"}</td>
+      <td className="py-3 px-4">{visit.utmSource || "-"}</td>
+      <td className="py-3 px-4">{visit.utmMedium || "-"}</td>
+      <td className="py-3 px-4">{visit.utmCampaign || "-"}</td>
     </tr>
   );
 }
