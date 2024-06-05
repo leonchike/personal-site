@@ -27,7 +27,7 @@ export default function BlogCallout() {
                     className="w-20 h-20"
                   />
                 </div>
-                <div>
+                <div className="select-none">
                   <h2 className="font-blog font-semibold text-[#302721]">
                     Check out my latest blog posts!
                   </h2>
