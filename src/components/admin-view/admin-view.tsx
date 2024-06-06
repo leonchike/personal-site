@@ -59,14 +59,10 @@ export default function AdminView() {
 
   useEffect(() => {
     if (isValidating) {
-      console.log("isValidating", isValidating);
-
       const lastFetched = new Date();
       setLastUpdated(lastFetched);
     }
   }, [isValidating]);
-
-  console.log("data", data);
 
   return (
     <div className="min-h-screen flex justify-center">
