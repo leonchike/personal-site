@@ -34,7 +34,7 @@ export default function LoadingBar({ isLoading }: { isLoading: boolean }) {
             return prevProgress;
           }
         });
-      }, 20); // Progress from 50 to 100 in 2.5 seconds (50 * 50ms)
+      }, 10); // Progress from 50 to 100 in 2.5 seconds (50 * 50ms)
     }
 
     return () => clearInterval(timer);
