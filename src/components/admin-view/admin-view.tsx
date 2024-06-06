@@ -33,41 +33,44 @@ const fetcher = async (page: number, limit: number) => {
 
 export default function AdminView() {
   const [lastUpdated, setLastUpdated] = useState<null | Date>(null);
-  const [isLoading, setIsLoading] = useState(false);
   const limit = 100;
 
-  const { data, error, size, setSize } = useSWRInfinite(
-    (index) => [index + 1, limit],
+  const getKey = (pageIndex: number, previousPageData: any) => {
+    if (previousPageData && !previousPageData.visits.length) return null; // Reached the end
+    return [pageIndex + 1, limit];
+  };
+
+  const { data, error, size, setSize, isValidating, mutate } = useSWRInfinite(
+    getKey,
     fetcher,
     {
-      revalidateFirstPage: true,
       refreshInterval: 60000, // Refresh every minute
-      onLoadingSlow: () => setIsLoading(true),
-      onError: () => setIsLoading(false),
-      onSuccess: () => setIsLoading(false),
+      persistSize: true,
     }
   );
 
   const pageVisits = data ? data.flatMap((pageData) => pageData.visits) : [];
-  const isInitialLoading = !data && !error;
-  const hasMore = data && data[data.length - 1].hasMore;
+  const isLoading = isValidating && !data;
+  const hasMore = data && data[data.length - 1]?.hasMore;
 
   const handleLoadMore = () => {
-    setIsLoading(true);
     setSize(size + 1);
   };
 
   useEffect(() => {
-    if (data) {
+    if (isValidating) {
+      console.log("isValidating", isValidating);
+
       const lastFetched = new Date();
       setLastUpdated(lastFetched);
-      setIsLoading(false);
     }
-  }, [data]);
+  }, [isValidating]);
+
+  console.log("data", data);
 
   return (
     <div className="min-h-screen flex justify-center">
-      <LoadingBar isLoading={isLoading || isInitialLoading} />
+      <LoadingBar isLoading={isLoading} />
       <div className="max-w-[100rem] px-4 m-auto mt-8">
         <Header />
         <div className="mb-6">
@@ -92,7 +95,7 @@ export default function AdminView() {
             ))}
           </tbody>
         </table>
-        {isInitialLoading ? (
+        {isLoading ? (
           <p className="mt-4">Loading...</p>
         ) : (
           hasMore && (
