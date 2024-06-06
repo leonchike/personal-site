@@ -35,7 +35,10 @@ export default function AdminView() {
 
   const { data, error, size, setSize } = useSWRInfinite(
     (index) => [index + 1, limit],
-    fetcher
+    fetcher,
+    {
+      refreshInterval: 60000, // Refresh every minute
+    }
   );
 
   const pageVisits = data ? data.flatMap((pageData) => pageData.visits) : [];
