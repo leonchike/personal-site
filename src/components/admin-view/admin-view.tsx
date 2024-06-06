@@ -66,7 +66,7 @@ export default function AdminView() {
 
   return (
     <div className="min-h-screen flex justify-center">
-      <LoadingBar isLoading={isLoading} />
+      <LoadingBar isLoading={isValidating} />
       <div className="max-w-[100rem] px-4 m-auto mt-8">
         <Header />
         <div className="mb-6">
