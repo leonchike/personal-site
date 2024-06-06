@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import useSWRInfinite from "swr/infinite";
 import { knownIps } from "@/data/known-ip-addresses";
 import SignOut from "@/components/admin-view/sign-out";
+import LoadingBar from "@/components/admin-view/loading-bar";
+import RenderLastUpdated from "@/components/admin-view/last-updated";
 
 interface PageVisitInterface {
   _id: string;
@@ -31,21 +33,27 @@ const fetcher = async (page: number, limit: number) => {
 
 export default function AdminView() {
   const [lastUpdated, setLastUpdated] = useState<null | Date>(null);
+  const [isLoading, setIsLoading] = useState(false);
   const limit = 100;
 
   const { data, error, size, setSize } = useSWRInfinite(
     (index) => [index + 1, limit],
     fetcher,
     {
+      revalidateFirstPage: true,
       refreshInterval: 60000, // Refresh every minute
+      onLoadingSlow: () => setIsLoading(true),
+      onError: () => setIsLoading(false),
+      onSuccess: () => setIsLoading(false),
     }
   );
 
   const pageVisits = data ? data.flatMap((pageData) => pageData.visits) : [];
-  const isLoading = !data && !error;
+  const isInitialLoading = !data && !error;
   const hasMore = data && data[data.length - 1].hasMore;
 
   const handleLoadMore = () => {
+    setIsLoading(true);
     setSize(size + 1);
   };
 
@@ -53,11 +61,13 @@ export default function AdminView() {
     if (data) {
       const lastFetched = new Date();
       setLastUpdated(lastFetched);
+      setIsLoading(false);
     }
   }, [data]);
 
   return (
     <div className="min-h-screen flex justify-center">
+      <LoadingBar isLoading={isLoading || isInitialLoading} />
       <div className="max-w-[100rem] px-4 m-auto mt-8">
         <Header />
         <div className="mb-6">
@@ -82,7 +92,7 @@ export default function AdminView() {
             ))}
           </tbody>
         </table>
-        {isLoading ? (
+        {isInitialLoading ? (
           <p className="mt-4">Loading...</p>
         ) : (
           hasMore && (
@@ -138,18 +148,6 @@ function PageVisitRow({ visit }: { visit: PageVisitInterface }) {
       <td className="py-3 px-4">{visit.utmMedium || "-"}</td>
       <td className="py-3 px-4">{visit.utmCampaign || "-"}</td>
     </tr>
-  );
-}
-
-function RenderLastUpdated({ lastUpdated }: { lastUpdated: Date | null }) {
-  if (lastUpdated === null) {
-    return null;
-  }
-
-  return (
-    <div className="text-sm text-gray-500 mt-4">
-      Last updated: {lastUpdated.toLocaleString()}
-    </div>
   );
 }
 
