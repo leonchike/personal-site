@@ -61,12 +61,12 @@ export default function AdminView() {
 
   return (
     <div className="min-h-screen flex justify-center">
-      <div className="max-w-6xl m-auto mt-8">
+      <div className="max-w-[100rem] px-4 m-auto mt-8">
         <Header />
         <div className="mb-6">
           <RenderLastUpdated lastUpdated={lastUpdated} />
         </div>
-        <table className="w-full max-w-4xl bg-white shadow-md rounded-sm overflow-hidden">
+        <table className="w-full max-w-8xl bg-white shadow-md rounded-sm overflow-hidden">
           <thead>
             <tr className="bg-gray-100 text-gray-700 text-left text-sm">
               <th className="py-3 pt-4 px-4 font-medium">Timestamp</th>
@@ -132,7 +132,9 @@ function PageVisitRow({ visit }: { visit: PageVisitInterface }) {
           : "-"}
       </td>
       <td className="py-3 px-4">{visit.pathname}</td>
-      <td className="py-3 px-4">{visit.referrer || "-"}</td>
+      <td className="py-3 px-4">
+        {getDomainFromReferrer(visit.referrer) || "-"}
+      </td>
       <td className="py-3 px-4">{visit.utmSource || "-"}</td>
       <td className="py-3 px-4">{visit.utmMedium || "-"}</td>
       <td className="py-3 px-4">{visit.utmCampaign || "-"}</td>
@@ -150,4 +152,11 @@ function RenderLastUpdated({ lastUpdated }: { lastUpdated: Date | null }) {
       Last updated: {lastUpdated.toLocaleString()}
     </div>
   );
+}
+
+function getDomainFromReferrer(referrer: string | null) {
+  if (!referrer) return null;
+
+  const url = new URL(referrer);
+  return url.hostname;
 }
