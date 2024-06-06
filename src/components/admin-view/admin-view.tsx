@@ -1,7 +1,6 @@
 "use client";
 import { getPageVisitsServerAction } from "@/actions/page-visits-actions";
 import { useState, useEffect } from "react";
-import useSWR from "swr";
 import useSWRInfinite from "swr/infinite";
 import { knownIps } from "@/data/known-ip-addresses";
 import SignOut from "@/components/admin-view/sign-out";
@@ -25,25 +24,21 @@ interface PageVisitInterface {
   utmCampaign: string | null;
 }
 
-const fetcher = async (url: string) => {
-  const [_, page, limit] = url.split("/");
-  const { visits, hasMore } = await getPageVisitsServerAction(
-    parseInt(page),
-    parseInt(limit)
-  );
-  const lastFetched = new Date();
-  return { visits, hasMore, lastFetched };
+const fetcher = async (page: number, limit: number) => {
+  const { visits, hasMore } = await getPageVisitsServerAction(page, limit);
+  return { visits, hasMore };
 };
 
 export default function AdminView() {
   const [lastUpdated, setLastUpdated] = useState<null | Date>(null);
   const limit = 100;
+
   const { data, error, size, setSize } = useSWRInfinite(
-    (index) => `/api/page-visits/${index + 1}/${limit}`,
+    (index) => [index + 1, limit],
     fetcher
   );
 
-  const pageVisits = data ? data.flatMap((data) => data.visits) : [];
+  const pageVisits = data ? data.flatMap((pageData) => pageData.visits) : [];
   const isLoading = !data && !error;
   const hasMore = data && data[data.length - 1].hasMore;
 
@@ -51,10 +46,9 @@ export default function AdminView() {
     setSize(size + 1);
   };
 
-  // Update lastUpdated
   useEffect(() => {
     if (data) {
-      const lastFetched = data[data.length - 1].lastFetched;
+      const lastFetched = new Date();
       setLastUpdated(lastFetched);
     }
   }, [data]);
@@ -89,12 +83,14 @@ export default function AdminView() {
           <p className="mt-4">Loading...</p>
         ) : (
           hasMore && (
-            <button
-              className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
-              onClick={handleLoadMore}
-            >
-              Load More
-            </button>
+            <div className="pb-8 pt-4">
+              <button
+                className="mt-4 px-4 py-2 bg-gray-700 text-white rounded"
+                onClick={handleLoadMore}
+              >
+                Load More
+              </button>
+            </div>
           )
         )}
       </div>
