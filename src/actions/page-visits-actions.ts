@@ -104,13 +104,14 @@ export async function getPageVisitsServerAction(
     const pageVisits = await PageVisit.find()
       .sort({ timestamp: -1 })
       .skip((page - 1) * limit)
-      .limit(limit)
+      .limit(limit + 1)
       .lean()
       .exec();
 
-    const hasMore = pageVisits.length === limit;
+    const hasMore = pageVisits.length > limit;
+    const slicedVisits = hasMore ? pageVisits.slice(0, -1) : pageVisits;
 
-    const serializedVisits = pageVisits.map((visit) => ({
+    const serializedVisits = slicedVisits.map((visit) => ({
       _id: visit._id.toString(),
       pathname: visit.pathname,
       timestamp: visit.timestamp.toISOString(),
