@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { getSortedPostsData } from "@/lib/actions";
-import { SmallPost, LargePost } from "@/components/blog/post-previews";
 import { BlogProvider } from "@/context/blog-context";
 import IndexContent from "@/components/blog/index-content";
 
@@ -8,7 +7,7 @@ export default async function BlogHome() {
   const allPostsData = await getSortedPostsData();
   const allTags = Array.from(
     new Set(allPostsData.flatMap((post) => post.postMetadata.categories ?? []))
-  );
+  ).sort((a, b) => a.localeCompare(b));
 
   return (
     <BlogProvider>

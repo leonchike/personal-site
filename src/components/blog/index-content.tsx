@@ -42,9 +42,8 @@ function FilterComponent() {
         {state.filters.map((tag, index) => (
           <span
             key={index}
-            className={`px-4 py-1 border-dark-gold border-[1px] text-dark-gold rounded-sm text-[0.75rem] tracking-wider select-none cursor-pointer ${
-              state.currentFilter === tag ? "bg-dark-gold text-white" : ""
-            }`}
+            className={`px-4 py-1 border-dark-gold border-[1px] text-dark-gold font-medium rounded-sm text-[0.75rem] tracking-wider select-none cursor-pointer hover:bg-dark-gold hover:text-white transition-colors duration-200 ease-in-out  
+            ${state.currentFilter === tag ? "bg-dark-gold text-white" : ""}`}
             onClick={() => handleFilterClick(tag)}
           >
             {tag}
