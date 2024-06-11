@@ -44,7 +44,7 @@ export default function AdminView() {
     getKey,
     fetcher,
     {
-      refreshInterval: 60000, // Refresh every minute
+      refreshInterval: 600000, // Refresh every 10 minutes
       persistSize: true,
     }
   );
