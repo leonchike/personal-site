@@ -53,6 +53,21 @@ const components = {
       {props.children}
     </li>
   ),
+  Link: (props: React.HTMLProps<HTMLAnchorElement>) => (
+    <a
+      {...props}
+      className="text-blue-500 hover:underline"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {props.children}
+    </a>
+  ),
+  InternalLink: (props: React.HTMLProps<HTMLAnchorElement>) => (
+    <a {...props} className="text-blue-500 hover:underline">
+      {props.children}
+    </a>
+  ),
   Summary: (props: React.HTMLProps<HTMLDivElement>) => (
     <div {...props} className="border-l-4 border-dark-gold pl-4 mb-6">
       {props.children}
@@ -65,6 +80,19 @@ const components = {
         {props.children}
       </blockquote>
       <div className="w-16 border-t-2 border-dark-gold my-4"></div>
+    </div>
+  ),
+  Tag: (props: React.HTMLProps<HTMLSpanElement>) => (
+    <span
+      {...props}
+      className="bg-dark-gold text-white px-1 py-1 rounded-sm text-sm"
+    >
+      {props.children}
+    </span>
+  ),
+  Indent: (props: React.HTMLProps<HTMLDivElement>) => (
+    <div {...props} className="pl-4">
+      {props.children}
     </div>
   ),
 };
