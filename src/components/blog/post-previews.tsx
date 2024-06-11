@@ -10,7 +10,7 @@ export function SmallPost({ post }: { post: PostType }) {
     <Link href={`/blog/${post.id}`} className="group">
       <div className="border-t-[1px] pt-4 pb-12 flex flex-col sm:flex-row gap-4">
         <div className="flex-1 flex gap-2 flex-col sm:flex-row">
-          <div className="flex gap-2 flex-wrap pr-4 md:pr-8 w-[12ch]">
+          <div className="flex gap-2 flex-wrap pr-4 md:pr-8 w-[15ch]">
             {post.postMetadata.categories.map((category) => (
               <span
                 key={category}
