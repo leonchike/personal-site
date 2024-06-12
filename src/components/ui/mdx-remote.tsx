@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-// components/mdx-remote.js
+// components/ui/mdx-remote.js
 import { MDXRemote } from "next-mdx-remote/rsc";
 import CodeBlock from "@/components/blog/code-block";
 
