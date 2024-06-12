@@ -33,7 +33,7 @@ export default function Header() {
     >
       <WidthWrapper>
         <div className="flex justify-between items-center py-3 opacity-0 animate-fadeIn300">
-          <Link href={ROUTES.HOME} className="leading-0 block">
+          <Link href={ROUTES.HOME} className="leading-0 block" tabIndex={0}>
             <span className="uppercase text-[0.65rem] font-[500] tracking-[0.15em] leading-0 block">
               Leon Nwankwo [Chike]
             </span>
@@ -50,7 +50,12 @@ function DesktopLinks() {
   return (
     <div className="hidden md:flex space-x-8 lg:space-x-10">
       {LINKS.map((link) => (
-        <Link key={link.name} href={link.href} className="leading-0 block">
+        <Link
+          key={link.name}
+          href={link.href}
+          className="leading-0 block"
+          tabIndex={0}
+        >
           <span className="uppercase text-[0.65rem] font-[400] tracking-[0.15em] leading-0 block">
             {link.name}
           </span>
@@ -81,7 +86,12 @@ function MobileMenu({
   return (
     <Dialog.Root open={isOpen} onOpenChange={toggleMenu}>
       <Dialog.Trigger asChild>
-        <button onClick={toggleMenu} className="md:hidden focus:outline-none">
+        <button
+          onClick={toggleMenu}
+          className="md:hidden focus:outline-none"
+          tabIndex={0}
+          aria-label="Toggle mobile menu"
+        >
           <MobileMenuButton isOpen={isOpen} onClick={toggleMenu} />
         </button>
       </Dialog.Trigger>
@@ -105,12 +115,12 @@ function MobileLinks({ closeMenu }: { closeMenu: () => void }) {
     <nav className="flex flex-col">
       {LINKS.map((link) => (
         <Link href={link.href} key={link.name}>
-          <span
+          <button
             onClick={closeMenu}
             className="block uppercase text-[1.5rem] font-[400] tracking-[0.15em] mb-6"
           >
             {link.name}
-          </span>
+          </button>
         </Link>
       ))}
     </nav>
