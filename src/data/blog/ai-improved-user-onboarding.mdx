@@ -49,7 +49,11 @@ def extract_data(document):
     return extracted_data
 ```
 
-Meanwhile, the computer vision algorithms process the uploaded images, recognizing and categorizing the items present. These algorithms employ techniques like object detection and image classification to identify specific items and their attributes.
+<br />
+
+Meanwhile, the computer vision algorithms process the uploaded images, recognizing
+and categorizing the items present. These algorithms employ techniques like object
+detection and image classification to identify specific items and their attributes.
 
 ```python
 import cv2
@@ -76,7 +80,9 @@ def detect_objects(image):
     return objects
 ```
 
-By combining the power of NLP and computer vision, our custom-trained model can accurately extract the necessary information from the uploaded documents, laying the foundation for a seamless onboarding experience.
+<br />
+
+Combining the power of NLP and computer vision, our custom-trained model can accurately extract the necessary information from the uploaded documents, laying the foundation for a seamless onboarding experience.
 
 ### Generating Accurate and Context-Aware Content with LLMs
 
@@ -102,6 +108,8 @@ def generate_product_description(product_data):
     product_description = response.choices[0].text.strip()
     return product_description
 ```
+
+<br />
 
 By leveraging the power of LLMs, we can automatically generate detailed and accurate product descriptions, saving users the time and effort of manually entering this information. Similarly, LLMs can assist in creating personalized user profiles based on the extracted data, further enhancing the onboarding experience.
 
