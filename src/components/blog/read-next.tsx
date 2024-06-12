@@ -137,9 +137,17 @@ function getSimilarPosts(
       post.id !== currentPostId
   );
 
-  // Step 2: Shuffle the filtered posts to randomize the order
-  const shuffledPosts = filteredPosts.sort(() => 0.5 - Math.random());
+  // Step 2: If there are no posts from the same category, select random posts excluding the current post
+  let postsToReturn;
+  if (filteredPosts.length === 0) {
+    postsToReturn = allPostsData.filter((post) => post.id !== currentPostId);
+  } else {
+    postsToReturn = filteredPosts;
+  }
 
-  // Step 3: Return the top 4 posts
+  // Step 3: Shuffle the posts to randomize the order
+  const shuffledPosts = postsToReturn.sort(() => 0.5 - Math.random());
+
+  // Step 4: Return the top 4 posts
   return shuffledPosts.slice(0, 4);
 }
