@@ -102,6 +102,7 @@ export async function InlineReadNext({ category }: { category: string }) {
                 {post.postMetadata.heroImage && (
                   <img
                     src={post.postMetadata.heroImage}
+                    loading="lazy"
                     alt=""
                     className="w-full h-full object-cover"
                   />
