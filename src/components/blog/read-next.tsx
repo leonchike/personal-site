@@ -89,8 +89,10 @@ export async function InlineReadNext({ category }: { category: string }) {
   const allPostsData = await getSortedPostsData();
   const similarPosts = getSimilarPosts(allPostsData, category);
 
+  if (!similarPosts.length) return null;
+
   return (
-    <aside className="hidden lg:block relative float-right w-1/2 ml-8 py-4 space-y-4 -mr-24 border-t-[1px] border-primary-dark">
+    <aside className="hidden lg:block relative float-right w-[60%] ml-8 py-4 space-y-4 -mr-32 border-t-[1px] border-primary-dark">
       <div className="font-medium font-sans">Related Articles</div>
       <div className="divide-gray-500 flex flex-col gap-6">
         {similarPosts.map((post, index) => (
@@ -105,7 +107,7 @@ export async function InlineReadNext({ category }: { category: string }) {
                   />
                 )}
               </div>
-              <h3 className="overflow-hidden text-ellipsis max-h-14 leading-tight text-md">
+              <h3 className="overflow-hidden text-ellipsis max-h-16 leading-tight text-md">
                 {post.postMetadata.title}
               </h3>
             </div>
