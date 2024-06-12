@@ -23,10 +23,10 @@ function Header() {
   return (
     <header className="mb-6">
       <h1 className="text-3xl md:text-4xl font-medium mb-4 font-blog">
-        Welcome to My Blog
+        Coding, Creating, and Captaining
       </h1>
       <p className="text text-gray-800 ">
-        Sharing my experiences and insights on web development, product and
+        Sharing my experiences and insights on web engineering, product and
         leadership.
       </p>
     </header>
