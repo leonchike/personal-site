@@ -83,11 +83,17 @@ function getFeaturedPosts(
   return [...sameCategoryPosts, ...randomPosts].slice(0, 4);
 }
 
-export async function InlineReadNext({ category }: { category: string }) {
+export async function InlineReadNext({
+  category,
+  postSlug,
+}: {
+  category: string;
+  postSlug: string;
+}) {
   if (!category) return null;
 
   const allPostsData = await getSortedPostsData();
-  const similarPosts = getSimilarPosts(allPostsData, category);
+  const similarPosts = getSimilarPosts(allPostsData, category, postSlug);
 
   if (!similarPosts.length) return null;
 
@@ -96,7 +102,7 @@ export async function InlineReadNext({ category }: { category: string }) {
       <div className="font-medium font-sans">Related Articles</div>
       <div className="divide-gray-500 flex flex-col gap-6">
         {similarPosts.map((post, index) => (
-          <Link key={index} href={`/blog/${post.id}`}>
+          <Link key={index} href={`/blog/${post.id}`} target="_blank">
             <div className="flex">
               <div className="w-20 h-20 flex-shrink-0 mr-4">
                 {post.postMetadata.heroImage && (
@@ -119,15 +125,21 @@ export async function InlineReadNext({ category }: { category: string }) {
   );
 }
 
-function getSimilarPosts(allPostsData: PostType[], category: string) {
-  // Step 1: Filter posts that match the category
-  const filteredPosts = allPostsData.filter((post) =>
-    post.postMetadata.categories.includes(category)
+function getSimilarPosts(
+  allPostsData: PostType[],
+  category: string,
+  currentPostId: string
+) {
+  // Step 1: Filter posts that match the category and exclude the current post
+  const filteredPosts = allPostsData.filter(
+    (post) =>
+      post.postMetadata.categories.includes(category) &&
+      post.id !== currentPostId
   );
 
   // Step 2: Shuffle the filtered posts to randomize the order
   const shuffledPosts = filteredPosts.sort(() => 0.5 - Math.random());
 
-  // Step 3: Return the top 3 posts
-  return shuffledPosts.slice(0, 3);
+  // Step 3: Return the top 4 posts
+  return shuffledPosts.slice(0, 4);
 }
