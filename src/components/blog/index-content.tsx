@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { useBlogContext } from "@/context/blog-context";
 import { SmallPost, LargePost } from "@/components/blog/post-previews";
 import { PostType } from "@/utils/types";
-import { ca } from "date-fns/locale";
 
 interface IndexContentProps {
   posts: PostType[];

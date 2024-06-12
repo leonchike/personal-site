@@ -3,6 +3,7 @@
 // components/ui/mdx-remote.js
 import { MDXRemote } from "next-mdx-remote/rsc";
 import CodeBlock from "@/components/blog/code-block";
+import { InlineReadNext } from "@/components/blog/read-next";
 
 const components = {
   h1: (props: React.HTMLProps<HTMLHeadingElement>) => (
@@ -95,6 +96,7 @@ const components = {
       {props.children}
     </div>
   ),
+  InlineReadNext: InlineReadNext,
 };
 
 export function CustomMDX(props: any) {

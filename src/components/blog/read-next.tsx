@@ -1,7 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import { getSortedPostsData } from "@/lib/actions";
 import { PostType } from "@/utils/types";
 import { ReadNextPostPreview } from "@/components/blog/post-previews";
 import clsx from "clsx";
+import Link from "next/link";
 
 export default async function ReadNext({
   currentPostId,
@@ -79,4 +81,50 @@ function getFeaturedPosts(
 
   // Step 6: Return at most 4 posts
   return [...sameCategoryPosts, ...randomPosts].slice(0, 4);
+}
+
+export async function InlineReadNext({ category }: { category: string }) {
+  if (!category) return null;
+
+  const allPostsData = await getSortedPostsData();
+  const similarPosts = getSimilarPosts(allPostsData, category);
+
+  return (
+    <aside className="hidden lg:block relative float-right w-1/2 ml-8 py-4 space-y-4 -mr-24 border-t-[1px] border-primary-dark">
+      <div className="font-medium font-sans">Related Articles</div>
+      <div className="divide-gray-500 flex flex-col gap-6">
+        {similarPosts.map((post, index) => (
+          <Link key={index} href={`/blog/${post.id}`}>
+            <div className="flex">
+              <div className="w-20 h-20 flex-shrink-0 mr-4">
+                {post.postMetadata.heroImage && (
+                  <img
+                    src={post.postMetadata.heroImage}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                )}
+              </div>
+              <h3 className="overflow-hidden text-ellipsis max-h-14 leading-tight text-md">
+                {post.postMetadata.title}
+              </h3>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </aside>
+  );
+}
+
+function getSimilarPosts(allPostsData: PostType[], category: string) {
+  // Step 1: Filter posts that match the category
+  const filteredPosts = allPostsData.filter((post) =>
+    post.postMetadata.categories.includes(category)
+  );
+
+  // Step 2: Shuffle the filtered posts to randomize the order
+  const shuffledPosts = filteredPosts.sort(() => 0.5 - Math.random());
+
+  // Step 3: Return the top 3 posts
+  return shuffledPosts.slice(0, 3);
 }
