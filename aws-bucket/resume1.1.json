@@ -7,7 +7,7 @@
     "linkedIn": "linkedin.com/in/chike-nwankwo",
     "linkedInURL": "https://www.linkedin.com/in/chike-nwankwo/",
     "personalWebsite": "leonchike.me",
-    "personalWebsiteURL": "https://leonchike.me",
+    "personalWebsiteURL": "https://leonchike.me/?utm_source=resume&utm_medium=pdf&utm_campaign=job_application",
     "personalStatement": "Product Leader skilled in creating data-driven platforms and shipping delightful experiences. Adept in strategic road mapping, user-centered design, and aligning product strategy with business objectives to drive growth.",
     "personalStatementV2": ""
   },
@@ -105,7 +105,7 @@
         "subtitle": "",
         "type": "technical",
         "bullets": [],
-        "list": "Typescript, Python, ReactJS, NextJS, TensorFlow (AI/ML), SQL/NoSQL, PostgreSQL, MongoDB, Redis, Docker, CI/CD, AWS (ECS, Lambda, S3, CloudFront), Google Cloud Platform (GCP), Git, Stripe, OAuth"
+        "list": "Typescript, Python, ReactJS, NextJS, TensorFlow (AI/ML), SQL/NoSQL, PostgreSQL, MongoDB, Redis, Docker Azure (Machine Learning, AI Document Intelligence), AWS (ECS, Lambda, S3, CloudFront), Google Cloud Platform, Git, Stripe, OAuth"
       },
       {
         "title": "Leadership and Communication",
