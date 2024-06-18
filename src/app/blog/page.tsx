@@ -23,7 +23,7 @@ function Header() {
   return (
     <header className="mb-6">
       <h1 className="text-3xl md:text-4xl font-medium mb-4 font-blog">
-        Coding, Creating, and Captaining
+        Digital Craftsmanship & Leadership
       </h1>
       <p className="text text-gray-800 ">
         Sharing my experiences and insights on web engineering, product and
