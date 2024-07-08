@@ -2,7 +2,7 @@
 export default {
   sectionHeading: "strategy",
   sectionStatement: {
-    main: "Shipping successful products requires a team effort. I excel in translating business goals into actionable product roadmaps and strategies. This is achieved by facilitating collaborative, in-depth discussions with cross-functional teams and liaising with engineers to ensure the delivery of customer-centric solutions that offer an exceptional user experience.",
+    main: "Shipping successful products requires a collaborative team effort. This process involves translating business goals into actionable product roadmaps and strategies. Key elements include facilitating in-depth discussions with customers and cross-functional teams coupled with close collaboration with engineers. The ultimate mission is to deliver customer-centric solutions that offer exceptional user experiences.",
     sub: "A glimpse of some of the collaborative work I have led to uncover answers to challenging problems and inform product vision – ranging from design sprints to co-creation workshops, customer journey mapping, and more...",
   },
   strategyData: [
